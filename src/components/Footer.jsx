@@ -1,88 +1,98 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { siteConfig } from "../data/config.js";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const { categories, meta } = siteConfig;
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  const socialLinks = [
-    { name: 'GitHub', icon: <FaGithub className="text-xl" />, url: 'https://github.com/ericbowser' },
-    { name: 'LinkedIn', icon: <FaLinkedin className="text-xl" />, url: 'https://www.linkedin.com/in/erbowser/' },
-  ];
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!email) return;
+    const existing = JSON.parse(localStorage.getItem("wr_subscribers") || "[]");
+    existing.push({ email, date: new Date().toISOString() });
+    localStorage.setItem("wr_subscribers", JSON.stringify(existing));
+    setSubmitted(true);
+    setEmail("");
+  };
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto">
-      <div className="container mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-stone-900 text-stone-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* Brand */}
-          <div className="text-center md:text-left">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-              <span className="text-teal-500">E.R.B.</span> — Eric Ryan Bowser
-            </h3>
-            <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.72rem', color: '#a855f7', marginBottom: '10px' }}>
-              Execute &amp; Engrave LLC
-            </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-              Full-Stack Engineer · Cloud Architect in Training · AI Integrations
-            </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500">
-              &copy; {currentYear} Eric Ryan Bowser. All rights reserved.
+          <div className="md:col-span-1">
+            <span className="text-lg font-bold text-white">
+              Western <span className="text-amber-500">Rockhound</span>
+            </span>
+            <p className="mt-3 text-sm leading-relaxed">{meta.tagline}</p>
+            <p className="mt-4 text-xs text-stone-500">
+              Affiliate disclosure: We earn commissions from purchases made through links on this site at no extra cost to you. This never affects our reviews.
             </p>
           </div>
 
-          {/* Currently Building */}
-          <div className="text-center">
-            <h4 className="text-gray-900 dark:text-white font-semibold mb-3 text-sm uppercase tracking-wider" style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.72rem', letterSpacing: '0.1em' }}>
-              Currently Building
-            </h4>
-            <div className="space-y-2">
-              <div>
-                <a href="https://github.com/ericbowser/CompTIAPrepper" target="_blank" rel="noreferrer"
-                  className="text-sm text-teal-500 dark:text-teal-400 hover:underline font-medium">
-                  CloudPrepper
-                </a>
-                <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">Cloud cert study platform · IT-7000</p>
-              </div>
-              <div>
-                <a href="https://erb-think.com" target="_blank" rel="noreferrer"
-                  className="text-sm text-teal-500 dark:text-teal-400 hover:underline font-medium">
-                  erb-think.com
-                </a>
-                <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">Portfolio &amp; project hub</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Connect */}
-          <div className="text-center md:text-right">
-            <h4 style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}
-              className="text-gray-900 dark:text-white font-semibold mb-3">
-              Connect
-            </h4>
-            <div className="flex justify-center md:justify-end space-x-4 mb-4">
-              {socialLinks.map((link) => (
-                <a key={link.name} href={link.url} target="_blank" rel="noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
-                  aria-label={link.name}>
-                  {link.icon}
-                </a>
+          {/* Categories */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Gear Categories</h3>
+            <ul className="space-y-2">
+              {Object.entries(categories).map(([slug, cat]) => (
+                <li key={slug}>
+                  <Link to={`/category/${slug}`} className="text-sm hover:text-amber-400 transition-colors">
+                    {cat.icon} {cat.name}
+                  </Link>
+                </li>
               ))}
-              <a href="mailto:eric@erb-think.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors"
-                aria-label="Email">
-                <FaEnvelope className="text-xl" />
-              </a>
-            </div>
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: '6px',
-              background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.2)',
-              color: '#00d4ff', padding: '4px 14px', borderRadius: '20px',
-              fontSize: '0.72rem', fontFamily: 'Space Mono, monospace',
-            }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#00d4ff', display: 'inline-block' }} />
-              Open to new roles
-            </div>
+            </ul>
           </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Site</h3>
+            <ul className="space-y-2">
+              <li><Link to="/" className="text-sm hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-sm hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/about" className="text-sm hover:text-white transition-colors">Affiliate Disclosure</Link></li>
+              <li><Link to="/about" className="text-sm hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li>
+                <a href="https://www.blm.gov/programs/recreation" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">
+                  BLM Recreation Info ↗
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Field Notes</h3>
+            <p className="text-sm mb-3">New site guides, gear reviews, and seasonal tips — no spam.</p>
+            {submitted ? (
+              <p className="text-sm text-amber-400 font-medium">✓ You're in. We'll be in touch.</p>
+            ) : (
+              <form className="flex flex-col gap-2" onSubmit={handleSubscribe}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  className="bg-stone-800 border border-stone-700 rounded-lg px-3 py-2 text-sm text-white placeholder-stone-500 focus:outline-none focus:border-amber-500"
+                />
+                <button
+                  type="submit"
+                  className="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+
+        <div className="mt-10 pt-6 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-stone-500">© {new Date().getFullYear()} Western Rockhound. All rights reserved.</p>
+          <p className="text-xs text-stone-500">Built by Eric Bowser · Execute & Engrave LLC · Salt Lake City, UT</p>
         </div>
       </div>
     </footer>

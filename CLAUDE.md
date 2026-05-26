@@ -1,76 +1,76 @@
-# CLAUDE.md
+# CLAUDE.md — Western Rockhound
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Affiliate marketing site for rockhounding gear — metal detectors, rock hammers, tumblers, GPS, and field gear.
+Target audience: rockhounds in Utah and the American West.
+Owner: Eric Bowser / Execute & Engrave LLC — Salt Lake City, UT.
 
-## Development Commands
+## Dev Commands
 
-### Core Development
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build for production (includes Tailwind CSS compilation)
-- `npm test` - Run Jest tests in jsdom environment
+- `npm run dev` — Start Vite dev server
+- `npm run build` — Production build
+- `npm run preview` — Preview production build
+- `npm run tailwind:build` — Compile Tailwind CSS once
+- `npm run tailwind:watch` — Watch Tailwind CSS
 
-### CSS and Styling
-- `npm run tail` - Compile Tailwind CSS once
-- `npm run tail:watch` - Watch and compile Tailwind CSS on changes
+## Tech Stack
 
-### Environment and Maintenance
-- `npm run env` - Pull environment variables using dotenv-vault
-- `npm run clean` - Clean install (removes node_modules and package-lock.json)
+- React 18 + Vite
+- TailwindCSS (no component library)
+- react-router-dom v6
 
-### Testing
-- Tests are located in `src/components/__tests__/`
-- Uses Jest with jsdom environment for component testing
-- Run tests with `npm test`
+## Project Structure
 
-## Architecture Overview
-
-### Tech Stack
-- **Frontend**: React 18 with functional components and hooks
-- **Styling**: TailwindCSS with dark mode support
-- **Build Tool**: Webpack 5 with custom configuration
-- **Email Service**: Custom API integration via axios
-- **Testing**: Jest with React Testing Library
-
-### Project Structure
 ```
 src/
-├── App.js                    # Main app component with dark mode state
-├── index.js                  # React app entry point
-├── components/               # Reusable React components
-│   ├── About.js             # About section
-│   ├── Cards.js             # Skills cards display
-│   ├── EmailSubmit.js       # Contact form with email integration
-│   ├── Footer.js            # Site footer
-│   ├── Navbar.js            # Navigation with dark mode toggle
-│   ├── Projects.js          # Projects showcase
-│   └── Skills.js            # Skills section
-├── assets/                  # Static assets (images, fonts)
-└── styles/                  # CSS files (input.css, output.css)
-api/
-└── sendMail.js              # Email sending functionality
+├── App.jsx                      # Routes: /, /category/:slug, /review/:id, /compare/:id1/:id2, /about, *→404
+├── main.jsx                     # Entry point
+├── data/
+│   ├── config.js                # Site metadata + 6 categories
+│   └── products.js              # 15 rockhounding products with affiliate data
+├── components/
+│   ├── Landing.jsx              # Homepage
+│   ├── Category.jsx             # Filtered product grid by category
+│   ├── Review.jsx               # Individual product review
+│   ├── Compare.jsx              # Side-by-side product comparison
+│   ├── About.jsx                # About + affiliate disclosure
+│   ├── Navbar.jsx               # Sticky nav with working dropdown
+│   ├── Footer.jsx               # Newsletter capture + links
+│   └── NotFound.jsx             # 404 page
+└── styles/
+    ├── input.css                # Tailwind source
+    └── output.css               # Compiled (do not edit directly)
 ```
 
-### Key Features
-- **Dark Mode**: Persistent dark/light theme with localStorage and system preference detection
-- **Responsive Design**: Mobile-first approach using TailwindCSS
-- **Email Integration**: Contact form sends emails via external API
-- **Smooth Scrolling**: Uses react-scroll for navigation between sections
-- **Component-Based**: Modular React components for maintainability
+## Color Palette
 
-### Development Notes
-- Environment variables are managed through `env.json` and dotenv-vault
-- Webpack configuration includes Node.js polyfills for browser compatibility
-- Custom font (Burtons) is loaded from assets
-- Email functionality requires `ASSIST_EMAIL_URL` environment variable
-- The app uses localStorage for dark mode preference persistence
+Stone/amber. Primary CTA: amber-600. Backgrounds: stone-50, white.
+Hero gradients: stone-800 → amber-800.
 
-### Build Configuration
-- Webpack dev server runs on configurable port (default 3000)
-- Production builds are optimized with performance hints disabled
-- Source maps are enabled for development debugging
-- File loader handles images, PDFs, and other assets
+## Affiliate Programs to Sign Up For
 
-### Testing Strategy
-- Component tests verify rendering and basic functionality
-- Tests use `data-testid` attributes for reliable element selection
-- Jest configuration includes jsdom for DOM testing
+1. Amazon Associates — affiliate-program.amazon.com (~3% outdoor, ~4.5% books)
+2. Backcountry affiliate — outdoorgearexchange.com/affiliates (~8%)
+3. KellyCo Metal Detectors — kellycodetectors.com (~5%)
+4. Serious Detecting — seriousdetecting.com/affiliate
+5. High Plains Prospectors — highplainsprospectors.com/affiliate
+
+After joining, replace product URLs in products.js with tagged affiliate links.
+
+## Newsletter
+
+Footer captures emails into localStorage key `wr_subscribers`.
+Wire to ConvertKit or Beehiiv when ready. ConvertKit has a 30% recurring affiliate program too.
+
+## Content Roadmap
+
+Phase 1 — Text only, no photos needed (publish now to start ranking):
+- [ ] "Best Metal Detectors for Rockhounding 2026" (pillar post)
+- [ ] "Rockhounding in Utah: 8 Best Sites + What You'll Find"
+- [ ] "Garrett Ace 400 vs Minelab Vanquish 540 — Which Should You Buy?"
+- [ ] "Rockhounding Gear Checklist: Everything You Actually Need"
+- [ ] "Best Rock Tumblers for Beginners 2026"
+
+Phase 2 — Field content (after first trips out):
+- [ ] Trip reports with real photos from Topaz Mountain, Dugway
+- [ ] YouTube/TikTok channel for discovery traffic
+- [ ] Full site guides with GPS coordinates

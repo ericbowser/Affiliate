@@ -1,58 +1,115 @@
-import React from 'react';
-import { FiHome } from 'react-icons/fi';
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
-import resume from '../assets/erb_cv_resume_2.pdf';
+import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { siteConfig } from "../data/config.js";
 
-function Navbar({ setDarkMode = () => {}, darkMode = false, showBackButton = false, onBackToLanding = () => {} }) {
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const { categories } = siteConfig;
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-700 shadow-sm transition-all duration-300">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
 
-          {/* Brand / Back */}
-          <div className="flex items-center space-x-3">
-            {showBackButton && (
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
+            <span className="text-xl font-bold text-stone-800">
+              Western <span className="text-amber-600">Rockhound</span>
+            </span>
+          </Link>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-6">
+            <Link to="/" className="text-gray-600 hover:text-amber-700 transition-colors text-sm font-medium">
+              Home
+            </Link>
+
+            {/* Working Categories Dropdown */}
+            <div className="relative" ref={dropdownRef}>
               <button
-                onClick={onBackToLanding}
-                className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-teal-500 text-white hover:opacity-90 transition-opacity font-medium text-sm"
-                aria-label="Back to home"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="text-gray-600 hover:text-amber-700 transition-colors text-sm font-medium flex items-center gap-1"
               >
-                <FiHome className="text-base" />
-                <span className="hidden sm:inline">Home</span>
+                Gear Categories
+                <span className={`text-xs transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}>▾</span>
               </button>
-            )}
-            <div>
-              <span className="font-bold text-gray-900 dark:text-white text-sm sm:text-base" style={{ fontFamily: 'Space Mono, monospace' }}>
-                <span className="text-teal-500">ERB</span>
-                <span className="text-gray-400 dark:text-gray-500 mx-1">·</span>
-                <span style={{ color: '#a855f7', fontSize: '0.75rem' }}>Execute &amp; Engrave LLC</span>
-              </span>
+              {dropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-60 bg-white border border-gray-200 rounded-xl shadow-lg py-2 z-50">
+                  {Object.entries(categories).map(([slug, cat]) => (
+                    <Link
+                      key={slug}
+                      to={`/category/${slug}`}
+                      className="flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-800 transition-colors"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <span>{cat.icon}</span>
+                      <span>{cat.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
+
+            <Link to="/about" className="text-gray-600 hover:text-amber-700 transition-colors text-sm font-medium">
+              About
+            </Link>
           </div>
 
-          {/* Controls */}
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-              aria-label="Toggle dark mode"
-            >
-              {darkMode ? <BsFillSunFill className="text-lg" /> : <BsFillMoonStarsFill className="text-lg" />}
-            </button>
-
-            <a
-              href={resume}
-              download
-              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg hover:opacity-90 transition-opacity font-semibold text-sm"
-            >
-              <span className="hidden sm:inline">Download </span>Resume
-            </a>
-          </div>
-
+          {/* Mobile toggle */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {menuOpen
+                ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              }
+            </svg>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden border-t border-gray-100 bg-white">
+          <div className="px-4 py-3 space-y-1">
+            <Link to="/" className="block text-gray-700 hover:text-amber-700 text-sm font-medium py-2" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider pt-2 pb-1">Gear Categories</p>
+            {Object.entries(categories).map(([slug, cat]) => (
+              <Link
+                key={slug}
+                to={`/category/${slug}`}
+                className="flex items-center gap-2 text-gray-600 hover:text-amber-700 text-sm py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                <span>{cat.icon}</span>
+                <span>{cat.name}</span>
+              </Link>
+            ))}
+            <Link to="/about" className="block text-gray-700 hover:text-amber-700 text-sm font-medium py-2 border-t border-gray-100 mt-1" onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
-}
+};
 
 export default Navbar;

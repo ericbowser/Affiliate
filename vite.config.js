@@ -1,27 +1,18 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import config from './env.json';
+import dotenv from 'dotenv';
 
-// https://vitejs.dev/config/
-module.exports = defineConfig({
+dotenv.config();
+
+export default defineConfig({
   plugins: [react()],
+  base: '/',
   build: {
-   outDir: 'dist',
-   sourcemap: config.NODE_ENV === 'development' 
+    outDir: 'dist',
+    sourcemap: true,
   },
   server: {
-    port: config.PORT || 3000,
-    host: 'localhost',
-    https: {
-      cert: 'ssl/server.crt',
-      key: 'ssl/server.key'
-    }
+    host: process.env.HOST || 'localhost',
+    port: parseInt(process.env.PORT) || 3000,
   },
-  css: {
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-      ]
-      }
-  }
-})
+});

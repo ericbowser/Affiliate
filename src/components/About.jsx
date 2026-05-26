@@ -1,164 +1,73 @@
-import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import { siteConfig } from "../data/config.js";
 
-const About = ({ profileImage, darkMode, onNavigate }) => {
-  const [imgHover, setImgHover] = useState(false);
-
-  const highlights = [
-    { label: '10+ Years', desc: 'Enterprise full-stack development', color: '#00d4ff' },
-    { label: '40% Faster', desc: 'API performance gain at Maersk', color: '#a855f7' },
-    { label: '3 Apps', desc: 'Production apps built in 2024', color: '#22c55e' },
-    { label: 'Cloud+', desc: 'CompTIA & AWS certs in progress', color: '#f59e0b' },
-  ];
-
+const About = () => {
   return (
-    <section style={{
-      padding: '100px 24px 80px',
-      background: darkMode ? '#080c14' : '#f0f4f8',
-      minHeight: '100vh',
-    }}>
-      <style>{`
-        @keyframes erb-spin-ring { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      `}</style>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <nav className="text-sm text-gray-500 mb-8">
+        <Link to="/" className="hover:text-amber-700">Home</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-900">About</span>
+      </nav>
 
-      <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: 60 }}>
-          <p style={{
-            color: '#00d4ff', fontFamily: 'monospace', fontSize: '0.75rem',
-            letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 10,
-          }}>
-            // who I am
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">About Western Rockhound</h1>
+
+      <div className="space-y-6 text-gray-600 leading-relaxed">
+        <p>
+          <strong className="text-gray-900">Western Rockhound</strong> is an independent gear review site
+          built for people who actually go out and dig. No manufacturer-supplied gear, no paid placements —
+          just honest assessments of what performs in Utah's desert terrain and the broader American West.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-900 pt-4">Who's Behind This Site</h2>
+        <p>
+          I'm Eric Bowser, a software developer and small business owner based in Salt Lake City, Utah.
+          I run <strong className="text-gray-900">Execute & Engrave LLC</strong>, a laser engraving business
+          that's pushing me deeper into rockhounding — I'm sourcing raw minerals and gems from Utah's BLM
+          land to turn into custom engraved jewelry. So this is personal.
+        </p>
+        <p>
+          I started Western Rockhound because I couldn't find a gear review site that actually knew Utah.
+          Most outdoor review sites are written from a Pacific Northwest or Colorado perspective — great
+          if you're hiking above treeline, not great if you're navigating alkaline desert, dry washes,
+          and miles of unmarked BLM access roads looking for topaz.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-900 pt-4">How We Review Gear</h2>
+        <ul className="space-y-2">
+          <li><strong className="text-gray-800">Field use first:</strong> Every product reviewed gets time on actual Utah sites before we publish anything.</li>
+          <li><strong className="text-gray-800">Real terrain:</strong> We test in mineralized desert soil — the kind that trips up cheaper detectors — not just a backyard.</li>
+          <li><strong className="text-gray-800">No fluff:</strong> We're a developer and maker, not a lifestyle blogger. If something isn't worth the money, we say so.</li>
+          <li><strong className="text-gray-800">Updated regularly:</strong> Gear evolves. We revisit reviews when new models or firmware change the picture.</li>
+        </ul>
+
+        <h2 className="text-xl font-bold text-gray-900 pt-4">Affiliate Disclosure</h2>
+        <p>
+          Western Rockhound participates in affiliate programs including Amazon Associates, Backcountry,
+          and direct retailer programs. When you buy through our links, we earn a small commission at no
+          extra cost to you. This is how we keep the lights on and get into the field more often.
+        </p>
+        <p>
+          Our affiliate relationships never influence our ratings or recommendations. We've passed on
+          recommending gear that wasn't worth it regardless of commission potential.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-900 pt-4">What's Coming</h2>
+        <ul className="space-y-2">
+          <li>Full site guides for Topaz Mountain, Dugway Geode Beds, and Tintic with GPS coordinates</li>
+          <li>First-person trip reports with field photos</li>
+          <li>Beginner's guide to rockhounding in Utah</li>
+          <li>Seasonal guides — when to go, where to go</li>
+        </ul>
+
+        <div className="mt-8 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+          <p className="text-sm text-amber-800">
+            <strong>Have a question, site tip, or gear recommendation?</strong> Reach out — I'm genuinely interested in hearing from other Utah rockhounds.
           </p>
-          <h2 style={{
-            fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 800,
-            color: darkMode ? '#f1f5f9' : '#0f172a', letterSpacing: '-0.02em',
-          }}>
-            About Me
-          </h2>
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 48, alignItems: 'flex-start', justifyContent: 'center' }}>
-
-          {/* Image side */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20, flexShrink: 0 }}>
-            <div
-              style={{ position: 'relative', cursor: 'default' }}
-              onMouseEnter={() => setImgHover(true)}
-              onMouseLeave={() => setImgHover(false)}
-            >
-              {/* Spinning ring */}
-              <div style={{
-                position: 'absolute', inset: -8, borderRadius: '50%',
-                border: '2px dashed rgba(0,212,255,0.3)',
-                animation: 'erb-spin-ring 12s linear infinite',
-                pointerEvents: 'none',
-              }} />
-              <div style={{
-                width: 200, height: 200, borderRadius: '50%', overflow: 'hidden',
-                border: `3px solid ${imgHover ? '#a855f7' : '#00d4ff'}`,
-                boxShadow: `0 0 ${imgHover ? '32px' : '20px'} ${imgHover ? 'rgba(168,85,247,0.4)' : 'rgba(0,212,255,0.25)'}`,
-                transition: 'all 0.3s ease',
-              }}>
-                <img src={profileImage} alt="Eric Ryan Bowser" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-            </div>
-
-            {/* Social links */}
-            <div style={{ display: 'flex', gap: 12 }}>
-              {[
-                { icon: <FaGithub />, url: 'https://github.com/ericbowser', color: '#94a3b8', label: 'GitHub' },
-                { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/erbowser/', color: '#0077b5', label: 'LinkedIn' },
-              ].map(link => (
-                <a key={link.label} href={link.url} target="_blank" rel="noreferrer"
-                  style={{
-                    display: 'flex', alignItems: 'center', gap: 6,
-                    color: darkMode ? '#94a3b8' : '#64748b', textDecoration: 'none',
-                    fontSize: '0.88rem', padding: '8px 14px', borderRadius: 8,
-                    background: darkMode ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.04)',
-                    border: `1px solid ${darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'}`,
-                    transition: 'all 0.2s',
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.color = link.color; e.currentTarget.style.borderColor = link.color + '44'; }}
-                  onMouseLeave={e => { e.currentTarget.style.color = darkMode ? '#94a3b8' : '#64748b'; e.currentTarget.style.borderColor = darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'; }}
-                >
-                  {link.icon} {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Content side */}
-          <div style={{ flex: '1 1 420px', maxWidth: 560 }}>
-            <h3 style={{
-              fontSize: '1.5rem', fontWeight: 700, marginBottom: 20,
-              color: darkMode ? '#f1f5f9' : '#0f172a',
-            }}>
-              Hey, I'm Eric 👋
-            </h3>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 28 }}>
-              {[
-                "I'm a Full-Stack Software Engineer with 10+ years building mission-critical systems at companies like Maersk and Willis Towers Watson. I specialize in C#/.NET Core, React.js, and cloud architecture.",
-                "Since January 2024, I've been operating independently under Execute & Engrave LLC — shipping three production applications: CloudPrepper (a cloud cert study platform), an AI Assistant Platform integrating OpenAI, Gemini, and Claude, and a Pet ID Tags system.",
-                "I'm currently pursuing CompTIA Cloud+ and AWS Solutions Architect certifications, and actively seeking my next senior engineering role where I can bring deep enterprise experience together with modern cloud and AI skills.",
-              ].map((text, i) => (
-                <p key={i} style={{ color: darkMode ? '#94a3b8' : '#475569', lineHeight: 1.8, fontSize: '0.95rem' }}>
-                  {text}
-                </p>
-              ))}
-            </div>
-
-            {/* Highlight grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 28 }}>
-              {highlights.map(h => (
-                <div key={h.label} style={{
-                  padding: '14px 16px',
-                  background: darkMode ? 'rgba(255,255,255,0.02)' : 'rgba(255,255,255,0.7)',
-                  border: `1px solid ${h.color}25`, borderRadius: 10,
-                }}>
-                  <div style={{ color: h.color, fontWeight: 800, fontSize: '1.1rem', fontFamily: 'monospace' }}>{h.label}</div>
-                  <div style={{ color: darkMode ? '#64748b' : '#94a3b8', fontSize: '0.78rem', marginTop: 3 }}>{h.desc}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTAs */}
-            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-              <button
-                onClick={() => onNavigate && onNavigate('projects')}
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 6,
-                  background: 'linear-gradient(135deg, #00d4ff, #0080ff)',
-                  border: 'none', color: '#080c14',
-                  padding: '11px 24px', borderRadius: 9,
-                  fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer',
-                  transition: 'transform 0.2s, opacity 0.2s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
-                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-              >
-                View Projects
-              </button>
-              <button
-                onClick={() => onNavigate && onNavigate('contact')}
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 6,
-                  background: 'none',
-                  border: '1px solid rgba(0,212,255,0.35)',
-                  color: '#00d4ff', padding: '11px 24px', borderRadius: 9,
-                  fontSize: '0.9rem', fontWeight: 600, cursor: 'pointer',
-                  transition: 'background 0.2s',
-                }}
-                onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,212,255,0.08)'}
-                onMouseLeave={e => e.currentTarget.style.background = 'none'}
-              >
-                <FaEnvelope /> Contact Me
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

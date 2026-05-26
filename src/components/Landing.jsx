@@ -1,320 +1,223 @@
-import React, { useEffect, useState } from 'react';
-import { FaUser, FaCode, FaFolderOpen, FaEnvelope, FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
-import head2 from '../assets/eb_1.jpg';
+import React from "react";
+import { Link } from "react-router-dom";
+import { siteConfig } from "../data/config.js";
+import { products } from "../data/products.js";
 
-const STATS = [
-  { value: '10+', label: 'Years Experience', color: '#00d4ff' },
-  { value: '40%', label: 'API Perf Gain', color: '#a855f7' },
-  { value: '3', label: 'Apps Built (2024)', color: '#22c55e' },
-  { value: '50+', label: 'React Components', color: '#f59e0b' },
-];
+const Landing = () => {
+  const { categories, meta } = siteConfig;
+  const categoriesList = Object.entries(categories);
+  const featured = products.filter(p => p.tier === "premium" || p.rating >= 4.7).slice(0, 3);
 
-const sections = [
-  {
-    id: 'about',
-    title: 'About Me',
-    description: 'Background, experience & passion for development',
-    icon: <FaUser />,
-    color: '#00d4ff',
-    delay: 0
-  },
-  {
-    id: 'skills',
-    title: 'Technical Skills',
-    description: 'Full-stack expertise across modern tech stacks',
-    icon: <FaCode />,
-    color: '#a855f7',
-    delay: 80
-  },
-  {
-    id: 'projects',
-    title: 'Projects',
-    description: 'Production apps built with real-world architecture',
-    icon: <FaFolderOpen />,
-    color: '#22c55e',
-    delay: 160
-  },
-  {
-    id: 'contact',
-    title: 'Contact',
-    description: 'Open to new opportunities — let\'s connect',
-    icon: <FaEnvelope />,
-    color: '#f59e0b',
-    delay: 240
-  }
-];
+  const stats = [
+    { value: `${products.length}+`, label: "Products Reviewed" },
+    { value: "6", label: "Gear Categories" },
+    { value: "Utah", label: "Home Base" },
+    { value: "100%", label: "Field Tested" },
+  ];
 
-const TypewriterText = ({ text, delay = 0 }) => {
-  const [displayed, setDisplayed] = useState('');
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setStarted(true), delay);
-    return () => clearTimeout(t);
-  }, [delay]);
-
-  useEffect(() => {
-    if (!started) return;
-    let i = 0;
-    const interval = setInterval(() => {
-      setDisplayed(text.slice(0, i + 1));
-      i++;
-      if (i >= text.length) clearInterval(interval);
-    }, 45);
-    return () => clearInterval(interval);
-  }, [started, text]);
+  const utahSites = [
+    { name: "Topaz Mountain", what: "Topaz crystals", distance: "3.5 hrs from SLC" },
+    { name: "Dugway Geode Beds", what: "Agate geodes", distance: "2.5 hrs from SLC" },
+    { name: "Tintic Mountains", what: "Garnets & minerals", distance: "1.5 hrs from SLC" },
+  ];
 
   return (
-    <span>
-      {displayed}
-      <span style={{
-        display: 'inline-block', width: '3px', height: '1em',
-        background: '#00d4ff', marginLeft: '2px', verticalAlign: 'text-bottom',
-        animation: displayed.length < text.length ? 'none' : 'erb-blink 1s step-end infinite'
-      }} />
-    </span>
-  );
-};
-
-const Landing = ({ onNavigate, darkMode }) => {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 100);
-    return () => clearTimeout(t);
-  }, []);
-
-  return (
-    <div style={{
-      minHeight: '100vh',
-      background: darkMode ? '#080c14' : '#f0f4f8',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '80px 24px 40px',
-      position: 'relative',
-      overflow: 'hidden',
-    }}>
-      <style>{`
-        @keyframes erb-blink { 50% { opacity: 0; } }
-        @keyframes erb-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        @keyframes erb-grid { 0% { background-position: 0 0; } 100% { background-position: 60px 60px; } }
-        @keyframes erb-fadein { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .erb-card:hover { transform: translateY(-6px) !important; }
-        .erb-stat:hover { transform: translateY(-4px); }
-      `}</style>
-
-      {/* Animated grid bg */}
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
-        backgroundImage: `linear-gradient(${darkMode ? 'rgba(0,212,255,0.04)' : 'rgba(0,150,200,0.06)'} 1px, transparent 1px), linear-gradient(90deg, ${darkMode ? 'rgba(0,212,255,0.04)' : 'rgba(0,150,200,0.06)'} 1px, transparent 1px)`,
-        backgroundSize: '60px 60px',
-        animation: 'erb-grid 10s linear infinite',
-      }} />
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
-        background: darkMode
-          ? 'radial-gradient(ellipse 70% 50% at 50% 40%, rgba(0,212,255,0.07) 0%, transparent 70%)'
-          : 'radial-gradient(ellipse 70% 50% at 50% 40%, rgba(0,180,220,0.08) 0%, transparent 70%)',
-      }} />
-
-      <div style={{ position: 'relative', width: '100%', maxWidth: '900px', textAlign: 'center' }}>
-
-        {/* Status badge */}
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: '8px',
-          background: darkMode ? 'rgba(0,212,255,0.08)' : 'rgba(0,180,220,0.1)',
-          border: '1px solid rgba(0,212,255,0.25)',
-          padding: '6px 18px', borderRadius: '20px', marginBottom: '28px',
-          color: '#00d4ff', fontSize: '0.78rem', fontFamily: 'monospace', letterSpacing: '0.05em',
-          opacity: visible ? 1 : 0,
-          transition: 'opacity 0.6s ease',
-        }}>
-          <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#00d4ff', animation: 'erb-float 2s ease-in-out infinite' }} />
-          Open to new opportunities
-        </div>
-
-        {/* Avatar */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-          <div style={{
-            position: 'relative',
-            animation: visible ? 'erb-fadein 0.7s ease forwards' : 'none',
-            opacity: visible ? 1 : 0,
-          }}>
-            <div style={{
-              width: 96, height: 96, borderRadius: '50%', overflow: 'hidden',
-              border: '3px solid #00d4ff',
-              boxShadow: '0 0 24px rgba(0,212,255,0.3)',
-            }}>
-              <img src={head2} alt="Eric Ryan Bowser" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+    <div>
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-stone-800 via-stone-700 to-amber-800 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="max-w-3xl">
+            <span className="inline-block bg-white/20 backdrop-blur-sm text-amber-200 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
+              Based in Salt Lake City · Reviewing Gear for the American West
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              The Right Gear for Rockhounding in the West
+            </h1>
+            <p className="text-lg md:text-xl text-stone-200 leading-relaxed mb-8">
+              Honest reviews of metal detectors, rock hammers, GPS units, and field gear — tested by someone who actually uses them on Utah's BLM land. No fluff. Just what works.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#categories"
+                className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-8 py-3 rounded-xl transition-colors text-sm"
+              >
+                Browse Gear
+              </a>
+              <a
+                href="#top-picks"
+                className="bg-white/15 backdrop-blur-sm text-white border border-white/25 font-semibold px-8 py-3 rounded-xl hover:bg-white/25 transition-colors text-sm"
+              >
+                Top Picks
+              </a>
             </div>
-            <div style={{
-              position: 'absolute', inset: -6, borderRadius: '50%',
-              border: '1px solid rgba(0,212,255,0.2)',
-              animation: 'erb-float 3s ease-in-out infinite',
-              pointerEvents: 'none',
-            }} />
           </div>
         </div>
+      </section>
 
-        {/* Name */}
-        <h1 style={{
-          fontSize: 'clamp(2.2rem, 6vw, 4rem)',
-          fontWeight: 800,
-          lineHeight: 1.1,
-          color: darkMode ? '#f1f5f9' : '#0f172a',
-          marginBottom: '10px',
-          letterSpacing: '-0.02em',
-          fontFamily: 'system-ui, sans-serif',
-          opacity: visible ? 1 : 0,
-          transition: 'opacity 0.6s ease 0.2s',
-        }}>
-          <TypewriterText text="Eric Ryan Bowser" delay={400} />
-        </h1>
-
-        <p style={{
-          fontSize: '1.1rem', fontWeight: 500,
-          color: '#00d4ff', marginBottom: '6px', fontFamily: 'monospace',
-          opacity: visible ? 1 : 0, transition: 'opacity 0.6s ease 0.4s',
-        }}>
-          Full-Stack Engineer · Cloud Architect in Training · AI Integrations
-        </p>
-
-        <p style={{
-          color: darkMode ? '#94a3b8' : '#475569',
-          fontSize: '0.95rem', maxWidth: '520px', margin: '0 auto 32px',
-          lineHeight: 1.7,
-          opacity: visible ? 1 : 0, transition: 'opacity 0.6s ease 0.5s',
-        }}>
-          10+ years building mission-critical systems with C#/.NET, React, Azure & Docker.
-          Currently shipping production apps under{' '}
-          <span style={{ color: '#a855f7', fontWeight: 600 }}>Execute &amp; Engrave LLC</span>.
-        </p>
-
-        {/* CTA links */}
-        <div style={{
-          display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 48,
-          opacity: visible ? 1 : 0, transition: 'opacity 0.6s ease 0.6s',
-        }}>
-          <a href="https://github.com/ericbowser" target="_blank" rel="noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 6,
-              background: darkMode ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)',
-              border: `1px solid ${darkMode ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)'}`,
-              color: darkMode ? '#f1f5f9' : '#0f172a',
-              padding: '10px 22px', borderRadius: 8, fontSize: '0.9rem', fontWeight: 600,
-              textDecoration: 'none', transition: 'all 0.2s',
-            }}
-            onMouseEnter={e => e.currentTarget.style.background = darkMode ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.1)'}
-            onMouseLeave={e => e.currentTarget.style.background = darkMode ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)'}
-          >
-            <FaGithub /> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/erbowser/" target="_blank" rel="noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: 6,
-              background: 'rgba(168,85,247,0.1)', border: '1px solid rgba(168,85,247,0.3)',
-              color: '#a855f7', padding: '10px 22px', borderRadius: 8,
-              fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none', transition: 'transform 0.2s',
-            }}
-            onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
-            onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
-          >
-            <FaLinkedin /> LinkedIn
-          </a>
+      {/* Stats Bar */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {stats.map((stat, i) => (
+              <div key={i}>
+                <div className="text-3xl font-bold text-amber-600">{stat.value}</div>
+                <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Nav cards */}
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-          gap: 16, marginBottom: 48,
-        }}>
-          {sections.map((section, i) => (
-            <div
-              key={section.id}
-              className="erb-card"
-              onClick={() => onNavigate(section.id)}
-              style={{
-                background: darkMode ? 'rgba(255,255,255,0.03)' : 'rgba(255,255,255,0.7)',
-                border: `1px solid ${darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)'}`,
-                borderRadius: 14, padding: '22px 16px',
-                cursor: 'pointer', transition: 'all 0.25s ease',
-                textAlign: 'center',
-                boxShadow: darkMode ? 'none' : '0 2px 12px rgba(0,0,0,0.06)',
-                opacity: visible ? 1 : 0,
-                animation: visible ? `erb-fadein 0.5s ease ${section.delay + 700}ms forwards` : 'none',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = section.color;
-                e.currentTarget.style.boxShadow = `0 8px 24px ${section.color}22`;
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.08)';
-                e.currentTarget.style.boxShadow = darkMode ? 'none' : '0 2px 12px rgba(0,0,0,0.06)';
-              }}
-            >
-              <div style={{
-                width: 44, height: 44, borderRadius: 10, margin: '0 auto 12px',
-                background: `${section.color}18`, color: section.color,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: '1.2rem',
-              }}>
-                {section.icon}
-              </div>
-              <h2 style={{
-                fontWeight: 700, fontSize: '1rem', marginBottom: 6,
-                color: darkMode ? '#f1f5f9' : '#0f172a',
-              }}>
-                {section.title}
-              </h2>
-              <p style={{
-                fontSize: '0.78rem', color: darkMode ? '#64748b' : '#64748b',
-                lineHeight: 1.5, marginBottom: 12,
-              }}>
-                {section.description}
-              </p>
-              <div style={{
-                display: 'inline-flex', alignItems: 'center', gap: 4,
-                color: section.color, fontSize: '0.8rem', fontWeight: 600,
-              }}>
-                Explore <FaArrowRight style={{ fontSize: '0.65rem' }} />
-              </div>
+      {/* Categories */}
+      <section id="categories" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Browse by Gear Category</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            Every category tested in the field — from Dugway Geode Beds to Topaz Mountain and beyond.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categoriesList.map(([slug, cat]) => {
+            const count = products.filter(p => p.category === slug).length;
+            return (
+              <Link
+                key={slug}
+                to={`/category/${slug}`}
+                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-amber-400 hover:shadow-lg transition-all"
+              >
+                <span className="text-3xl mb-3 block">{cat.icon}</span>
+                <h3 className="font-bold text-gray-900 group-hover:text-amber-700 transition-colors">
+                  {cat.name}
+                </h3>
+                <p className="text-sm text-gray-500 mt-2 leading-relaxed">{cat.description}</p>
+                <div className="mt-4">
+                  <span className="text-xs font-medium text-amber-700 bg-amber-50 px-2 py-1 rounded-full">
+                    {count} {count === 1 ? "product" : "products"} reviewed
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Top Picks */}
+      <section id="top-picks" className="bg-stone-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Top Picks for 2026</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              The gear that consistently performs in Utah's mineralized desert terrain.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featured.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Utah Sites Teaser */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Start in Your Backyard</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            Utah is one of the top rockhounding states in the country. Here are three sites worth your first trip.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {utahSites.map((site, i) => (
+            <div key={i} className="bg-white border border-gray-200 rounded-2xl p-6">
+              <div className="text-2xl mb-3">📍</div>
+              <h3 className="font-bold text-gray-900 text-lg mb-1">{site.name}</h3>
+              <p className="text-sm text-amber-700 font-medium mb-2">{site.what}</p>
+              <p className="text-sm text-gray-500">{site.distance}</p>
             </div>
           ))}
         </div>
+        <p className="text-center text-sm text-gray-400 mt-8">
+          Full site guides with GPS coordinates, best seasons, and what to bring — coming soon.
+        </p>
+      </section>
 
-        {/* Stats row */}
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12,
-          opacity: visible ? 1 : 0, transition: 'opacity 0.6s ease 1.2s',
-        }}>
-          {STATS.map((stat) => (
-            <div key={stat.label} className="erb-stat" style={{
-              textAlign: 'center', padding: '16px 8px',
-              background: darkMode ? 'rgba(255,255,255,0.02)' : 'rgba(255,255,255,0.6)',
-              border: `1px solid ${stat.color}25`,
-              borderRadius: 10, transition: 'transform 0.2s',
-            }}>
-              <div style={{
-                fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 800,
-                color: stat.color, fontFamily: 'monospace', lineHeight: 1,
-              }}>
-                {stat.value}
-              </div>
-              <div style={{
-                color: darkMode ? '#64748b' : '#94a3b8',
-                fontSize: '0.72rem', marginTop: 6, letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-              }}>
-                {stat.label}
-              </div>
+      {/* Why Trust Us */}
+      <section className="bg-stone-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Why Trust Western Rockhound?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <div className="text-2xl mb-2">⛏️</div>
+              <h3 className="font-bold text-gray-900 mb-2">Actually Field Tested</h3>
+              <p className="text-sm text-gray-500">We review gear on real digs across Utah's BLM land — not from spec sheets or press releases.</p>
             </div>
-          ))}
+            <div>
+              <div className="text-2xl mb-2">📍</div>
+              <h3 className="font-bold text-gray-900 mb-2">Local Knowledge</h3>
+              <p className="text-sm text-gray-500">Based in Salt Lake City. We write about Utah terrain, soil mineralization, and seasons from experience.</p>
+            </div>
+            <div>
+              <div className="text-2xl mb-2">🔒</div>
+              <h3 className="font-bold text-gray-900 mb-2">Honest Reviews</h3>
+              <p className="text-sm text-gray-500">We use affiliate links to earn commissions, but we never recommend gear we wouldn't bring into the field ourselves.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-r from-stone-800 to-amber-800 text-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Get Out There?</h2>
+          <p className="text-stone-300 mb-8">
+            Browse gear by category or check out our beginner guide to rockhounding in Utah.
+          </p>
+          <a
+            href="#categories"
+            className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-8 py-3 rounded-xl transition-colors"
+          >
+            Browse Gear →
+          </a>
+        </div>
+      </section>
     </div>
   );
 };
+
+function ProductCard({ product }) {
+  const stars = "★".repeat(Math.floor(product.rating)) + (product.rating % 1 >= 0.5 ? "½" : "");
+  return (
+    <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all">
+      <div className="mb-3">
+        <h3 className="font-bold text-gray-900 text-lg">{product.name}</h3>
+        <p className="text-sm text-gray-500">{product.tagline}</p>
+      </div>
+      <div className="text-amber-500 text-sm mb-3">{stars} {product.rating}</div>
+      <p className="text-sm text-gray-600 mb-1">
+        <span className="font-medium text-gray-700">Best for:</span> {product.bestFor}
+      </p>
+      <p className="text-sm text-gray-700 mb-4">
+        <span className="font-medium">Price:</span>{" "}
+        <span className="text-amber-700 font-semibold">{product.price}</span>
+      </p>
+      <div className="flex gap-2">
+        <a
+          href={product.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
+        >
+          Check Price →
+        </a>
+        <Link
+          to={`/review/${product.id}`}
+          className="bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
+        >
+          Review
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 export default Landing;
