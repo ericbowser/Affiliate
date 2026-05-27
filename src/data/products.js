@@ -9,8 +9,31 @@ export const products = [
     rating: 4.5,
     bestFor: "Brand-new detectorists on a tight budget",
     url: "https://amzn.to/43iswmN",
-    pros: ["Fully waterproof to 16 ft — submerge it, no worries","Single-menu turn-on-and-go design — minimal learning curve","Lightweight at 2.6 lbs — easy on the shoulders all day","USB rechargeable — no AA batteries to keep buying","Vibration alert plus LED flashlight and LCD backlight for low light"],
-    cons: ["Simpler tuning than Garrett or Minelab","Less depth on tiny targets in heavy mineralized soil"],
+    pros: [
+      "Fully waterproof to 16 ft — submerge it, no worries",
+      "Single-menu turn-on-and-go design — minimal learning curve",
+      "Lightweight at 2.6 lbs — easy on the shoulders all day",
+      "USB rechargeable — no AA batteries to keep buying",
+      "Vibration alert plus LED flashlight and LCD backlight for low light"
+    ],
+    cons: [
+      "Simpler tuning than Garrett or Minelab at the same price",
+      "Less depth on tiny targets in heavy mineralized soil"
+    ],
+    verdict: "The Simplex Lite earns its reputation as the best waterproof entry-level detector on the market. At under $300 it's fully submersible to 16 ft — a spec you won't find from Garrett or Minelab until you spend twice as much. If you're hunting Utah's creeks or want a no-fuss first detector that won't punish you for getting it wet, this is where to start.",
+    ownerPros: [
+      "Waterproofing is genuine — owners regularly hunt in water with no issues",
+      "Target ID accuracy impresses at the price point, especially on coins in the 0–6 inch range",
+      "USB charging is consistently praised — no AAs to manage in the field",
+      "Lighter than almost everything in its class — arm fatigue is rarely mentioned"
+    ],
+    ownerCons: [
+      "Depth in mineralized soil lags behind the Garrett Ace 400 for some owners",
+      "Limited tuning options frustrate hunters who want to dial in specific sites",
+      "Not the best choice if gold prospecting is your primary goal"
+    ],
+    whoFor: "You're brand new to metal detecting, hunting creeks or wet terrain, and want a waterproof detector without spending $500+. Also ideal if you refuse to deal with AA batteries.",
+    whoSkip: "You're hunting Utah's highly mineralized desert soil and want maximum depth. The Garrett Ace 400 handles mineralization better at a similar price.",
     tier: "budget"
   },
   {
@@ -20,10 +43,34 @@ export const products = [
     category: "metal-detectors",
     price: "$349",
     rating: 4.7,
-    bestFor: "Beginners ready to get serious",
+    bestFor: "Beginners ready to get serious about the hobby",
     url: "https://amzn.to/4dyU6Sx",
-    pros: ["Iron Audio feature distinguishes junk from finds","DD search coil for excellent depth and separation","Works great in mineralized Utah desert soil","Frequency adjust helps in trashy areas","Lightweight at 2.8 lbs"],
-    cons: ["No rechargeable battery (uses AAs)","Display can wash out in direct sunlight"],
+    pros: [
+      "Iron Audio feature distinguishes junk from real finds",
+      "DD search coil handles mineralized desert soil better than concentric coils",
+      "Frequency adjust helps in trashy, high-interference areas",
+      "Lightweight at 2.8 lbs — comfortable all day",
+      "Trusted Garrett build quality and US-based support"
+    ],
+    cons: [
+      "No rechargeable battery — runs on AAs",
+      "Display washes out in direct sunlight",
+      "No waterproofing — avoid creek hunting"
+    ],
+    verdict: "The Ace 400 is the most-recommended first serious detector in the hobby for a reason. Iron Audio is a genuine differentiator — you hear iron targets differently, which matters the moment you start hunting in trashy sites. The DD coil also handles Utah's mineralized desert soil better than the concentric coils found on cheaper models. If you're not hunting in water, this is the strongest entry-level buy.",
+    ownerPros: [
+      "Iron Audio consistently cited as a game-changer for learning to read targets",
+      "Holds up well in field conditions — owners report years of reliable use",
+      "Ground balance handles mineralized soil better than comparable Minelab entry models",
+      "Large online community means help is always available for new users"
+    ],
+    ownerCons: [
+      "No rechargeable battery is a real inconvenience — owners burn through AAs",
+      "Display glare in Utah's bright sun is a legitimate complaint",
+      "Heavier than the Nokta Simplex at 2.8 lbs — noticeable on long digs"
+    ],
+    whoFor: "You're moving past casual interest and want a detector that will teach you the hobby properly. Especially strong for Utah desert and open field hunting where water isn't a factor.",
+    whoSkip: "You plan to hunt creeks or wet conditions — the Ace 400 is not waterproof. Step up to the Garrett AT Max or Minelab Vanquish 540 instead.",
     tier: "mid"
   },
   {
@@ -33,10 +80,20 @@ export const products = [
     category: "metal-detectors",
     price: "$399",
     rating: 4.6,
-    bestFor: "Beginners who want serious technology",
+    bestFor: "Beginners who want serious technology without the serious price",
     url: "https://amzn.to/4a6IXWL",
-    pros: ["Multi-IQ simultaneous multi-frequency — rare at this price","Waterproof up to 3ft — great for creek hunting","Folds flat for easy transport","Vibration + audio alerts","Excellent depth on coins and nuggets"],
-    cons: ["App required for full settings control","Lighter build quality than Garrett"],
+    pros: [
+      "Multi-IQ simultaneous multi-frequency — rare under $500",
+      "Waterproof up to 3ft — solid for creek wading",
+      "Folds flat for easy transport and storage",
+      "Vibration + audio alerts for silent hunting",
+      "Excellent depth on coins and small targets"
+    ],
+    cons: [
+      "App required for full settings access",
+      "Lighter build quality than Garrett at the same price",
+      "Multi-IQ adds complexity for complete beginners"
+    ],
     tier: "mid"
   },
   {
@@ -48,8 +105,17 @@ export const products = [
     rating: 4.8,
     bestFor: "Intermediate hunters and wet terrain",
     url: "https://amzn.to/42Uv2iO",
-    pros: ["Fully submersible to 10ft — creek and river hunting","Z-Lynk wireless audio with low latency","Excellent ground balance for mineralized desert soil","Pro audio for tone identification","Built for serious daily use"],
-    cons: ["Higher price point","Heavier than entry models at 3.03 lbs"],
+    pros: [
+      "Fully submersible to 10ft — creek and river hunting",
+      "Z-Lynk wireless audio with low latency",
+      "Excellent ground balance for mineralized desert soil",
+      "Pro audio for tone identification",
+      "Built for serious daily use"
+    ],
+    cons: [
+      "Higher price point",
+      "Heavier than entry models at 3.03 lbs"
+    ],
     tier: "premium"
   },
   {
@@ -61,8 +127,17 @@ export const products = [
     rating: 4.6,
     bestFor: "Gold prospectors hunting flakes and small nuggets",
     url: "https://amzn.to/49jGJ6k",
-    pros: ["48 kHz frequency catches gold other detectors miss entirely","XGB auto ground balance handles highly mineralized desert soil","Two audio modes — 2-tone Beep and VCO Zip","Submersible 6 x 10 DD search coil for stream prospecting","Made in the USA with strong Garrett support"],
-    cons: ["Specialized for gold — less ideal for coins and relics","Control housing is rainproof but not fully submersible"],
+    pros: [
+      "48 kHz frequency catches gold other detectors miss entirely",
+      "XGB auto ground balance handles highly mineralized desert soil",
+      "Two audio modes — 2-tone Beep and VCO Zip",
+      "Submersible 6 x 10 DD search coil for stream prospecting",
+      "Made in the USA with strong Garrett support"
+    ],
+    cons: [
+      "Specialized for gold — less ideal for coins and relics",
+      "Control housing is rainproof but not fully submersible"
+    ],
     tier: "premium"
   },
   {
@@ -74,8 +149,32 @@ export const products = [
     rating: 4.8,
     bestFor: "Serious hunters who want one detector that does it all",
     url: "https://amzn.to/3RwArdq",
-    pros: ["Multi-IQ simultaneous multi-frequency for all targets at once","Fully waterproof and submersible to 10 ft","4 dedicated modes — Park, Field, Beach, and Gold","Low-latency wireless apt-X headphones included","Lightweight 2.96 lbs for all-day hunting"],
-    cons: ["Premium price for the feature set","Settings depth has a real learning curve early on"],
+    pros: [
+      "Multi-IQ simultaneous multi-frequency for all targets at once",
+      "Fully waterproof and submersible to 10 ft",
+      "4 dedicated modes — Park, Field, Beach, and Gold",
+      "Low-latency wireless apt-X headphones included",
+      "Lightweight 2.96 lbs for all-day hunting"
+    ],
+    cons: [
+      "Real learning curve — not a pickup-and-go detector",
+      "Earlier units had documented control box sealing issues",
+      "Shaft quality feels underwhelming at this price"
+    ],
+    verdict: "The Equinox 800 remains the benchmark for versatile detecting under $1,000. Multi-IQ means you're running multiple frequencies simultaneously — not choosing between them — which translates to better target ID in mineralized ground and trash-heavy sites. The learning curve is real, but owners who put in the time consistently report it outperforms detectors at 2–3x the price.",
+    ownerPros: [
+      "Multi-IQ performance in mineralized and trashy soil is consistently praised",
+      "Versatility across terrain types — parks, beaches, desert, creeks — without switching machines",
+      "Depth on deep targets regularly surprises owners upgrading from single-frequency detectors",
+      "Wireless audio with low latency works reliably in the field"
+    ],
+    ownerCons: [
+      "Learning curve is steep — owners warn it's not intuitive out of the box",
+      "Earlier production runs had documented control box flooding in submersion",
+      "Shaft and build feel plastic-heavy for a near-$900 machine"
+    ],
+    whoFor: "You've outgrown entry-level detecting and want one machine for every terrain. Especially strong if you're hunting multiple environments — Utah desert one weekend, creek beds the next.",
+    whoSkip: "You're brand new to the hobby. The settings depth will overwhelm you and you'll miss finds because you're tweaking menus. Start with the Ace 400 or Simplex Lite and come back.",
     tier: "premium"
   },
   {
@@ -87,8 +186,17 @@ export const products = [
     rating: 4.8,
     bestFor: "Experienced hunters upgrading from the Equinox 800",
     url: "https://amzn.to/4fJbR2R",
-    pros: ["119 high-resolution target IDs — sharper discrimination than the 800","Carbon-fiber 3-piece shaft, only 2.8 lbs, packs down to 24 inches","Fully waterproof to 10 ft with the 11\" Double-D coil","Comes with both 11\" and 6\" coils — beach to brush in one box","Wireless apt-X Low Latency headphones included"],
-    cons: ["Meaningful upgrade over the 800 only if you'll use the deeper settings","Top of the lineup — full retail above $1k"],
+    pros: [
+      "119 high-resolution target IDs — sharper discrimination than the 800",
+      "Carbon-fiber 3-piece shaft, only 2.8 lbs, packs down to 24 inches",
+      "Fully waterproof to 10 ft with the 11\" Double-D coil",
+      "Comes with both 11\" and 6\" coils — beach to brush in one box",
+      "Wireless apt-X Low Latency headphones included"
+    ],
+    cons: [
+      "Meaningful upgrade over the 800 only if you'll use the deeper settings",
+      "Top of the lineup — full retail above $1k"
+    ],
     tier: "premium"
   },
 
@@ -102,8 +210,17 @@ export const products = [
     rating: 4.9,
     bestFor: "Every rockhound, beginner to expert",
     url: "https://amzn.to/3PDmlX7",
-    pros: ["One-piece forged steel — virtually indestructible","Pointed tip for splitting and prying","Shock-reduction grip reduces fatigue","Made in the USA since 1923","Lifetime warranty"],
-    cons: ["Heavier than fiberglass-handle alternatives","Grip can get slippery when wet"],
+    pros: [
+      "One-piece forged steel — virtually indestructible",
+      "Pointed tip for splitting and prying",
+      "Shock-reduction grip reduces fatigue",
+      "Made in the USA since 1923",
+      "Lifetime warranty"
+    ],
+    cons: [
+      "Heavier than fiberglass-handle alternatives",
+      "Grip can get slippery when wet"
+    ],
     tier: "mid"
   },
   {
@@ -115,8 +232,17 @@ export const products = [
     rating: 4.8,
     bestFor: "Gold prospectors and serious diggers",
     url: "https://amzn.to/42TPJvj",
-    pros: ["Flat blade for prying and scraping","Pointed pick for breaking and digging","Same forged-steel Estwing quality","Shock-reduction grip","Perfect balance for all-day use"],
-    cons: ["Specialized — less versatile than standard hammer","Overkill for casual surface collecting"],
+    pros: [
+      "Flat blade for prying and scraping",
+      "Pointed pick for breaking and digging",
+      "Same forged-steel Estwing quality",
+      "Shock-reduction grip",
+      "Perfect balance for all-day use"
+    ],
+    cons: [
+      "Specialized — less versatile than standard hammer",
+      "Overkill for casual surface collecting"
+    ],
     tier: "mid"
   },
   {
@@ -128,8 +254,17 @@ export const products = [
     rating: 4.8,
     bestFor: "Specimen collectors and general field work",
     url: "https://amzn.to/4dALQBG",
-    pros: ["One-piece forged steel construction — no handle to break","Pick end for breaking and chisel end for prying","Shock-reduction grip reduces hand fatigue","Compact size — easy to carry on long hikes","Made in the USA with Estwing's lifetime warranty"],
-    cons: ["Shorter handle than the E3-23LP — less leverage on large rocks","Pick end dulls over time on very hard material"],
+    pros: [
+      "One-piece forged steel construction — no handle to break",
+      "Pick end for breaking and chisel end for prying",
+      "Shock-reduction grip reduces hand fatigue",
+      "Compact size — easy to carry on long hikes",
+      "Made in the USA with Estwing's lifetime warranty"
+    ],
+    cons: [
+      "Shorter handle than the E3-23LP — less leverage on large rocks",
+      "Pick end dulls over time on very hard material"
+    ],
     tier: "budget"
   },
   {
@@ -141,8 +276,17 @@ export const products = [
     rating: 4.5,
     bestFor: "Cutting rough specimens and trimming finds in the field or shop",
     url: "https://amzn.to/4wYquWy",
-    pros: ["Adjustable frame fits 10\" and 12\" blades","Comfortable grip for extended cutting sessions","Compatible with standard replacement blades","Lightweight and easy to pack for field trips","Great value at the price point"],
-    cons: ["Economy build — not for heavy daily professional use","Blade not included"],
+    pros: [
+      "Adjustable frame fits 10\" and 12\" blades",
+      "Comfortable grip for extended cutting sessions",
+      "Compatible with standard replacement blades",
+      "Lightweight and easy to pack for field trips",
+      "Great value at the price point"
+    ],
+    cons: [
+      "Economy build — not for heavy daily professional use",
+      "Blade not included"
+    ],
     tier: "budget"
   },
 
@@ -156,8 +300,16 @@ export const products = [
     rating: 4.5,
     bestFor: "First-time tumblers and beginners",
     url: "https://amzn.to/4vfVFuL",
-    pros: ["Includes grit, polish, and rough rocks to start","Quiet motor by tumbler standards","Complete kit — nothing extra to buy","Great for Utah geodes and agate"],
-    cons: ["Small 1 lb barrel capacity","Motor may need replacement after heavy use"],
+    pros: [
+      "Includes grit, polish, and rough rocks to start",
+      "Quiet motor by tumbler standards",
+      "Complete kit — nothing extra to buy",
+      "Great for Utah geodes and agate"
+    ],
+    cons: [
+      "Small 1 lb barrel capacity",
+      "Motor may need replacement after heavy use"
+    ],
     tier: "budget"
   },
   {
@@ -169,8 +321,17 @@ export const products = [
     rating: 4.6,
     bestFor: "Beginners wanting a complete kit without extras to buy",
     url: "https://amzn.to/49Uf1x4",
-    pros: ["Complete kit — grit, polish, and rough stones included","Durable barrel holds up to repeated use","Quiet enough for home use","Good starter size for field finds","Simple operation — no experience needed"],
-    cons: ["Smaller capacity than hobbyist-grade tumblers","Not suitable for very hard stones like corundum"],
+    pros: [
+      "Complete kit — grit, polish, and rough stones included",
+      "Durable barrel holds up to repeated use",
+      "Quiet enough for home use",
+      "Good starter size for field finds",
+      "Simple operation — no experience needed"
+    ],
+    cons: [
+      "Smaller capacity than hobbyist-grade tumblers",
+      "Not suitable for very hard stones like corundum"
+    ],
     tier: "budget"
   },
   {
@@ -182,8 +343,16 @@ export const products = [
     rating: 4.4,
     bestFor: "Tumblers who want more capacity and control",
     url: "https://amzn.to/4vivx2p",
-    pros: ["Digital timer — set it and forget it","Dual barrel lets you run two batches simultaneously","Good value at the price point","Handles harder stones well"],
-    cons: ["Louder than entry-level tumblers","Barrel seals need regular monitoring"],
+    pros: [
+      "Digital timer — set it and forget it",
+      "Dual barrel lets you run two batches simultaneously",
+      "Good value at the price point",
+      "Handles harder stones well"
+    ],
+    cons: [
+      "Louder than entry-level tumblers",
+      "Barrel seals need regular monitoring"
+    ],
     tier: "mid"
   },
 
@@ -197,8 +366,17 @@ export const products = [
     rating: 4.7,
     bestFor: "Any rockhound entering dark or enclosed spaces",
     url: "https://amzn.to/4wRB8yb",
-    pros: ["High lumens — bright enough for mine exploration","Red night-vision mode preserves eye adaptation","Waterproof rated for rain and splashing","Strobe for emergency signaling","Runs on AAA batteries — easy to source anywhere"],
-    cons: ["Battery life drops fast at full brightness","Headband can loosen over a long day"],
+    pros: [
+      "High lumens — bright enough for mine exploration",
+      "Red night-vision mode preserves eye adaptation",
+      "Waterproof rated for rain and splashing",
+      "Strobe for emergency signaling",
+      "Runs on AAA batteries — easy to source anywhere"
+    ],
+    cons: [
+      "Battery life drops fast at full brightness",
+      "Headband can loosen over a long day"
+    ],
     tier: "mid"
   },
   {
@@ -210,8 +388,17 @@ export const products = [
     rating: 4.7,
     bestFor: "Utah desert and high-desert rockhounding",
     url: "https://amzn.to/4dA1NIh",
-    pros: ["Keeps drinks cold 24hrs and hot 12hrs in the field","Built-in cup lid — no extra cup needed at camp","Virtually indestructible — survives drops and rough terrain","Packable design fits most side pockets","Lifetime warranty — Stanley stands behind it"],
-    cons: ["Heavier than ultralight plastic alternatives","Lid can be tight when cold"],
+    pros: [
+      "Keeps drinks cold 24hrs and hot 12hrs in the field",
+      "Built-in cup lid — no extra cup needed at camp",
+      "Virtually indestructible — survives drops and rough terrain",
+      "Packable design fits most side pockets",
+      "Lifetime warranty — Stanley stands behind it"
+    ],
+    cons: [
+      "Heavier than ultralight plastic alternatives",
+      "Lid can be tight when cold"
+    ],
     tier: "mid"
   },
   {
@@ -223,8 +410,17 @@ export const products = [
     rating: 4.7,
     bestFor: "Remote site rockhounding and backcountry safety",
     url: "https://amzn.to/4nSxM9P",
-    pros: ["Fire starter built in — critical on remote BLM land","Emergency whistle included","Saw blade for brush clearing","19 tools in one compact package","25-year Leatherman warranty"],
-    cons: ["Heavier than minimalist multi-tools","Fire starter takes practice to use reliably"],
+    pros: [
+      "Fire starter built in — critical on remote BLM land",
+      "Emergency whistle included",
+      "Saw blade for brush clearing",
+      "19 tools in one compact package",
+      "25-year Leatherman warranty"
+    ],
+    cons: [
+      "Heavier than minimalist multi-tools",
+      "Fire starter takes practice to use reliably"
+    ],
     tier: "premium"
   },
 
@@ -238,8 +434,17 @@ export const products = [
     rating: 4.6,
     bestFor: "Marking find locations and navigating BLM land",
     url: "https://amzn.to/49Ui3kU",
-    pros: ["3-axis compass + barometric altimeter","Pre-loaded TopoActive maps of Western US","16 hr battery life on 2 AAs","Glove-friendly buttons for winter use","Waterproof IPX7"],
-    cons: ["Small 2.2 inch screen","No touchscreen"],
+    pros: [
+      "3-axis compass + barometric altimeter",
+      "Pre-loaded TopoActive maps of Western US",
+      "16 hr battery life on 2 AAs",
+      "Glove-friendly buttons for winter use",
+      "Waterproof IPX7"
+    ],
+    cons: [
+      "Small 2.2 inch screen",
+      "No touchscreen"
+    ],
     tier: "mid"
   },
   {
@@ -251,8 +456,17 @@ export const products = [
     rating: 4.7,
     bestFor: "Solo rockhounds in remote Utah desert and mountains",
     url: "https://amzn.to/3POuVSN",
-    pros: ["SOS connects to GEOS 24/7 rescue coordination","Two-way texting via Iridium satellite network","Works anywhere on Earth — no cell signal needed","Pairs with phone for easy messaging","24hr battery in tracking mode"],
-    cons: ["Requires monthly subscription ($14.95-$49.99/mo)","Small buttons hard to use with gloves"],
+    pros: [
+      "SOS connects to GEOS 24/7 rescue coordination",
+      "Two-way texting via Iridium satellite network",
+      "Works anywhere on Earth — no cell signal needed",
+      "Pairs with phone for easy messaging",
+      "24hr battery in tracking mode"
+    ],
+    cons: [
+      "Requires monthly subscription ($14.95-$49.99/mo)",
+      "Small buttons hard to use with gloves"
+    ],
     tier: "premium"
   },
 
@@ -266,8 +480,17 @@ export const products = [
     rating: 4.6,
     bestFor: "Utah-based rockhounds of all skill levels",
     url: "https://amzn.to/4wNZyst",
-    pros: ["75 sites including Topaz Mountain, Dugway, Tintic","GPS coordinates for each location","What you will find and best seasons listed","Land access and permit notes included","Compact enough to bring into the field"],
-    cons: ["Some site info slightly dated — verify access online","No color photos inside (line drawings only)"],
+    pros: [
+      "75 sites including Topaz Mountain, Dugway, Tintic",
+      "GPS coordinates for each location",
+      "What you will find and best seasons listed",
+      "Land access and permit notes included",
+      "Compact enough to bring into the field"
+    ],
+    cons: [
+      "Some site info slightly dated — verify access online",
+      "No color photos inside (line drawings only)"
+    ],
     tier: "budget"
   },
   {
@@ -279,8 +502,16 @@ export const products = [
     rating: 4.4,
     bestFor: "Gem hunters focused on Utah minerals and crystals",
     url: "https://amzn.to/4fLlEW9",
-    pros: ["Detailed directions to lesser-known sites","Mineral descriptions and photos","Good companion to Hazlewood guide","Covers geodes, topaz, obsidian, and garnets"],
-    cons: ["Older edition — some roads have changed","Less detailed than Hazlewood on access information"],
+    pros: [
+      "Detailed directions to lesser-known sites",
+      "Mineral descriptions and photos",
+      "Good companion to Hazlewood guide",
+      "Covers geodes, topaz, obsidian, and garnets"
+    ],
+    cons: [
+      "Older edition — some roads have changed",
+      "Less detailed than Hazlewood on access information"
+    ],
     tier: "budget"
   }
 ];

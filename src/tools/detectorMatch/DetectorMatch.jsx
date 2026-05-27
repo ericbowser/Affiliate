@@ -47,11 +47,12 @@ const DetectorMatch = () => {
       <nav className="text-sm text-gray-500 mb-8">
         <Link to="/" className="hover:text-amber-700">Home</Link>
         <span className="mx-2">/</span>
+        <Link to="/category/metal-detectors" className="hover:text-amber-700">Metal Detectors</Link>
+        <span className="mx-2">/</span>
         <span className="text-gray-900">Detector Match Quiz</span>
       </nav>
 
       {step === 'intro' && <IntroScreen onStart={() => setStep('question')} />}
-
       {step === 'question' && (
         <QuestionScreen
           question={currentQuestion}
@@ -61,7 +62,6 @@ const DetectorMatch = () => {
           onBack={handleBack}
         />
       )}
-
       {step === 'result' && result && (
         <ResultScreen result={result} onRetake={handleRetake} />
       )}
@@ -90,9 +90,7 @@ const IntroScreen = ({ onStart }) => (
     >
       Start the quiz →
     </button>
-    <p className="text-xs text-gray-400 mt-6">
-      No email required. We'll show your match instantly.
-    </p>
+    <p className="text-xs text-gray-400 mt-6">No email required. We'll show your match instantly.</p>
   </div>
 );
 
@@ -101,11 +99,9 @@ const IntroScreen = ({ onStart }) => (
 const QuestionScreen = ({ question, questionIndex, selectedValue, onSelect, onBack }) => (
   <div>
     <ProgressBar current={questionIndex + 1} total={TOTAL_QUESTIONS} />
-
     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-8 mb-8">
       {question.label}
     </h2>
-
     <div className="space-y-3">
       {question.options.map(option => {
         const isSelected = selectedValue === option.value;
@@ -127,7 +123,6 @@ const QuestionScreen = ({ question, questionIndex, selectedValue, onSelect, onBa
         );
       })}
     </div>
-
     <div className="mt-8 flex items-center justify-between">
       <button
         onClick={onBack}
@@ -135,9 +130,7 @@ const QuestionScreen = ({ question, questionIndex, selectedValue, onSelect, onBa
       >
         ← Back
       </button>
-      <span className="text-sm text-gray-400">
-        {questionIndex + 1} of {TOTAL_QUESTIONS}
-      </span>
+      <span className="text-sm text-gray-400">{questionIndex + 1} of {TOTAL_QUESTIONS}</span>
     </div>
   </div>
 );
@@ -165,8 +158,7 @@ const ResultScreen = ({ result, onRetake }) => {
           No detector matches all your requirements.
         </h2>
         <p className="text-gray-600 mb-6">
-          Your answers were too restrictive for the current catalog. Try loosening
-          the water or budget filter.
+          Your answers were too restrictive. Try loosening the water or budget filter.
         </p>
         <button
           onClick={onRetake}
@@ -211,11 +203,7 @@ const ResultScreen = ({ result, onRetake }) => {
 const DetectorCard = ({ pick, isPrimary = false }) => {
   const { detector, matches } = pick;
   return (
-    <div
-      className={`bg-white rounded-2xl border ${
-        isPrimary ? 'border-amber-300 shadow-md' : 'border-gray-200'
-      } overflow-hidden`}
-    >
+    <div className={`bg-white rounded-2xl border ${isPrimary ? 'border-amber-300 shadow-md' : 'border-gray-200'} overflow-hidden`}>
       <div className="p-6 sm:p-8">
         <div className="flex items-start justify-between gap-4 mb-3">
           <h2 className={`font-bold text-gray-900 ${isPrimary ? 'text-2xl sm:text-3xl' : 'text-xl'}`}>
@@ -251,28 +239,19 @@ const DetectorCard = ({ pick, isPrimary = false }) => {
           <p className="text-gray-700 leading-relaxed mb-6">{detector.pitchAngle}</p>
         )}
 
-        <div className="flex flex-col sm:flex-row gap-3">
-          <a
-            href={detector.url}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="flex-1 bg-amber-600 hover:bg-amber-500 text-white px-5 py-3 rounded-xl font-medium text-center transition-colors"
-          >
-            Check current price →
-          </a>
-          <Link
-            to={`/review/${detector.id}`}
-            className="flex-1 bg-white hover:bg-stone-50 text-gray-900 border border-gray-300 px-5 py-3 rounded-xl font-medium text-center transition-colors"
-          >
-            Read full review
-          </Link>
-        </div>
+        <a
+          href={detector.url}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          className="block w-full bg-amber-600 hover:bg-amber-500 text-white px-5 py-3 rounded-xl font-medium text-center transition-colors"
+        >
+          Check current price →
+        </a>
       </div>
     </div>
   );
 };
 
-// Required by FTC and Amazon Associates TOS — kept minimal and factual
 const LegalDisclosure = () => (
   <p className="text-xs text-gray-400 mt-10 text-center max-w-lg mx-auto leading-relaxed">
     As an Amazon Associate we earn from qualifying purchases at no extra cost to you.

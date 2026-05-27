@@ -9,10 +9,10 @@ const Landing = () => {
   const featured = products.filter(p => p.tier === "premium" || p.rating >= 4.7).slice(0, 3);
 
   const stats = [
-    { value: `${products.length}+`, label: "Products Reviewed" },
+    { value: `${products.length}+`, label: "Products Covered" },
     { value: "6", label: "Gear Categories" },
     { value: "Utah", label: "Home Base" },
-    { value: "100%", label: "Field Tested" },
+    { value: "BLM", label: "Our Backyard" },
   ];
 
   const utahSites = [
@@ -28,13 +28,14 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
             <span className="inline-block bg-white/20 backdrop-blur-sm text-amber-200 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
-              Based in Salt Lake City · Reviewing Gear for the American West
+              Based in Salt Lake City · Gear for the American West
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               The Right Gear for Rockhounding in the West
             </h1>
             <p className="text-lg md:text-xl text-stone-200 leading-relaxed mb-8">
-              Honest reviews of metal detectors, rock hammers, GPS units, and field gear — tested by someone who actually uses them on Utah's BLM land. No fluff. Just what works.
+              Honest gear picks for metal detectors, rock hammers, GPS units, and field tools —
+              chosen for Utah's BLM land, desert terrain, and mineralized soil. No fluff. Just what works.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -43,12 +44,12 @@ const Landing = () => {
               >
                 Browse Gear
               </a>
-              <a
-                href="#top-picks"
+              <Link
+                to="/tools/detector-match"
                 className="bg-white/15 backdrop-blur-sm text-white border border-white/25 font-semibold px-8 py-3 rounded-xl hover:bg-white/25 transition-colors text-sm"
               >
-                Top Picks
-              </a>
+                Find My Detector →
+              </Link>
             </div>
           </div>
         </div>
@@ -73,7 +74,7 @@ const Landing = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Browse by Gear Category</h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Every category tested in the field — from Dugway Geode Beds to Topaz Mountain and beyond.
+            From Dugway Geode Beds to Topaz Mountain — gear chosen for where you're actually going.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -92,12 +93,34 @@ const Landing = () => {
                 <p className="text-sm text-gray-500 mt-2 leading-relaxed">{cat.description}</p>
                 <div className="mt-4">
                   <span className="text-xs font-medium text-amber-700 bg-amber-50 px-2 py-1 rounded-full">
-                    {count} {count === 1 ? "product" : "products"} reviewed
+                    {count} {count === 1 ? "product" : "products"}
                   </span>
                 </div>
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* Detector Quiz CTA */}
+      <section className="bg-amber-50 border-y border-amber-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+            Interactive Tool
+          </span>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Not sure which metal detector to buy?
+          </h2>
+          <p className="text-gray-600 max-w-xl mx-auto mb-8">
+            Answer 6 questions about your budget, terrain, and experience.
+            Get a matched recommendation with honest reasoning — in 30 seconds.
+          </p>
+          <Link
+            to="/tools/detector-match"
+            className="inline-block bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-3 rounded-xl transition-colors"
+          >
+            Take the Detector Match Quiz →
+          </Link>
         </div>
       </section>
 
@@ -123,7 +146,7 @@ const Landing = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Start in Your Backyard</h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Utah is one of the top rockhounding states in the country. Here are three sites worth your first trip.
+            Utah is one of the best rockhounding states in the country. Here are three sites worth your first trip.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -136,30 +159,33 @@ const Landing = () => {
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-gray-400 mt-8">
-          Full site guides with GPS coordinates, best seasons, and what to bring — coming soon.
-        </p>
       </section>
 
-      {/* Why Trust Us */}
+      {/* About / Trust */}
       <section className="bg-stone-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Why Trust Western Rockhound?</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">About Western Rockhound</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="text-2xl mb-2">⛏️</div>
-              <h3 className="font-bold text-gray-900 mb-2">Actually Field Tested</h3>
-              <p className="text-sm text-gray-500">We review gear on real digs across Utah's BLM land — not from spec sheets or press releases.</p>
-            </div>
-            <div>
               <div className="text-2xl mb-2">📍</div>
-              <h3 className="font-bold text-gray-900 mb-2">Local Knowledge</h3>
-              <p className="text-sm text-gray-500">Based in Salt Lake City. We write about Utah terrain, soil mineralization, and seasons from experience.</p>
+              <h3 className="font-bold text-gray-900 mb-2">Utah-Based</h3>
+              <p className="text-sm text-gray-500">
+                Built by Eric Bowser in Salt Lake City. Every site, terrain type, and season mentioned here is ground we know personally.
+              </p>
             </div>
             <div>
-              <div className="text-2xl mb-2">🔒</div>
-              <h3 className="font-bold text-gray-900 mb-2">Honest Reviews</h3>
-              <p className="text-sm text-gray-500">We use affiliate links to earn commissions, but we never recommend gear we wouldn't bring into the field ourselves.</p>
+              <div className="text-2xl mb-2">⛏️</div>
+              <h3 className="font-bold text-gray-900 mb-2">Niche Focus</h3>
+              <p className="text-sm text-gray-500">
+                We cover gear specifically for Western rockhounding — not general outdoor gear. Mineralized desert soil, BLM access, and high-desert conditions shape every pick.
+              </p>
+            </div>
+            <div>
+              <div className="text-2xl mb-2">🧭</div>
+              <h3 className="font-bold text-gray-900 mb-2">No Fluff</h3>
+              <p className="text-sm text-gray-500">
+                Straight pros, cons, and who each piece of gear is actually best for. We'd rather send you to the right $50 tool than upsell you on something you don't need.
+              </p>
             </div>
           </div>
         </div>
@@ -170,14 +196,22 @@ const Landing = () => {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Out There?</h2>
           <p className="text-stone-300 mb-8">
-            Browse gear by category or check out our beginner guide to rockhounding in Utah.
+            Browse gear by category or take the detector quiz to find your match.
           </p>
-          <a
-            href="#categories"
-            className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-8 py-3 rounded-xl transition-colors"
-          >
-            Browse Gear →
-          </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="#categories"
+              className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-semibold px-8 py-3 rounded-xl transition-colors"
+            >
+              Browse Gear →
+            </a>
+            <Link
+              to="/tools/detector-match"
+              className="bg-white/15 text-white border border-white/25 font-semibold px-8 py-3 rounded-xl hover:bg-white/25 transition-colors"
+            >
+              Take the Quiz →
+            </Link>
+          </div>
         </div>
       </section>
     </div>
@@ -200,22 +234,14 @@ function ProductCard({ product }) {
         <span className="font-medium">Price:</span>{" "}
         <span className="text-amber-700 font-semibold">{product.price}</span>
       </p>
-      <div className="flex gap-2">
-        <a
-          href={product.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
-        >
-          Check Price →
-        </a>
-        <Link
-          to={`/review/${product.id}`}
-          className="bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
-        >
-          Review
-        </Link>
-      </div>
+      <a
+        href={product.url}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="block w-full bg-amber-600 hover:bg-amber-500 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
+      >
+        Check Price →
+      </a>
     </div>
   );
 }
