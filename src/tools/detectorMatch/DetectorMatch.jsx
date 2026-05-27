@@ -1,0 +1,292 @@
+import React, { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { questions, TOTAL_QUESTIONS } from './questions.js';
+import { recommendDetectors } from './engine.js';
+import { getDetectorsForQuiz } from './detectorAttrs.js';
+
+/**
+ * Detector Match — interactive buying-guide quiz
+ *
+ * Drop into router as:
+ *   <Route path="/tools/detector-match" element={<DetectorMatch />} />
+ *
+ * The component depends only on the engine + questions + data abstractions.
+ * Swap out any of those without touching this file (Dependency Inversion).
+ */
+const DetectorMatch = () => {
+  const detectors = useMemo(() => getDetectorsForQuiz(), []);
+  const [step, setStep] = useState('intro');     // 'intro' | 'question' | 'result'
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [answers, setAnswers] = useState({});
+
+  const result = useMemo(() => {
+    if (step !== 'result') return null;
+    return recommendDetectors(detectors, answers);
+  }, [step, detectors, answers]);
+
+  const currentQuestion = questions[questionIndex];
+  const isLastQuestion = questionIndex === TOTAL_QUESTIONS - 1;
+
+  const handleSelect = (value) => {
+    const nextAnswers = { ...answers, [currentQuestion.id]: value };
+    setAnswers(nextAnswers);
+    if (isLastQuestion) {
+      setStep('result');
+    } else {
+      setQuestionIndex(questionIndex + 1);
+    }
+  };
+
+  const handleBack = () => {
+    if (questionIndex === 0) {
+      setStep('intro');
+    } else {
+      setQuestionIndex(questionIndex - 1);
+    }
+  };
+
+  const handleRetake = () => {
+    setAnswers({});
+    setQuestionIndex(0);
+    setStep('intro');
+  };
+
+  return (
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <nav className="text-sm text-gray-500 mb-8">
+        <Link to="/" className="hover:text-amber-700">Home</Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-900">Detector Match Quiz</span>
+      </nav>
+
+      {step === 'intro' && <IntroScreen onStart={() => setStep('question')} />}
+
+      {step === 'question' && (
+        <QuestionScreen
+          question={currentQuestion}
+          questionIndex={questionIndex}
+          selectedValue={answers[currentQuestion.id]}
+          onSelect={handleSelect}
+          onBack={handleBack}
+        />
+      )}
+
+      {step === 'result' && result && (
+        <ResultScreen result={result} onRetake={handleRetake} />
+      )}
+    </div>
+  );
+};
+
+// ─── INTRO ─────────────────────────────────────────────────────────────
+
+const IntroScreen = ({ onStart }) => (
+  <div className="text-center">
+    <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
+      Interactive Tool · ~30 seconds
+    </span>
+    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+      Which metal detector should you buy?
+    </h1>
+    <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+      Answer 6 quick questions about your budget, experience, and where you'll hunt.
+      We'll match you with the detector that actually fits — with honest reasoning,
+      not affiliate hype.
+    </p>
+    <button
+      onClick={onStart}
+      className="bg-amber-600 hover:bg-amber-500 text-white px-8 py-3 rounded-xl text-base font-medium transition-colors shadow-sm"
+    >
+      Start the quiz →
+    </button>
+    <p className="text-xs text-gray-400 mt-6">
+      No email required. We'll show your match instantly.
+    </p>
+  </div>
+);
+
+// ─── QUESTION ──────────────────────────────────────────────────────────
+
+const QuestionScreen = ({ question, questionIndex, selectedValue, onSelect, onBack }) => (
+  <div>
+    <ProgressBar current={questionIndex + 1} total={TOTAL_QUESTIONS} />
+
+    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-8 mb-8">
+      {question.label}
+    </h2>
+
+    <div className="space-y-3">
+      {question.options.map(option => {
+        const isSelected = selectedValue === option.value;
+        return (
+          <button
+            key={option.value}
+            onClick={() => onSelect(option.value)}
+            className={`w-full text-left p-4 sm:p-5 rounded-xl border transition-all ${
+              isSelected
+                ? 'border-amber-500 bg-amber-50'
+                : 'border-gray-200 bg-white hover:border-amber-300 hover:bg-stone-50'
+            }`}
+          >
+            <div className="font-semibold text-gray-900">{option.label}</div>
+            {option.hint && (
+              <div className="text-sm text-gray-500 mt-1">{option.hint}</div>
+            )}
+          </button>
+        );
+      })}
+    </div>
+
+    <div className="mt-8 flex items-center justify-between">
+      <button
+        onClick={onBack}
+        className="text-sm text-gray-500 hover:text-amber-700 transition-colors"
+      >
+        ← Back
+      </button>
+      <span className="text-sm text-gray-400">
+        {questionIndex + 1} of {TOTAL_QUESTIONS}
+      </span>
+    </div>
+  </div>
+);
+
+const ProgressBar = ({ current, total }) => (
+  <div className="flex gap-1.5">
+    {Array.from({ length: total }).map((_, i) => (
+      <div
+        key={i}
+        className={`h-1.5 flex-1 rounded-full transition-colors ${
+          i < current ? 'bg-amber-600' : 'bg-stone-200'
+        }`}
+      />
+    ))}
+  </div>
+);
+
+// ─── RESULT ────────────────────────────────────────────────────────────
+
+const ResultScreen = ({ result, onRetake }) => {
+  if (!result.primary) {
+    return (
+      <div className="text-center py-12">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          No detector matches all your requirements.
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Your answers were too restrictive for the current catalog. Try loosening
+          the water or budget filter.
+        </p>
+        <button
+          onClick={onRetake}
+          className="bg-amber-600 hover:bg-amber-500 text-white px-6 py-2.5 rounded-lg font-medium"
+        >
+          Retake the quiz
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+        Your match
+      </span>
+      <DetectorCard pick={result.primary} isPrimary />
+
+      {result.runnerUp && (
+        <>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mt-12 mb-4">
+            Worth considering
+          </h3>
+          <DetectorCard pick={result.runnerUp} />
+        </>
+      )}
+
+      <div className="mt-12 text-center">
+        <button
+          onClick={onRetake}
+          className="text-sm text-amber-700 hover:text-amber-900 underline transition-colors"
+        >
+          Retake the quiz
+        </button>
+      </div>
+
+      <AffiliateDisclosure />
+    </div>
+  );
+};
+
+const DetectorCard = ({ pick, isPrimary = false }) => {
+  const { detector, matches } = pick;
+  return (
+    <div
+      className={`bg-white rounded-2xl border ${
+        isPrimary ? 'border-amber-300 shadow-md' : 'border-gray-200'
+      } overflow-hidden`}
+    >
+      <div className="p-6 sm:p-8">
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <h2 className={`font-bold text-gray-900 ${isPrimary ? 'text-2xl sm:text-3xl' : 'text-xl'}`}>
+            {detector.name}
+          </h2>
+          <div className="text-right shrink-0">
+            <div className={`font-bold text-amber-700 ${isPrimary ? 'text-2xl' : 'text-lg'}`}>
+              {detector.price}
+            </div>
+            <div className="text-xs text-gray-500">★ {detector.rating}</div>
+          </div>
+        </div>
+
+        <p className="text-gray-600 italic mb-6">{detector.tagline}</p>
+
+        {matches.length > 0 && (
+          <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+              Why this matches you
+            </div>
+            <ul className="space-y-1.5">
+              {matches.map((m, i) => (
+                <li key={i} className="text-sm text-gray-700 flex">
+                  <span className="text-amber-600 mr-2 shrink-0">✓</span>
+                  <span>{m}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {isPrimary && (
+          <p className="text-gray-700 leading-relaxed mb-6">{detector.pitchAngle}</p>
+        )}
+
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a
+            href={detector.url}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="flex-1 bg-amber-600 hover:bg-amber-500 text-white px-5 py-3 rounded-xl font-medium text-center transition-colors"
+          >
+            Check current price →
+          </a>
+          <Link
+            to={`/review/${detector.id}`}
+            className="flex-1 bg-white hover:bg-stone-50 text-gray-900 border border-gray-300 px-5 py-3 rounded-xl font-medium text-center transition-colors"
+          >
+            Read full review
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AffiliateDisclosure = () => (
+  <p className="text-xs text-gray-400 mt-10 text-center max-w-lg mx-auto leading-relaxed">
+    Western Rockhound participates in affiliate programs including Amazon Associates.
+    As an Amazon Associate we earn from qualifying purchases. Our recommendations are
+    based on the scoring engine — not the commission rate.
+  </p>
+);
+
+export default DetectorMatch;

@@ -8,6 +8,7 @@ import Review from "./components/Review";
 import Compare from "./components/Compare";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
+import DetectorMatch from "./tools/detectorMatch/DetectorMatch.jsx";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/category/:slug" element={<Category />} />
             <Route path="/review/:id" element={<Review />} />
             <Route path="/compare/:id1/:id2" element={<Compare />} />
+            <Route path="/tools/detector-match" element={<DetectorMatch />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

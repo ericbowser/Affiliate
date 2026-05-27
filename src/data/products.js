@@ -1,6 +1,29 @@
 export const products = [
   // --- METAL DETECTORS ---
   {
+    id: "nokta-simplex-lite",
+    name: "Nokta Simplex Lite",
+    tagline: "Best waterproof entry-level detector under $300",
+    category: "metal-detectors",
+    commission: "~3% via Amazon Associates",
+    price: "$249",
+    rating: 4.5,
+    bestFor: "Brand-new detectorists on a tight budget",
+    url: "https://www.amazon.com/dp/B0C6KZ2GKG",
+    pros: [
+      "Fully waterproof to 16 ft — submerge it, no worries",
+      "Single-menu turn-on-and-go design — minimal learning curve",
+      "Lightweight at 2.6 lbs — easy on the shoulders all day",
+      "USB rechargeable — no AA batteries to keep buying",
+      "Vibration alert plus LED flashlight and LCD backlight for low light"
+    ],
+    cons: [
+      "Simpler tuning than Garrett or Minelab",
+      "Less depth on tiny targets in heavy mineralized soil"
+    ],
+    tier: "budget"
+  },
+  {
     id: "garrett-ace-400",
     name: "Garrett Ace 400",
     tagline: "The best all-around beginner-intermediate detector",
@@ -66,6 +89,75 @@ export const products = [
     cons: [
       "Higher price point",
       "Heavier than entry models at 3.03 lbs"
+    ],
+    tier: "premium"
+  },
+  {
+    id: "garrett-goldmaster-24k",
+    name: "Garrett Goldmaster 24K",
+    tagline: "48 kHz high-frequency rig built specifically for gold",
+    category: "metal-detectors",
+    commission: "~3-5% via Amazon / KellyCo",
+    price: "$729",
+    rating: 4.6,
+    bestFor: "Gold prospectors hunting flakes and small nuggets",
+    url: "https://www.amazon.com/dp/B09BZYC7SD",
+    pros: [
+      "48 kHz frequency catches gold other detectors miss entirely",
+      "XGB auto ground balance handles highly mineralized desert soil",
+      "Two audio modes — 2-tone Beep and VCO Zip",
+      "Submersible 6 x 10 DD search coil for stream prospecting",
+      "Made in the USA with strong Garrett support"
+    ],
+    cons: [
+      "Specialized for gold — less ideal for coins and relics",
+      "Control housing is rainproof but not fully submersible"
+    ],
+    tier: "premium"
+  },
+  {
+    id: "minelab-equinox-800",
+    name: "Minelab Equinox 800",
+    tagline: "Premium multi-frequency all-around treasure machine",
+    category: "metal-detectors",
+    commission: "~3% via Amazon Associates",
+    price: "$899",
+    rating: 4.8,
+    bestFor: "Serious hunters who want one detector that does it all",
+    url: "https://www.amazon.com/dp/B079Y1YPTK",
+    pros: [
+      "Multi-IQ simultaneous multi-frequency for all targets at once",
+      "Fully waterproof and submersible to 10 ft",
+      "4 dedicated modes — Park, Field, Beach, and Gold",
+      "Low-latency wireless apt-X headphones included",
+      "Lightweight 2.96 lbs for all-day hunting"
+    ],
+    cons: [
+      "Premium price for the feature set",
+      "Settings depth has a real learning curve early on"
+    ],
+    tier: "premium"
+  },
+  {
+    id: "minelab-equinox-900",
+    name: "Minelab Equinox 900",
+    tagline: "The flagship Multi-IQ upgrade with 119 target IDs",
+    category: "metal-detectors",
+    commission: "~3% via Amazon Associates",
+    price: "$1,099",
+    rating: 4.8,
+    bestFor: "Experienced hunters upgrading from the Equinox 800",
+    url: "https://amzn.to/4fJbR2R",
+    pros: [
+      "119 high-resolution target IDs — sharper discrimination than the 800",
+      "Carbon-fiber 3-piece shaft, only 2.8 lbs, packs down to 24 inches",
+      "Fully waterproof to 10 ft with the 11\" Double-D coil",
+      "Comes with both 11\" and 6\" coils — beach to brush in one box",
+      "Wireless apt-X Low Latency headphones included"
+    ],
+    cons: [
+      "Meaningful upgrade over the 800 only if you'll use the deeper settings",
+      "Top of the lineup — full retail above $1k"
     ],
     tier: "premium"
   },
