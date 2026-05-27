@@ -14,7 +14,7 @@ const Category = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-6">
-        <Link to="/" className="hover:text-blue-600">Home</Link>
+        <Link to="/" className="hover:text-amber-700">Home</Link>
         <span className="mx-2">/</span>
         <span className="text-gray-900">{category.name}</span>
       </nav>
@@ -40,17 +40,13 @@ const Category = () => {
           Best {category.name} in 2026
         </h2>
         <p className="text-gray-600 leading-relaxed mb-4">
-          Finding the right {category.name.toLowerCase()} tool can be overwhelming. There are dozens of options, 
-          each claiming to be the best. We've tested and compared all of them so you don't have to.
-        </p>
-        <p className="text-gray-600 leading-relaxed mb-4">
-          Our {productsInCategory.length} featured products represent the top tools in this category, 
-          selected based on features, pricing, reliability, and value. Each has been independently evaluated 
-          using real-world scenarios and workflows.
+          Finding the right {category.name.toLowerCase()} can be overwhelming with dozens of options 
+          all claiming to be the best. We test and compare them so you don't have to.
         </p>
         <p className="text-gray-600 leading-relaxed">
-          All links on this page are affiliate links, which means we may earn a small commission 
-          at no extra cost to you. We only recommend tools we genuinely believe in.
+          Our {productsInCategory.length} featured picks represent the top gear in this category, 
+          selected based on real field use, value, and reliability — tested on Utah BLM land by 
+          an experienced rockhound.
         </p>
       </div>
     </div>
@@ -60,6 +56,12 @@ const Category = () => {
 function CategoryProductCard({ product }) {
   const stars = "★".repeat(Math.floor(product.rating)) + (product.rating % 1 >= 0.5 ? "½" : "");
 
+  const tierLabel = {
+    budget: { label: "Budget Pick", style: "bg-stone-100 text-stone-700" },
+    mid: { label: "Mid Range", style: "bg-amber-50 text-amber-800" },
+    premium: { label: "Premium", style: "bg-amber-100 text-amber-900" },
+  }[product.tier] || { label: "", style: "" };
+
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all">
       <div className="flex items-start justify-between mb-3">
@@ -68,35 +70,37 @@ function CategoryProductCard({ product }) {
           <p className="text-sm text-gray-500">{product.tagline}</p>
         </div>
       </div>
-      
-      <div className="text-yellow-500 text-sm mb-2">{stars} {product.rating}</div>
-      
-      <span className="inline-block text-xs font-semibold bg-blue-50 text-blue-700 px-2 py-1 rounded-full mb-3">
-        {product.commission}
-      </span>
-      
+
+      <div className="text-amber-500 text-sm mb-2">{stars} {product.rating}</div>
+
+      {tierLabel.label && (
+        <span className={`inline-block text-xs font-semibold px-2 py-1 rounded-full mb-3 ${tierLabel.style}`}>
+          {tierLabel.label}
+        </span>
+      )}
+
       <p className="text-sm text-gray-600 mb-1">
         <span className="font-medium text-gray-700">Best for:</span> {product.bestFor}
       </p>
       <p className="text-sm text-gray-700 mb-4">
-        <span className="font-medium">Starting at:</span>{" "}
-        <span className="text-blue-600 font-semibold">{product.price}</span>
+        <span className="font-medium">Price:</span>{" "}
+        <span className="text-amber-700 font-semibold">{product.price}</span>
       </p>
-      
+
       <div className="flex gap-2">
         <a
           href={product.url}
           target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
+          rel="noopener noreferrer sponsored"
+          className="flex-1 bg-amber-600 hover:bg-amber-500 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
         >
-          Visit Site →
+          Check price →
         </a>
         <Link
           to={`/review/${product.id}`}
-          className="bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
+          className="bg-stone-100 hover:bg-stone-200 text-gray-700 text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
         >
-          Review
+          Full review
         </Link>
       </div>
     </div>
@@ -107,7 +111,7 @@ function NotFound() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
       <h1 className="text-3xl font-bold text-gray-900 mb-4">Category not found</h1>
-      <Link to="/" className="text-blue-600 hover:underline">← Back to home</Link>
+      <Link to="/" className="text-amber-700 hover:underline">← Back to home</Link>
     </div>
   );
 }

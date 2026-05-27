@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "tailwind:build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
-    "tailwind:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
+    "tail:build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
+    "tail:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -25,7 +25,15 @@
   },
   "keywords": [
     "affiliate",
-    "ai-tools",
+    "metal detector",
+    "rock hammer",
+    "GPS",
+    "field gear",
+    "Utah",
+    "BLM",
+    "rockhounding",
+    "metal detecting",
+    "rockhounding gear",
     "reviews"
   ],
   "author": "E.R.B. (Eric Bowser)",

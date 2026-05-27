@@ -4,18 +4,9 @@ import { questions, TOTAL_QUESTIONS } from './questions.js';
 import { recommendDetectors } from './engine.js';
 import { getDetectorsForQuiz } from './detectorAttrs.js';
 
-/**
- * Detector Match — interactive buying-guide quiz
- *
- * Drop into router as:
- *   <Route path="/tools/detector-match" element={<DetectorMatch />} />
- *
- * The component depends only on the engine + questions + data abstractions.
- * Swap out any of those without touching this file (Dependency Inversion).
- */
 const DetectorMatch = () => {
   const detectors = useMemo(() => getDetectorsForQuiz(), []);
-  const [step, setStep] = useState('intro');     // 'intro' | 'question' | 'result'
+  const [step, setStep] = useState('intro');
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState({});
 
@@ -90,8 +81,8 @@ const IntroScreen = ({ onStart }) => (
     </h1>
     <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
       Answer 6 quick questions about your budget, experience, and where you'll hunt.
-      We'll match you with the detector that actually fits — with honest reasoning,
-      not affiliate hype.
+      We'll match you with the right detector — with honest reasoning from the field,
+      not a sales pitch.
     </p>
     <button
       onClick={onStart}
@@ -212,7 +203,7 @@ const ResultScreen = ({ result, onRetake }) => {
         </button>
       </div>
 
-      <AffiliateDisclosure />
+      <LegalDisclosure />
     </div>
   );
 };
@@ -281,11 +272,10 @@ const DetectorCard = ({ pick, isPrimary = false }) => {
   );
 };
 
-const AffiliateDisclosure = () => (
+// Required by FTC and Amazon Associates TOS — kept minimal and factual
+const LegalDisclosure = () => (
   <p className="text-xs text-gray-400 mt-10 text-center max-w-lg mx-auto leading-relaxed">
-    Western Rockhound participates in affiliate programs including Amazon Associates.
-    As an Amazon Associate we earn from qualifying purchases. Our recommendations are
-    based on the scoring engine — not the commission rate.
+    As an Amazon Associate we earn from qualifying purchases at no extra cost to you.
   </p>
 );
 

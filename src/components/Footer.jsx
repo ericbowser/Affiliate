@@ -29,7 +29,7 @@ const Footer = () => {
             </span>
             <p className="mt-3 text-sm leading-relaxed">{meta.tagline}</p>
             <p className="mt-4 text-xs text-stone-500">
-              Affiliate disclosure: We earn commissions from purchases made through links on this site at no extra cost to you. This never affects our reviews.
+              Some links on this site earn us a small commission at no extra cost to you. It keeps the site running and never influences our reviews.
             </p>
           </div>
 
@@ -52,9 +52,9 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Site</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="text-sm hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/tools/detector-match" className="text-sm hover:text-white transition-colors">Detector Match Quiz</Link></li>
               <li><Link to="/about" className="text-sm hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/about" className="text-sm hover:text-white transition-colors">Affiliate Disclosure</Link></li>
-              <li><Link to="/about" className="text-sm hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/about" className="text-sm hover:text-white transition-colors">Disclosures & Privacy</Link></li>
               <li>
                 <a href="https://www.blm.gov/programs/recreation" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">
                   BLM Recreation Info ↗
