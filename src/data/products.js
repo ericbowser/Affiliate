@@ -245,28 +245,9 @@ export const products = [
     ],
     tier: "mid"
   },
-  {
-    id: "estwing-rock-pick-e323lp",
-    name: "Estwing E323LP Rock Pick",
-    tagline: "Classic rock pick for splitting and collecting specimens",
-    category: "rock-hammers",
-    price: "$39",
-    rating: 4.8,
-    bestFor: "Specimen collectors and general field work",
-    url: "https://amzn.to/4dALQBG",
-    pros: [
-      "One-piece forged steel construction — no handle to break",
-      "Pick end for breaking and chisel end for prying",
-      "Shock-reduction grip reduces hand fatigue",
-      "Compact size — easy to carry on long hikes",
-      "Made in the USA with Estwing's lifetime warranty"
-    ],
-    cons: [
-      "Shorter handle than the E3-23LP — less leverage on large rocks",
-      "Pick end dulls over time on very hard material"
-    ],
-    tier: "budget"
-  },
+  // TODO: estwing-rock-pick-e323lp removed — duplicate ASIN of estwing-prospecting-pick.
+  // Replace with a distinct budget Estwing pick (e.g. E3-20BP ~$39).
+  // Get the correct affiliate link from Amazon Associates and add the entry back.
   {
     id: "nicholson-hacksaw-80950",
     name: "Nicholson 80950 10-Inch Economy Hacksaw",
@@ -320,7 +301,7 @@ export const products = [
     price: "$89",
     rating: 4.6,
     bestFor: "Beginners wanting a complete kit without extras to buy",
-    url: "https://amzn.to/49Uf1x4",
+    url: "https://amzn.to/4dQ63lE",
     pros: [
       "Complete kit — grit, polish, and rough stones included",
       "Durable barrel holds up to repeated use",
@@ -479,7 +460,7 @@ export const products = [
     price: "$18",
     rating: 4.6,
     bestFor: "Utah-based rockhounds of all skill levels",
-    url: "https://amzn.to/4wNZyst",
+    url: "https://amzn.to/4fdSjn9",
     pros: [
       "75 sites including Topaz Mountain, Dugway, Tintic",
       "GPS coordinates for each location",
