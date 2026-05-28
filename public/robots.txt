@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rockhoundutah.com/sitemap.xml
