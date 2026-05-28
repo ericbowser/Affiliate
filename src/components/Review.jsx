@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products.js";
 import { siteConfig } from "../data/config.js";
+import { trackAffiliateClick } from "../utils/analytics.js";
 
 const Review = () => {
   const { id } = useParams();
@@ -16,6 +17,16 @@ const Review = () => {
     .slice(0, 3);
 
   const hasReviewContent = product.verdict || product.ownerPros || product.ownerCons;
+
+  const handleAffiliateClick = (location) => {
+    trackAffiliateClick({
+      productId:   product.id,
+      productName: product.name,
+      category:    product.category,
+      location,
+      url:         product.url,
+    });
+  };
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -180,6 +191,7 @@ const Review = () => {
               href={product.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
+              onClick={() => handleAffiliateClick('cta_button')}
               className="inline-block bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 px-8 rounded-xl transition-colors"
             >
               Check current price on Amazon →
@@ -201,6 +213,7 @@ const Review = () => {
               href={product.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
+              onClick={() => handleAffiliateClick('sidebar_button')}
               className="block w-full bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition-colors text-center text-sm mb-4"
             >
               Check price on Amazon →
