@@ -41,10 +41,11 @@ const BlogPost = () => {
         </p>
       </div>
 
-      {/* Inline map — only rendered if post has mapSites */}
+      {/* Inline map — disabled until Maps API key is configured
       {post.mapSites?.length > 0 && (
         <BlogMap siteIds={post.mapSites} />
       )}
+      */}
 
       {/* Article body */}
       <article className="prose-article">
