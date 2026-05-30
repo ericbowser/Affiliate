@@ -81,3 +81,41 @@
     animation: fadeInUp 0.6s ease-out forwards;
     opacity: 0;
 }
+
+/* Gem Icon Animations */
+@keyframes opal-shift {
+    0%   { stop-color: #b388ff; }
+    20%  { stop-color: #80cbc4; }
+    40%  { stop-color: #f48fb1; }
+    60%  { stop-color: #80deea; }
+    80%  { stop-color: #ce93d8; }
+    100% { stop-color: #b388ff; }
+}
+@keyframes opal-shift2 {
+    0%   { stop-color: #80cbc4; }
+    20%  { stop-color: #f48fb1; }
+    40%  { stop-color: #ce93d8; }
+    60%  { stop-color: #b388ff; }
+    80%  { stop-color: #80deea; }
+    100% { stop-color: #80cbc4; }
+}
+@keyframes opal-shift3 {
+    0%,100% { stop-color: #312e81; }
+    50%     { stop-color: #4c1d95; }
+}
+@keyframes gem-sparkle {
+    0%,100% { opacity: 0; transform: scale(0.4); }
+    50%     { opacity: 1; transform: scale(1); }
+}
+@keyframes beryl-glow {
+    0%,100% { opacity: 0.75; }
+    50%     { opacity: 1; }
+}
+.opal-s1  { animation: opal-shift  4s infinite linear; }
+.opal-s2  { animation: opal-shift2 4s infinite linear; }
+.opal-s3  { animation: opal-shift3 4s infinite linear; }
+.gem-sparkle  { animation: gem-sparkle 1.8s infinite ease-in-out; }
+.gem-sparkle2 { animation: gem-sparkle 1.8s 0.6s  infinite ease-in-out; }
+.gem-sparkle3 { animation: gem-sparkle 1.8s 1.2s  infinite ease-in-out; }
+.gem-sparkle4 { animation: gem-sparkle 1.8s 1.6s  infinite ease-in-out; }
+.beryl-glow   { animation: beryl-glow  2.5s infinite ease-in-out; }

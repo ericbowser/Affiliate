@@ -3,7 +3,6 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPostBySlug, posts } from "../data/posts";
-import BlogMap from "./BlogMap";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -31,21 +30,22 @@ const BlogPost = () => {
         <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight mb-4">
           {post.title}
         </h1>
-        <p className="text-gray-500 text-sm">
-          {new Date(post.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}{" "}
-          · {post.readTime}
-        </p>
+        <div className="flex items-center justify-between flex-wrap gap-3">
+          <p className="text-gray-500 text-sm">
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric", month: "long", day: "numeric",
+            })}{" "}· {post.readTime}
+          </p>
+          {post.mapSites?.length > 0 && (
+            <Link
+              to="/weather"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-amber-700 hover:text-amber-900 border border-amber-300 hover:border-amber-500 px-3 py-1.5 rounded-lg transition-colors"
+            >
+              🏜️ Check field conditions
+            </Link>
+          )}
+        </div>
       </div>
-
-      {/* Inline map — disabled until Maps API key is configured
-      {post.mapSites?.length > 0 && (
-        <BlogMap siteIds={post.mapSites} />
-      )}
-      */}
 
       {/* Article body */}
       <article className="prose-article">
@@ -53,7 +53,7 @@ const BlogPost = () => {
           remarkPlugins={[remarkGfm]}
           children={post.content}
           components={{
-            h1: ({ children }) => null, // title already shown above
+            h1: ({ children }) => null,
             h2: ({ children }) => (
               <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4 pb-2 border-b border-stone-200">
                 {children}
@@ -113,31 +113,35 @@ const BlogPost = () => {
                   <code>{children}</code>
                 </pre>
               ),
-            hr: () => (
-              <hr className="my-10 border-stone-200" />
-            ),
+            hr: () => <hr className="my-10 border-stone-200" />,
           }}
         />
       </article>
 
       {/* Footer CTA */}
       <div className="mt-14 p-6 bg-amber-50 border border-amber-200 rounded-2xl">
-        <p className="text-sm font-semibold text-amber-900 mb-1">Ready to gear up?</p>
+        <p className="text-sm font-semibold text-amber-900 mb-1">Ready to head out?</p>
         <p className="text-sm text-amber-800 mb-4">
-          Browse gear picks tested for Utah's BLM land and desert terrain.
+          Check live field conditions before you drive, or browse gear picked for Utah terrain.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
-            to="/category/rock-hammers"
+            to="/weather"
             className="text-sm font-medium bg-amber-700 hover:bg-amber-600 text-white px-4 py-2 rounded-lg transition-colors"
           >
-            Rock Hammers →
+            🏜️ Field Conditions →
+          </Link>
+          <Link
+            to="/category/rock-hammers"
+            className="text-sm font-medium border border-amber-400 text-amber-700 hover:bg-amber-100 px-4 py-2 rounded-lg transition-colors"
+          >
+            Browse Gear →
           </Link>
           <Link
             to="/guides/utah-sites-map"
             className="text-sm font-medium border border-amber-400 text-amber-700 hover:bg-amber-100 px-4 py-2 rounded-lg transition-colors"
           >
-            📍 View Sites Map
+            📍 Site Map
           </Link>
         </div>
       </div>

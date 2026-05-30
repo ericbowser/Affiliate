@@ -71,6 +71,9 @@ const Navbar = () => {
             <Link to="/blog" className="text-gray-600 hover:text-amber-700 transition-colors text-base font-medium">
               Blog
             </Link>
+            <Link to="/weather" className="text-gray-600 hover:text-amber-700 transition-colors text-base font-medium">
+              Field Conditions
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -113,6 +116,9 @@ const Navbar = () => {
             </Link>
             <Link to="/blog" className="block text-gray-700 hover:text-amber-700 text-sm font-medium py-2 border-t border-gray-100" onClick={() => setMenuOpen(false)}>
               Blog
+            </Link>
+            <Link to="/weather" className="block text-gray-700 hover:text-amber-700 text-sm font-medium py-2 border-t border-gray-100" onClick={() => setMenuOpen(false)}>
+              Field Conditions
             </Link>
           </div>
         </div>

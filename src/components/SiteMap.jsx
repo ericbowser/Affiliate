@@ -1,7 +1,8 @@
 import React, { useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader, Marker, InfoWindow } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { Link } from "react-router-dom";
 import { rockhoundingSites } from "../data/sites";
+import { GEM_MARKERS } from "../data/gemMarkers";
 
 const MAP_CENTER = { lat: 39.2, lng: -111.5 };
 const MAP_ZOOM = 7;
@@ -125,15 +126,18 @@ const SiteMap = () => {
                 key={site.id}
                 position={{ lat: site.lat, lng: site.lng }}
                 onClick={() => handleMarkerClick(site)}
-                icon={{
-                  path: "M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z",
-                  fillColor: selected?.id === site.id ? "#92400e" : "#d97706",
-                  fillOpacity: 1,
-                  strokeColor: "#ffffff",
-                  strokeWeight: 1.5,
-                  scale: selected?.id === site.id ? 2 : 1.6,
-                  anchor: { x: 12, y: 24 },
-                }}
+                icon={isLoaded ? {
+                  url: GEM_MARKERS[site.id],
+                  scaledSize: new window.google.maps.Size(
+                    selected?.id === site.id ? 44 : 36,
+                    selected?.id === site.id ? 54 : 44
+                  ),
+                  anchor: new window.google.maps.Point(
+                    selected?.id === site.id ? 22 : 18,
+                    selected?.id === site.id ? 52 : 42
+                  ),
+                } : undefined}
+                zIndex={selected?.id === site.id ? 10 : 1}
               />
             ))}
           </GoogleMap>

@@ -12,6 +12,7 @@ import DetectorMatch from "./tools/detectorMatch/DetectorMatch.jsx";
 import SiteMap from "./components/SiteMap";
 import BlogPost from "./components/BlogPost";
 import Blog from "./components/Blog";
+import WeatherPage from "./components/WeatherPage";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/tools/detector-match" element={<DetectorMatch />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/weather" element={<WeatherPage />} />
             <Route path="/guides/utah-sites-map" element={<SiteMap />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />

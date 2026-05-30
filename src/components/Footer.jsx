@@ -91,8 +91,11 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500">© {new Date().getFullYear()} Western Rockhound. All rights reserved.</p>
-          <p className="text-xs text-slate-500">Built by Execute &amp; Engrave LLC · Salt Lake City, UT</p>
+          <p className="text-xs text-slate-500">© {new Date().getFullYear()} Wasatch Rockhound. All rights reserved.</p>
+          <p className="text-xs text-slate-500">
+            <a href="https://www.flaticon.com/free-icons/gem" title="gem icons" className="hover:text-slate-300 transition-colors">Gem icons by Freepik — Flaticon</a>
+            {" · "} Built by Execute &amp; Engrave LLC · Salt Lake City, UT
+          </p>
         </div>
       </div>
     </footer>

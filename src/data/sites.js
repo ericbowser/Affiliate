@@ -12,11 +12,13 @@ export const rockhoundingSites = [
     access: "Free · BLM",
     vehicle: "High-clearance recommended",
     find: ["Topaz", "Garnet", "Amethyst", "Opal", "Red Beryl (rare)"],
-    description:
-      "Utah's premier topaz site and one of the best free collecting areas in the world. Work the south-side washes and crack rhyolite for crystal-lined vugs. Bring a spray bottle — topaz glitters when wet.",
+    description: "Utah's premier topaz site and one of the best free collecting areas in the world. Work the south-side washes and crack rhyolite for crystal-lined vugs. Bring a spray bottle — topaz glitters when wet.",
     blmUrl: "https://www.blm.gov/visit/topaz-mountain",
     reviewUrl: null,
-    color: "#d97706", // amber-600
+    color: "#d97706",
+    roadWarning: "Last mile access road requires high-clearance. Passable in dry conditions.",
+    rainWarning: "Avoid after rain — dirt access road becomes rutted and slippery.",
+    heatWarning: "Exposed site with no shade. Avoid midday in summer months (Jun–Aug).",
   },
   {
     id: "dugway-geode-beds",
@@ -31,11 +33,13 @@ export const rockhoundingSites = [
     access: "Free · BLM",
     vehicle: "High-clearance recommended · bring spare tire",
     find: ["Quartz geodes", "Amethyst geodes", "Rose quartz geodes", "Calcite"],
-    description:
-      "The most beginner-friendly site in Utah. Dig gray tuff hillsides for round geodes lined with sparkling crystal. Bring a shovel — non-negotiable. Follow the Pony Express Road west from Faust.",
+    description: "The most beginner-friendly site in Utah. Dig gray tuff hillsides for round geodes lined with sparkling crystal. Bring a shovel — non-negotiable. Follow the Pony Express Road west from Faust.",
     blmUrl: "https://www.blm.gov/visit/dugway-geode-beds",
     reviewUrl: null,
     color: "#d97706",
+    roadWarning: "50 miles of dirt road on the Pony Express Trail. Always bring a spare tire.",
+    rainWarning: "Clay soil becomes completely impassable after rain. Do not attempt wet.",
+    heatWarning: "No shade anywhere on site. Go early morning in summer.",
   },
   {
     id: "u-dig-fossils",
@@ -50,11 +54,13 @@ export const rockhoundingSites = [
     access: "Fee · ~$70/day",
     vehicle: "Any vehicle",
     find: ["Elrathia kingii trilobites", "Asaphiscus wheeleri", "Other marine fossils"],
-    description:
-      "A private fee quarry in the Wheeler Shale — one of the most prolific trilobite deposits in North America. Tools provided. Staff walk you through splitting technique. Everything you find goes home with you.",
+    description: "A private fee quarry in the Wheeler Shale — one of the most prolific trilobite deposits in North America. Tools provided. Staff walk you through splitting technique. Everything you find goes home with you.",
     blmUrl: null,
     reviewUrl: null,
     color: "#92400e",
+    roadWarning: "Paved road to the site. Any vehicle fine year-round.",
+    rainWarning: null,
+    heatWarning: "Exposed quarry — bring sunscreen and a hat.",
   },
   {
     id: "tintic-mountains",
@@ -69,11 +75,13 @@ export const rockhoundingSites = [
     access: "Free · BLM (verify per area)",
     vehicle: "Any vehicle · topo map recommended",
     find: ["Garnet", "Fluorite", "Galena", "Cerussite", "Quartz"],
-    description:
-      "The closest serious rockhounding from SLC. The Tintic Mining District's 19th-century silver and lead operations left exposed geology rich in garnets and minerals. Verify claim status before collecting.",
+    description: "The closest serious rockhounding from SLC. The Tintic Mining District's 19th-century silver and lead operations left exposed geology rich in garnets and minerals. Verify claim status before collecting.",
     blmUrl: null,
     reviewUrl: null,
     color: "#d97706",
+    roadWarning: "Mix of paved and gravel roads. Check claim markers — some areas are active mining.",
+    rainWarning: "Gravel roads drain quickly. Usually fine within a few hours of rain.",
+    heatWarning: null,
   },
   {
     id: "san-rafael-swell",
@@ -88,11 +96,13 @@ export const rockhoundingSites = [
     access: "Free · BLM",
     vehicle: "4WD recommended · GPS essential",
     find: ["Agate", "Jasper", "Chalcedony", "Petrified wood", "Moqui marbles", "Fossil coral"],
-    description:
-      "A 75×40 mile geological dome exposing hundreds of millions of years of sedimentary rock. River gravel bars yield tumbler-ready agate and jasper. Bring a GPS — the road network is confusing and unmarked.",
+    description: "A 75×40 mile geological dome exposing hundreds of millions of years of sedimentary rock. River gravel bars yield tumbler-ready agate and jasper. Bring a GPS — the road network is confusing and unmarked.",
     blmUrl: null,
     reviewUrl: null,
     color: "#d97706",
+    roadWarning: "Road network is unmarked and confusing. GPS essential — do not rely on cell service.",
+    rainWarning: "Flash flood risk in canyon areas. Check upstream conditions before entering washes.",
+    heatWarning: "Exposed desert with no services. Carry minimum 3 liters of water per person.",
   },
   {
     id: "marysvale",
@@ -107,11 +117,13 @@ export const rockhoundingSites = [
     access: "Free · BLM (verify per area)",
     vehicle: "Any vehicle",
     find: ["Fluorite", "Amethyst", "Quartz", "Cinnabar", "Alunite", "Opal"],
-    description:
-      "Old-timer favorite that beginners often miss. Almost any creek or wash near Marysvale holds something. Fluorite cubic crystals in purple and green are the standout find. Handle cinnabar minimally — it's mercury sulfide.",
+    description: "Old-timer favorite that beginners often miss. Almost any creek or wash near Marysvale holds something. Fluorite cubic crystals in purple and green are the standout find. Handle cinnabar minimally — it's mercury sulfide.",
     blmUrl: null,
     reviewUrl: null,
     color: "#d97706",
+    roadWarning: "Mostly paved access. Some mine tailings areas require short dirt road drives.",
+    rainWarning: "Dirt road sections get muddy. Wait a day after heavy rain.",
+    heatWarning: null,
   },
   {
     id: "sunstone-knoll",
@@ -126,11 +138,13 @@ export const rockhoundingSites = [
     access: "Free · BLM",
     vehicle: "Any vehicle",
     find: ["Sunstones (oligoclase feldspar)", "Basaltic minerals"],
-    description:
-      "One of the few places in the US to reliably find sunstones — feldspar with a warm golden shimmer from copper platelets. Pure surface hunting on a flat cinder cone. Great first trip for kids or beginners.",
+    description: "One of the few places in the US to reliably find sunstones — feldspar with a warm golden shimmer from copper platelets. Pure surface hunting on a flat cinder cone. Great first trip for kids or beginners.",
     blmUrl: null,
     reviewUrl: null,
     color: "#d97706",
+    roadWarning: "Flat desert approach. Any vehicle fine in dry conditions.",
+    rainWarning: "Desert surface firms up quickly. Usually accessible within hours of light rain.",
+    heatWarning: "Zero shade on the cinder cone. Early morning strongly recommended in summer.",
   },
   {
     id: "comb-ridge",
@@ -145,10 +159,12 @@ export const rockhoundingSites = [
     access: "Free · BLM",
     vehicle: "High-clearance recommended · extra fuel",
     find: ["Pyrope garnets (Arizona Rubies)", "Chlorite", "Chromite"],
-    description:
-      "Deep red pyrope garnets eroding from ancient minette rock. Small (3–6mm) but exceptional color — they tumble to a high polish. Combine with Monument Valley and Valley of the Gods for a full weekend.",
+    description: "Deep red pyrope garnets eroding from ancient minette rock. Small (3–6mm) but exceptional color — they tumble to a high polish. Combine with Monument Valley and Valley of the Gods for a full weekend.",
     blmUrl: null,
     reviewUrl: null,
     color: "#92400e",
+    roadWarning: "Remote site near Bears Ears. Carry extra fuel — nearest gas is 30+ miles away.",
+    rainWarning: "Dirt roads in the area can become impassable. Allow 24hrs after rain.",
+    heatWarning: "High desert with intense sun. Early start recommended year-round.",
   },
 ];
