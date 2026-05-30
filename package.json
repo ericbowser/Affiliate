@@ -6,6 +6,7 @@
   "description": "AI tools reviews & comparisons — affiliate marketing site",
   "scripts": {
     "dev": "vite",
+    "tail": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "build": "vite build",
     "preview": "vite preview",
     "tail:build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
@@ -14,13 +15,16 @@
     "server:dev": "node --watch server.js"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.20.8",
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "nodemailer": "^6.9.14",
+    "nodemailer": "^8.0.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.23.1"
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^6.23.1",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.1.0",

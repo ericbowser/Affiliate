@@ -11,36 +11,28 @@ const About = () => {
         <span className="text-gray-900">About</span>
       </nav>
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">About Western Rockhound</h1>
+      <h1 className="text-3xl font-semibold text-gray-900 mb-6">About Wasatch Rockhound</h1>
 
       <div className="space-y-6 text-gray-600 leading-relaxed">
         <p>
-          <strong className="text-gray-900">Western Rockhound</strong> is an independent gear review site
-          built for people who actually go out and dig. No manufacturer-supplied gear, no paid placements —
-          just honest assessments of what performs in Utah's desert terrain and the broader American West.
+          <strong className="text-gray-900">Wasatch Rockhound</strong> is an independent gear site
+          built for people who actually get out and dig. Picks are chosen based on real Utah terrain —
+          what holds up in desert conditions, on BLM land, and in mineralized soil.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900 pt-4">Who's Behind This Site</h2>
         <p>
-          I'm Eric Bowser, a software developer and small business owner based in Salt Lake City, Utah.
-          I run <strong className="text-gray-900">Execute & Engrave LLC</strong>, a laser engraving business
-          that's pushing me deeper into rockhounding — I'm sourcing raw minerals and gems from Utah's BLM
-          land to turn into custom engraved jewelry. So this is personal.
+          A Salt Lake City-based software developer and small business owner running{" "}
+          <strong className="text-gray-900">Execute &amp; Engrave LLC</strong>, a laser engraving business
+          that's pushing deeper into rockhounding — sourcing raw minerals and gems from Utah's BLM
+          land to turn into custom engraved jewelry.
         </p>
         <p>
-          I started Western Rockhound because I couldn't find a gear review site that actually knew Utah.
-          Most outdoor review sites are written from a Pacific Northwest or Colorado perspective — great
-          if you're hiking above treeline, not great if you're navigating alkaline desert, dry washes,
-          and miles of unmarked BLM access roads looking for topaz.
+          Western Rockhound started because there wasn't a gear site that actually knew Utah.
+          Most outdoor review sites come from a Pacific Northwest or Colorado perspective — great
+          for hiking above treeline, less useful for navigating alkaline desert, dry washes,
+          and miles of unmarked BLM access roads.
         </p>
-
-        <h2 className="text-xl font-bold text-gray-900 pt-4">How We Review Gear</h2>
-        <ul className="space-y-2">
-          <li><strong className="text-gray-800">Field use first:</strong> Every product reviewed gets time on actual Utah sites before we publish anything.</li>
-          <li><strong className="text-gray-800">Real terrain:</strong> We test in mineralized desert soil — the kind that trips up cheaper detectors — not just a backyard.</li>
-          <li><strong className="text-gray-800">No fluff:</strong> We're a developer and maker, not a lifestyle blogger. If something isn't worth the money, we say so.</li>
-          <li><strong className="text-gray-800">Updated regularly:</strong> Gear evolves. We revisit reviews when new models or firmware change the picture.</li>
-        </ul>
 
         <h2 className="text-xl font-bold text-gray-900 pt-4">Affiliate Disclosure</h2>
         <p>
@@ -63,7 +55,7 @@ const About = () => {
 
         <div className="mt-8 p-4 bg-amber-50 border border-amber-200 rounded-xl">
           <p className="text-sm text-amber-800">
-            <strong>Have a question, site tip, or gear recommendation?</strong> Reach out — I'm genuinely interested in hearing from other Utah rockhounds.
+            <strong>Have a question, site tip, or gear recommendation?</strong> Reach out — always interested in hearing from other Utah rockhounds.
           </p>
         </div>
       </div>

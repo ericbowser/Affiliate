@@ -18,17 +18,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-stone-900 text-stone-400">
+    <footer className="bg-slate-900 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* Brand */}
           <div className="md:col-span-1">
-            <span className="text-lg font-bold text-white">
-              Western <span className="text-amber-500">Rockhound</span>
+            <span className="text-lg font-semibold text-white">
+              Wasatch <span className="text-amber-500">Rockhound</span>
             </span>
-            <p className="mt-3 text-sm leading-relaxed">{meta.tagline}</p>
-            <p className="mt-4 text-xs text-stone-500">
+            <p className="mt-3 text-sm leading-relaxed text-slate-400">{meta.tagline}</p>
+            <p className="mt-3 text-xs text-slate-500">
               Some links on this site earn us a small commission at no extra cost to you. It keeps the site running and never influences our reviews.
             </p>
           </div>
@@ -77,11 +77,11 @@ const Footer = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your@email.com"
                   required
-                  className="bg-stone-800 border border-stone-700 rounded-lg px-3 py-2 text-sm text-white placeholder-stone-500 focus:outline-none focus:border-amber-500"
+                  className="bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-600"
                 />
                 <button
                   type="submit"
-                  className="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="bg-amber-700 hover:bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   Subscribe
                 </button>
@@ -90,9 +90,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-stone-500">© {new Date().getFullYear()} Western Rockhound. All rights reserved.</p>
-          <p className="text-xs text-stone-500">Built by Eric Bowser · Execute & Engrave LLC · Salt Lake City, UT</p>
+        <div className="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-500">© {new Date().getFullYear()} Western Rockhound. All rights reserved.</p>
+          <p className="text-xs text-slate-500">Built by Execute &amp; Engrave LLC · Salt Lake City, UT</p>
         </div>
       </div>
     </footer>

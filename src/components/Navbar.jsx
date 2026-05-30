@@ -24,15 +24,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-stone-800">
-              Western <span className="text-amber-600">Rockhound</span>
+          <Link to="/" className="flex items-center gap-3">
+            <span className="text-lg font-semibold text-slate-900">
+              Wasatch <span className="text-amber-700">Rockhound</span>
+            </span>
+            <span className="hidden lg:block text-xs text-gray-400 border-l border-gray-200 pl-3">
+              Salt Lake City · Gear for the American West
             </span>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
-            <Link to="/" className="text-gray-600 hover:text-amber-700 transition-colors text-sm font-medium">
+            <Link to="/" className="text-gray-600 hover:text-amber-700 transition-colors text-base font-medium">
               Home
             </Link>
 
@@ -40,7 +43,7 @@ const Navbar = () => {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="text-gray-600 hover:text-amber-700 transition-colors text-sm font-medium flex items-center gap-1"
+                className="text-gray-600 hover:text-amber-700 transition-colors text-base font-medium flex items-center gap-1"
               >
                 Gear Categories
                 <span className={`text-xs transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}>▾</span>
@@ -62,8 +65,11 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-gray-600 hover:text-amber-700 transition-colors text-sm font-medium">
+            <Link to="/about" className="text-gray-600 hover:text-amber-700 transition-colors text-base font-medium">
               About
+            </Link>
+            <Link to="/blog" className="text-gray-600 hover:text-amber-700 transition-colors text-base font-medium">
+              Blog
             </Link>
           </div>
 
@@ -104,6 +110,9 @@ const Navbar = () => {
             ))}
             <Link to="/about" className="block text-gray-700 hover:text-amber-700 text-sm font-medium py-2 border-t border-gray-100 mt-1" onClick={() => setMenuOpen(false)}>
               About
+            </Link>
+            <Link to="/blog" className="block text-gray-700 hover:text-amber-700 text-sm font-medium py-2 border-t border-gray-100" onClick={() => setMenuOpen(false)}>
+              Blog
             </Link>
           </div>
         </div>

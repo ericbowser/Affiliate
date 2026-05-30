@@ -50,10 +50,10 @@ export const siteConfig = {
     }
   },
   meta: {
-    siteName: "Western Rockhound",
+    siteName: "Wasatch Rockhound",
     tagline: "Gear reviews & field guides for rockhounds in the American West",
     description: "Honest gear reviews, site guides, and beginner resources for rockhounding across Utah and the American West. Find what to buy, where to go, and what to bring.",
-    twitter: "@westernrockhound",
-    author: "Eric Bowser"
+    twitter: "@wasatchrockhound",
+    author: "Execute & Engrave LLC"
   }
 };
