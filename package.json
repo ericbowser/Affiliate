@@ -8,6 +8,7 @@
     "dev": "vite",
     "tail": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "build": "vite build",
+    "clean": "rm node_modules -R && npm install",
     "preview": "vite preview",
     "tail:build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "tail:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
