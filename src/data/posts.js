@@ -11,6 +11,7 @@
 import rockhoundingUtah from "./posts/rockhounding-utah-8-best-sites.md?raw";
 import bestDetectors2026 from "./posts/best-metal-detectors-2026.md?raw";
 import aceVsVanquish from "./posts/garrett-ace-400-vs-vanquish-540.md?raw";
+import bestTumblers2026 from "./posts/best-rock-tumblers-beginners-2026.md?raw";
 
 export const posts = [
   // --- PUBLISHED ---
@@ -76,6 +77,26 @@ export const posts = [
     ],
     linkedProducts: ["garrett-ace-400", "minelab-vanquish-540"],
     content: aceVsVanquish,
+  },
+
+  {
+    slug: "best-rock-tumblers-beginners-2026",
+    title: "Best Rock Tumblers for Beginners in 2026",
+    description:
+      "The three best beginner rock tumblers compared — what actually matters at this price range, common mistakes that ruin your first batch, and which Utah stones tumble best.",
+    date: "2026-06-01",
+    category: "Gear Reviews",
+    type: "pillar",
+    status: "published",
+    readTime: "8 min read",
+    keywords: [
+      "best rock tumbler",
+      "rock tumbler for beginners",
+      "best rock tumbler 2026",
+      "how to tumble rocks",
+    ],
+    linkedProducts: ["national-geo-tumbler", "c1-rock-tumbler-kit", "vevor-tumbler"],
+    content: bestTumblers2026,
   },
 
   // --- PLANNED (uncomment and add import as each is written) ---
