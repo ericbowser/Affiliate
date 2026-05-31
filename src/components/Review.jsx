@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products.js";
 import { siteConfig } from "../data/config.js";
 import { trackAffiliateClick } from "../utils/analytics.js";
+import { ProductSchema } from "../data/seoSchema.jsx";
 
 const Review = () => {
   const { id } = useParams();
@@ -30,6 +31,8 @@ const Review = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* JSON-LD structured data for Google rich results */}
+      <ProductSchema product={product} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">

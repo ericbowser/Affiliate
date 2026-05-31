@@ -13,7 +13,8 @@
     "tail:build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "tail:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
     "server": "node server.js",
-    "server:dev": "node --watch server.js"
+    "server:dev": "node --watch server.js",
+    "sitemap": "node generateSitemap.js"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.8",

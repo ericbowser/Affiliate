@@ -2,16 +2,21 @@ import React from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { getPostBySlug, posts } from "../data/posts";
+import { getPostBySlug, getRelatedPosts } from "../data/posts";
+import { ArticleSchema } from "../data/seoSchema";
 
 const BlogPost = () => {
   const { slug } = useParams();
   const post = getPostBySlug(slug);
 
+  const related = getRelatedPosts(slug, 3);
+
   if (!post) return <Navigate to="/404" replace />;
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* JSON-LD structured data for Google */}
+      <ArticleSchema post={post} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">
@@ -147,13 +152,11 @@ const BlogPost = () => {
       </div>
 
       {/* Related posts */}
-      {posts.length > 1 && (
+      {related.length > 0 && (
         <div className="mt-12">
           <h3 className="text-lg font-bold text-gray-900 mb-4">More Guides</h3>
           <div className="space-y-3">
-            {posts
-              .filter((p) => p.slug !== slug)
-              .map((p) => (
+            {related.map((p) => (
                 <Link
                   key={p.slug}
                   to={`/blog/${p.slug}`}

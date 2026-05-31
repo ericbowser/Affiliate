@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://rockhoundutah.com/sitemap.xml
+
+# Block dev/build artifacts
+Disallow: /assets/
