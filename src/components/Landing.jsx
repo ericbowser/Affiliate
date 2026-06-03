@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { siteConfig } from "../data/config.js";
 import { products } from "../data/products.js";
 import { posts } from "../data/posts";
+import GemIcon from "./gems/GemIcons";
 
 const Landing = () => {
   const { categories, meta } = siteConfig;
@@ -17,9 +18,9 @@ const Landing = () => {
   ];
 
   const utahSites = [
-    { name: "Topaz Mountain", what: "Topaz crystals", distance: "3.5 hrs from SLC" },
-    { name: "Dugway Geode Beds", what: "Agate geodes", distance: "2.5 hrs from SLC" },
-    { name: "Tintic Mountains", what: "Garnets & minerals", distance: "1.5 hrs from SLC" },
+    { name: "Topaz Mountain", what: "Topaz crystals", distance: "3.5 hrs from SLC", gem: "topaz" },
+    { name: "Dugway Geode Beds", what: "Agate geodes", distance: "2.5 hrs from SLC", gem: "geode" },
+    { name: "Tintic Mountains", what: "Garnets & minerals", distance: "1.5 hrs from SLC", gem: "garnet" },
   ];
 
   return (
@@ -150,7 +151,9 @@ const Landing = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {utahSites.map((site, i) => (
             <div key={i} className="bg-white border border-gray-200 rounded-2xl p-5">
-              <div className="text-xl mb-2">📍</div>
+              <div className="mb-3">
+                <GemIcon name={site.gem} size={44} />
+              </div>
               <h3 className="font-semibold text-gray-900 text-base mb-1">{site.name}</h3>
               <p className="text-sm text-amber-700 font-medium mb-1">{site.what}</p>
               <p className="text-sm text-gray-500">{site.distance}</p>
@@ -203,21 +206,21 @@ const Landing = () => {
           <h2 className="text-2xl font-semibold text-gray-900 mb-8">About Wasatch Rockhound</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <div className="text-xl mb-2">📍</div>
+              <div className="mb-3"><GemIcon name="topaz" size={36} /></div>
               <h3 className="font-semibold text-gray-900 mb-1.5 text-base">Utah-Based</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Built in Salt Lake City. Every site, terrain type, and season mentioned here is ground we know personally.
               </p>
             </div>
             <div>
-              <div className="text-xl mb-2">⛏️</div>
+              <div className="mb-3"><GemIcon name="garnet" size={36} /></div>
               <h3 className="font-semibold text-gray-900 mb-1.5 text-base">Niche Focus</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Gear specifically for Western rockhounding — not general outdoor gear. Mineralized desert soil, BLM access, and high-desert conditions shape every pick.
               </p>
             </div>
             <div>
-              <div className="text-xl mb-2">🧭</div>
+              <div className="mb-3"><GemIcon name="opal" size={36} /></div>
               <h3 className="font-semibold text-gray-900 mb-1.5 text-base">Straight Talk</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 Honest pros, cons, and who each piece of gear is actually best for. We'd rather send you to the right $50 tool than upsell you on something you don't need.
@@ -283,4 +286,3 @@ function ProductCard({ product }) {
 }
 
 export default Landing;
-

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 88" fill="none">
+  <defs>
+    <linearGradient id="topaz-g" x1="18" y1="0" x2="54" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="35%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+  </defs>
+  <polygon points="36,4 54,18 58,50 36,84 14,50 18,18" fill="url(#topaz-g)" stroke="#d97706" stroke-width="1.2"/>
+  <polygon points="36,4 54,18 36,26 18,18" fill="#fef9c3" opacity="0.55"/>
+  <polygon points="36,26 54,18 58,50 36,54" fill="#fbbf24" opacity="0.5"/>
+  <polygon points="36,26 18,18 14,50 36,54" fill="#f59e0b" opacity="0.4"/>
+  <polygon points="36,54 58,50 36,84" fill="#92400e" opacity="0.55"/>
+  <polygon points="36,54 14,50 36,84" fill="#b45309" opacity="0.45"/>
+  <ellipse cx="29" cy="20" rx="4" ry="7" fill="white" opacity="0.3" transform="rotate(-15 29 20)"/>
+  <line x1="36" y1="4" x2="36" y2="84" stroke="white" stroke-width="0.6" opacity="0.18"/>
+</svg>

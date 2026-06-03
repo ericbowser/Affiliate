@@ -3,6 +3,8 @@ import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { Link } from "react-router-dom";
 import { rockhoundingSites } from "../data/sites";
 import { GEM_MARKERS } from "../data/gemMarkers";
+import GemIcon from "./gems/GemIcons";
+import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET, GEM_ASSETS } from "../assets/gems";
 
 const MAP_CENTER = { lat: 39.2, lng: -111.5 };
 const MAP_ZOOM = 7;
@@ -11,36 +13,12 @@ const MAP_STYLES = [
   { elementType: "geometry", stylers: [{ color: "#f5f0e8" }] },
   { elementType: "labels.text.fill", stylers: [{ color: "#57534e" }] },
   { elementType: "labels.text.stroke", stylers: [{ color: "#fafaf9" }] },
-  {
-    featureType: "administrative",
-    elementType: "geometry.stroke",
-    stylers: [{ color: "#c6b89a" }],
-  },
-  {
-    featureType: "landscape.natural",
-    elementType: "geometry",
-    stylers: [{ color: "#e8dfc8" }],
-  },
-  {
-    featureType: "poi",
-    elementType: "geometry",
-    stylers: [{ color: "#ddd0b4" }],
-  },
-  {
-    featureType: "road",
-    elementType: "geometry",
-    stylers: [{ color: "#ffffff" }],
-  },
-  {
-    featureType: "road.highway",
-    elementType: "geometry",
-    stylers: [{ color: "#f0c070" }],
-  },
-  {
-    featureType: "water",
-    elementType: "geometry",
-    stylers: [{ color: "#b8d4e8" }],
-  },
+  { featureType: "administrative", elementType: "geometry.stroke", stylers: [{ color: "#c6b89a" }] },
+  { featureType: "landscape.natural", elementType: "geometry", stylers: [{ color: "#e8dfc8" }] },
+  { featureType: "poi", elementType: "geometry", stylers: [{ color: "#ddd0b4" }] },
+  { featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
+  { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#f0c070" }] },
+  { featureType: "water", elementType: "geometry", stylers: [{ color: "#b8d4e8" }] },
 ];
 
 const DIFFICULTY_COLOR = {
@@ -63,9 +41,7 @@ const SiteMap = () => {
 
   const handleMarkerClick = (site) => {
     setSelected(site);
-    if (map) {
-      map.panTo({ lat: site.lat, lng: site.lng });
-    }
+    if (map) map.panTo({ lat: site.lat, lng: site.lng });
   };
 
   if (loadError) {
@@ -146,13 +122,18 @@ const SiteMap = () => {
         {/* Sidebar */}
         <div className="lg:w-80 flex flex-col gap-3">
           {selected ? (
-            /* Selected site detail card */
             <div className="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
+              {/* Header with gem icon */}
               <div className="bg-gradient-to-r from-stone-800 to-amber-800 px-5 py-4">
                 <div className="flex items-start justify-between">
-                  <div>
-                    <h2 className="text-white font-bold text-lg leading-tight">{selected.name}</h2>
-                    <p className="text-amber-200 text-sm mt-0.5">{selected.county} · {selected.region}</p>
+                  <div className="flex items-center gap-3">
+                    {SITE_PRIMARY_GEM[selected.id] && (
+                      <GemIcon name={SITE_PRIMARY_GEM[selected.id]} size={36} className="shrink-0 drop-shadow-md" />
+                    )}
+                    <div>
+                      <h2 className="text-white font-bold text-lg leading-tight">{selected.name}</h2>
+                      <p className="text-amber-200 text-sm mt-0.5">{selected.county} · {selected.region}</p>
+                    </div>
                   </div>
                   <button
                     onClick={() => setSelected(null)}
@@ -187,15 +168,19 @@ const SiteMap = () => {
                   </div>
                 </div>
 
-                {/* What you'll find */}
+                {/* What you'll find — with gem icons */}
                 <div>
                   <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">What You'll Find</p>
                   <div className="flex flex-wrap gap-1.5">
-                    {selected.find.map((item) => (
-                      <span key={item} className="bg-amber-50 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-full border border-amber-200">
-                        {item}
-                      </span>
-                    ))}
+                    {selected.find.map((item) => {
+                      const gemKey = MINERAL_TO_ASSET[item];
+                      return (
+                        <span key={item} className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 text-xs font-medium px-2.5 py-1 rounded-full border border-amber-200">
+                          {gemKey && <GemIcon name={gemKey} size={14} className="shrink-0" />}
+                          {item}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
 
@@ -232,7 +217,7 @@ const SiteMap = () => {
               </div>
             </div>
           ) : (
-            /* Site list when nothing selected */
+            /* Site list — with gem icons */
             <div className="space-y-2">
               <p className="text-sm text-gray-400 mb-3">Click a pin or select a site:</p>
               {rockhoundingSites.map((site) => (
@@ -242,11 +227,18 @@ const SiteMap = () => {
                   className="w-full text-left bg-white border border-stone-200 hover:border-amber-400 rounded-xl px-4 py-3 transition-colors group"
                 >
                   <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold text-gray-900 text-sm group-hover:text-amber-700 transition-colors">
-                        {site.name}
-                      </p>
-                      <p className="text-xs text-gray-400 mt-0.5">{site.county} · {site.distanceFromSLC}</p>
+                    <div className="flex items-center gap-2.5">
+                      {SITE_PRIMARY_GEM[site.id] ? (
+                        <GemIcon name={SITE_PRIMARY_GEM[site.id]} size={24} className="shrink-0" />
+                      ) : (
+                        <span className="text-lg">📍</span>
+                      )}
+                      <div>
+                        <p className="font-semibold text-gray-900 text-sm group-hover:text-amber-700 transition-colors">
+                          {site.name}
+                        </p>
+                        <p className="text-xs text-gray-400 mt-0.5">{site.county} · {site.distanceFromSLC}</p>
+                      </div>
                     </div>
                     <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${DIFFICULTY_COLOR[site.difficulty] ?? "bg-gray-100 text-gray-700"}`}>
                       {site.difficulty}

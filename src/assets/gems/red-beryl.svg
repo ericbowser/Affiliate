@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 88" fill="none">
+  <defs>
+    <linearGradient id="beryl-g" x1="16" y1="0" x2="56" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="30%" stop-color="#dc2626"/>
+      <stop offset="70%" stop-color="#991b1b"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </linearGradient>
+  </defs>
+  <polygon points="24,6 48,6 60,16 60,72 48,82 24,82 12,72 12,16" fill="url(#beryl-g)" stroke="#b91c1c" stroke-width="1.2"/>
+  <polygon points="24,6 48,6 36,16 36,6" fill="#fca5a5" opacity="0.28"/>
+  <polygon points="24,6 36,16 12,16" fill="#ef4444" opacity="0.22"/>
+  <polygon points="48,6 60,16 36,16" fill="#fca5a5" opacity="0.18"/>
+  <rect x="12" y="16" width="48" height="9" fill="#ef4444" opacity="0.12"/>
+  <rect x="12" y="63" width="48" height="9" fill="#7f1d1d" opacity="0.28"/>
+  <polygon points="12,72 24,82 36,72 36,82" fill="#450a0a" opacity="0.38"/>
+  <polygon points="60,72 48,82 36,72 36,82" fill="#7f1d1d" opacity="0.32"/>
+  <line x1="12" y1="25" x2="60" y2="25" stroke="white" stroke-width="0.6" opacity="0.14"/>
+  <line x1="12" y1="63" x2="60" y2="63" stroke="white" stroke-width="0.6" opacity="0.11"/>
+  <line x1="36" y1="6" x2="36" y2="82" stroke="white" stroke-width="0.5" opacity="0.14"/>
+  <ellipse cx="28" cy="20" rx="6" ry="9" fill="white" opacity="0.18" transform="rotate(-10 28 20)"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 88" fill="none">
+  <defs>
+    <linearGradient id="garnet-g" x1="0" y1="0" x2="72" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fca5a5"/>
+      <stop offset="40%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#7f1d1d"/>
+    </linearGradient>
+  </defs>
+  <polygon points="36,4 64,24 64,64 36,84 8,64 8,24" fill="url(#garnet-g)" stroke="#991b1b" stroke-width="1.2"/>
+  <polygon points="36,4 64,24 36,34 8,24" fill="#fca5a5" opacity="0.36"/>
+  <polygon points="36,34 64,24 64,64 36,54" fill="#dc2626" opacity="0.32"/>
+  <polygon points="36,34 8,24 8,64 36,54" fill="#b91c1c" opacity="0.28"/>
+  <polygon points="36,54 64,64 36,84" fill="#7f1d1d" opacity="0.48"/>
+  <polygon points="36,54 8,64 36,84" fill="#991b1b" opacity="0.42"/>
+  <ellipse cx="30" cy="18" rx="5" ry="8" fill="white" opacity="0.2" transform="rotate(-18 30 18)"/>
+</svg>

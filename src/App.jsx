@@ -16,7 +16,7 @@ import WeatherPage from "./components/WeatherPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="min-h-screen bg-gray-50 flex flex-col">
         <Navbar />
         <main className="flex-1">

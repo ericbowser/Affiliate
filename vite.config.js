@@ -13,6 +13,9 @@ export default defineConfig({
   },
   server: {
     host: process.env.HOST || 'localhost',
-    port: parseInt(process.env.PORT) || 3000,
+    port: parseInt(process.env.VITE_PORT) || 3000,
+    proxy: {
+      '/api': 'http://localhost:7666',
+    },
   },
 });
