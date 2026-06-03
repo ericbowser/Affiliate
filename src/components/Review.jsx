@@ -286,6 +286,26 @@ const Review = () => {
         </div>
       </div>
     </div>
+
+    {/* ── MOBILE STICKY PRICE BAR (hidden on lg+) ── */}
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg px-4 py-3 flex items-center justify-between gap-3">
+      <div>
+        <div className="text-lg font-bold text-amber-700 leading-none">{product.price}</div>
+        <div className="text-xs text-gray-500 mt-0.5 truncate max-w-[160px]">{product.name}</div>
+      </div>
+      <a
+        href={product.url}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        onClick={() => handleAffiliateClick('mobile_sticky_bar')}
+        className="shrink-0 bg-amber-600 hover:bg-amber-500 text-white font-semibold py-2.5 px-5 rounded-xl transition-colors text-sm"
+      >
+        Check price →
+      </a>
+    </div>
+
+    {/* Bottom padding so sticky bar doesn't cover content */}
+    <div className="lg:hidden h-20" />
   );
 };
 
