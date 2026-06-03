@@ -306,6 +306,7 @@ const Review = () => {
 
     {/* Bottom padding so sticky bar doesn't cover content */}
     <div className="lg:hidden h-20" />
+    </>
   );
 };
 
