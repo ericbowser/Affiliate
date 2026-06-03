@@ -10,6 +10,17 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    chunkSizeWarningLimit: 800,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react':    ['react', 'react-dom', 'react-router-dom'],
+          'vendor-markdown': ['react-markdown', 'remark-gfm'],
+          'vendor-maps':     ['@react-google-maps/api'],
+          'vendor-icons':    ['react-icons'],
+        },
+      },
+    },
   },
   server: {
     host: process.env.HOST || 'localhost',

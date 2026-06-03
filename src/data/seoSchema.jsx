@@ -56,25 +56,50 @@ export const ArticleSchema = ({ post }) => {
 };
 
 /**
+ * Extract brand name from the first word(s) of a product name.
+ * e.g. "Garrett AT Max" → "Garrett", "Minelab Equinox 800" → "Minelab"
+ * Falls back to site name for unbranded products.
+ */
+function extractBrand(productName) {
+  const knownBrands = [
+    "Garrett", "Minelab", "Nokta", "Estwing", "National Geographic",
+    "Lortone", "VEVOR", "Black Diamond", "Stanley", "Leatherman",
+    "Garmin", "Hydro Flask", "Nicholson", "C1",
+  ];
+  return knownBrands.find((b) => productName.startsWith(b)) || SITE.name;
+}
+
+/**
  * Product review schema for individual product reviews.
  * Enables star ratings in Google search results.
+ *
+ * Required by Google: name, image, review with rating.
+ * Add product.image in products.js for best results;
+ * falls back to site logo if not provided.
  */
 export const ProductSchema = ({ product }) => {
   if (!product) return null;
 
   const priceNum = parseFloat(product.price.replace(/[^0-9.]/g, ""));
+  const imageUrl = product.image || SITE.logo;
 
   const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     description: product.tagline,
+    image: imageUrl,
+    brand: {
+      "@type": "Brand",
+      name: extractBrand(product.name),
+    },
     review: {
       "@type": "Review",
       reviewRating: {
         "@type": "Rating",
         ratingValue: product.rating,
         bestRating: 5,
+        worstRating: 1,
       },
       author: SITE.author,
     },
@@ -84,6 +109,24 @@ export const ProductSchema = ({ product }) => {
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: product.url,
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: { "@type": "MonetaryAmount", value: "0", currency: "USD" },
+        shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+          transitTime: { "@type": "QuantitativeValue", minValue: 2, maxValue: 5, unitCode: "DAY" },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "US",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 30,
+        returnMethod: "https://schema.org/ReturnByMail",
+        returnFees: "https://schema.org/FreeReturn",
+      },
     },
   };
 
