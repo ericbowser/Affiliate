@@ -3,21 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Wasatch Rockhound — gear reviews & field guides for rockhounding in the American West",
+  "description": "AI tools reviews & comparisons — affiliate marketing site",
   "scripts": {
     "dev": "vite",
     "dev:all": "concurrently \"node --watch server.js\" \"vite\"",
     "tail": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "build": "vite build",
-    "prerender": "node scripts/prerender.js",
-    "sitemap": "node generateSitemap.js",
-    "build:full": "vite build && node scripts/prerender.js && node generateSitemap.js",
     "clean": "rm node_modules -R && npm install",
     "preview": "vite preview",
     "tail:build": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css",
     "tail:watch": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
     "server": "node server.js",
-    "server:dev": "node --watch server.js"
+    "server:dev": "node --watch server.js",
+    "sitemap": "node generateSitemap.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -44,7 +42,6 @@
     "concurrently": "^9.1.2",
     "dotenv": "^17.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "puppeteer": "^24.43.1",
     "tailwindcss": "^3.4.17",
     "vite": "^7.1.2"
   },
