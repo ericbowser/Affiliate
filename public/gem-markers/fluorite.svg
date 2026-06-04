@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <polygon points="18,2 30,9 30,30 18,38 6,30 6,9" fill="#a855f7" stroke="#6b21a8" stroke-width="1.2"/>
+    <polygon points="18,2 30,9 18,16 6,9" fill="#e9d5ff" opacity="0.45"/>
+    <polygon points="6,9 18,16 6,30" fill="#9333ea" opacity="0.35"/>
+    <polygon points="30,9 18,16 30,30" fill="#7e22ce" opacity="0.45"/>
+    <polygon points="18,16 6,30 18,38 30,30" fill="#581c87" opacity="0.5"/>
+    <line x1="18" y1="2" x2="18" y2="38" stroke="white" stroke-width="0.6" opacity="0.2"/>
+    <line x1="6" y1="9" x2="30" y2="30" stroke="white" stroke-width="0.5" opacity="0.15"/>
+    <line x1="30" y1="9" x2="6" y2="30" stroke="white" stroke-width="0.5" opacity="0.15"/>
+    <ellipse cx="14" cy="10" rx="3" ry="6" fill="white" opacity="0.25" transform="rotate(-15 14 10)"/>
+    <ellipse cx="18" cy="40" rx="8" ry="3" fill="#00000022"/>
+  </g>
+</svg>

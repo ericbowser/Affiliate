@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { Link } from "react-router-dom";
 import { rockhoundingSites } from "../data/sites";
-import { GEM_MARKERS } from "../data/gemMarkers";
+import GemSiteMarkers from "./GemSiteMarkers";
 import GemIcon from "./gems/GemIcons";
 import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET, GEM_ASSETS } from "../assets/gems";
 
@@ -97,25 +97,12 @@ const SiteMap = () => {
               zoomControlOptions: { position: 9 },
             }}
           >
-            {rockhoundingSites.map((site) => (
-              <Marker
-                key={site.id}
-                position={{ lat: site.lat, lng: site.lng }}
-                onClick={() => handleMarkerClick(site)}
-                icon={isLoaded ? {
-                  url: GEM_MARKERS[site.id],
-                  scaledSize: new window.google.maps.Size(
-                    selected?.id === site.id ? 44 : 36,
-                    selected?.id === site.id ? 54 : 44
-                  ),
-                  anchor: new window.google.maps.Point(
-                    selected?.id === site.id ? 22 : 18,
-                    selected?.id === site.id ? 52 : 42
-                  ),
-                } : undefined}
-                zIndex={selected?.id === site.id ? 10 : 1}
-              />
-            ))}
+            <GemSiteMarkers
+              sites={rockhoundingSites}
+              selectedId={selected?.id ?? null}
+              onSelect={handleMarkerClick}
+              mapsReady={isLoaded}
+            />
           </GoogleMap>
         </div>
 
@@ -127,9 +114,7 @@ const SiteMap = () => {
               <div className="bg-gradient-to-r from-stone-800 to-amber-800 px-5 py-4">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
-                    {SITE_PRIMARY_GEM[selected.id] && (
-                      <GemIcon name={SITE_PRIMARY_GEM[selected.id]} size={36} className="shrink-0 drop-shadow-md" />
-                    )}
+                    <GemIcon name={SITE_PRIMARY_GEM[selected.id]} size={36} className="shrink-0 drop-shadow-md" />
                     <div>
                       <h2 className="text-white font-bold text-lg leading-tight">{selected.name}</h2>
                       <p className="text-amber-200 text-sm mt-0.5">{selected.county} · {selected.region}</p>
@@ -228,11 +213,7 @@ const SiteMap = () => {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
-                      {SITE_PRIMARY_GEM[site.id] ? (
-                        <GemIcon name={SITE_PRIMARY_GEM[site.id]} size={24} className="shrink-0" />
-                      ) : (
-                        <span className="text-lg">📍</span>
-                      )}
+                      <GemIcon name={SITE_PRIMARY_GEM[site.id]} size={24} className="shrink-0" />
                       <div>
                         <p className="font-semibold text-gray-900 text-sm group-hover:text-amber-700 transition-colors">
                           {site.name}

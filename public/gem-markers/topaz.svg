@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <polygon points="18,2 28,9 30,26 18,40 6,26 8,9" fill="#fbbf24" stroke="#92400e" stroke-width="1.2"/>
+    <polygon points="18,2 28,9 18,14 8,9" fill="#fef3c7" opacity="0.7"/>
+    <polygon points="18,14 28,9 30,26 18,28" fill="#f59e0b" opacity="0.6"/>
+    <polygon points="18,14 8,9 6,26 18,28" fill="#d97706" opacity="0.5"/>
+    <polygon points="18,28 30,26 18,40" fill="#92400e" opacity="0.7"/>
+    <polygon points="18,28 6,26 18,40" fill="#b45309" opacity="0.6"/>
+    <ellipse cx="14" cy="10" rx="3" ry="5" fill="white" opacity="0.3" transform="rotate(-15 14 10)"/>
+  </g>
+</svg>

@@ -17,10 +17,20 @@ import redBeryl from './red-beryl.svg';
 import garnet from './garnet.svg';
 import pseudobrookite from './pseudobrookite.svg';
 import geode from './geode.svg';
+import { rockhoundingSites } from '../../data/sites.js';
 
 export { topaz, amethyst, opal, redBeryl, garnet, pseudobrookite, geode };
 
-/** Keyed lookup — keys match site mineral names and GemIcon `name` prop */
+/** Map-pin icons (public/gem-markers) — same artwork as Google Maps markers */
+const MAP_MARKER_ASSETS = {
+  trilobite: '/gem-markers/trilobite.svg',
+  agate:     '/gem-markers/agate.svg',
+  fluorite:  '/gem-markers/fluorite.svg',
+  sunstone:  '/gem-markers/sunstone.svg',
+  pyrope:    '/gem-markers/pyrope.svg',
+};
+
+/** Keyed lookup — keys match GemIcon `name` prop */
 export const GEM_ASSETS = {
   topaz,
   amethyst,
@@ -29,6 +39,7 @@ export const GEM_ASSETS = {
   garnet,
   pseudobrookite,
   geode,
+  ...MAP_MARKER_ASSETS,
 };
 
 /**
@@ -36,27 +47,27 @@ export const GEM_ASSETS = {
  * to asset keys for automatic icon resolution.
  */
 export const MINERAL_TO_ASSET = {
-  'Topaz':              'topaz',
-  'Amethyst':           'amethyst',
-  'Opal':               'opal',
-  'Red Beryl (rare)':   'red-beryl',
-  'Garnet':             'garnet',
-  'Pseudobrookite':     'pseudobrookite',
-  'Quartz geodes':      'geode',
-  'Amethyst geodes':    'geode',
-  'Rose quartz geodes': 'geode',
-  'Fluorite':           null,   // future: add fluorite.svg
-  'Sunstone':           null,   // future: add sunstone.svg
+  'Topaz':                          'topaz',
+  'Amethyst':                       'amethyst',
+  'Opal':                           'opal',
+  'Red Beryl (rare)':               'red-beryl',
+  'Garnet':                         'garnet',
+  'Pseudobrookite':                 'pseudobrookite',
+  'Quartz geodes':                  'geode',
+  'Amethyst geodes':                'geode',
+  'Rose quartz geodes':             'geode',
+  'Elrathia kingii trilobites':     'trilobite',
+  'Asaphiscus wheeleri':            'trilobite',
+  'Other marine fossils':           'trilobite',
+  'Fluorite':                       'fluorite',
+  'Agate':                          'agate',
+  'Jasper':                         'agate',
+  'Chalcedony':                     'agate',
+  'Sunstones (oligoclase feldspar)': 'sunstone',
+  'Pyrope garnets (Arizona Rubies)': 'pyrope',
 };
 
-/** Primary gem icon for each site (by site id) */
-export const SITE_PRIMARY_GEM = {
-  'topaz-mountain':     'topaz',
-  'dugway-geode-beds':  'geode',
-  'u-dig-fossils':      null,
-  'tintic-mountains':   'garnet',
-  'san-rafael-swell':   null,
-  'marysvale':          'opal',
-  'sunstone-knoll':     null,
-  'comb-ridge':         'garnet',
-};
+/** Primary gem icon per site — matches map markerKey */
+export const SITE_PRIMARY_GEM = Object.fromEntries(
+  rockhoundingSites.map((site) => [site.id, site.markerKey])
+);

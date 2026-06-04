@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <ellipse cx="18" cy="22" rx="14" ry="10" fill="#fbbf24" stroke="#d97706" stroke-width="1.2"/>
+    <line x1="18" y1="4"  x2="18" y2="13" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="28" y1="7"  x2="25" y2="14" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="33" y1="17" x2="26" y2="18" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="8"  y1="7"  x2="11" y2="14" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="3"  y1="17" x2="10" y2="18" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <ellipse cx="13" cy="19" rx="5" ry="3" fill="white" opacity="0.35" transform="rotate(-20 13 19)"/>
+    <ellipse cx="18" cy="40" rx="8" ry="3" fill="#00000022"/>
+  </g>
+</svg>

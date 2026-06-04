@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <circle cx="18" cy="20" r="17" fill="#a8a29e" stroke="#78716c" stroke-width="1"/>
+    <circle cx="18" cy="20" r="12" fill="#e8dfc8" stroke="#c4b5b0" stroke-width="0.8"/>
+    <circle cx="18" cy="20" r="8" fill="#7c3aed"/>
+    <polygon points="18,12 21,17 18,15 15,17" fill="white" opacity="0.7"/>
+    <polygon points="24,15 25,20 22,17 24,15" fill="#ddd6fe" opacity="0.8"/>
+    <polygon points="24,25 20,26 22,21 25,22" fill="#ede9fe" opacity="0.9"/>
+    <polygon points="18,28 15,22 18,24 21,22" fill="white" opacity="0.6"/>
+    <polygon points="12,25 11,20 14,23 12,25" fill="#c4b5fd" opacity="0.8"/>
+    <ellipse cx="18" cy="40" rx="8" ry="3" fill="#00000022"/>
+  </g>
+</svg>

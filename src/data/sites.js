@@ -1,6 +1,10 @@
+/**
+ * markerKey — iconic find for map pins & UI (matches /public/gem-markers/{key}.svg)
+ */
 export const rockhoundingSites = [
   {
     id: "topaz-mountain",
+    markerKey: "topaz",
     name: "Topaz Mountain",
     county: "Juab County",
     region: "Thomas Range",
@@ -22,6 +26,7 @@ export const rockhoundingSites = [
   },
   {
     id: "dugway-geode-beds",
+    markerKey: "geode",
     name: "Dugway Geode Beds",
     county: "Tooele County",
     region: "West Desert",
@@ -43,6 +48,7 @@ export const rockhoundingSites = [
   },
   {
     id: "u-dig-fossils",
+    markerKey: "trilobite",
     name: "U-Dig Fossils",
     county: "Millard County",
     region: "Near Delta",
@@ -64,6 +70,7 @@ export const rockhoundingSites = [
   },
   {
     id: "tintic-mountains",
+    markerKey: "garnet",
     name: "Tintic Mountains",
     county: "Juab County",
     region: "Near Eureka",
@@ -85,6 +92,7 @@ export const rockhoundingSites = [
   },
   {
     id: "san-rafael-swell",
+    markerKey: "agate",
     name: "San Rafael Swell",
     county: "Emery County",
     region: "Central Utah",
@@ -106,6 +114,7 @@ export const rockhoundingSites = [
   },
   {
     id: "marysvale",
+    markerKey: "fluorite",
     name: "Marysvale",
     county: "Piute County",
     region: "Sevier River Canyon",
@@ -127,6 +136,7 @@ export const rockhoundingSites = [
   },
   {
     id: "sunstone-knoll",
+    markerKey: "sunstone",
     name: "Sunstone Knoll",
     county: "Millard County",
     region: "Southwest of Delta",
@@ -148,6 +158,7 @@ export const rockhoundingSites = [
   },
   {
     id: "comb-ridge",
+    markerKey: "pyrope",
     name: "Comb Ridge / Moses Rock",
     county: "San Juan County",
     region: "Bears Ears Area",

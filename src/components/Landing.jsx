@@ -4,6 +4,7 @@ import { siteConfig } from "../data/config.js";
 import { products } from "../data/products.js";
 import { posts } from "../data/posts";
 import GemIcon from "./gems/GemIcons";
+import LandingMap from "./LandingMap";
 
 const Landing = () => {
   const { categories, meta } = siteConfig;
@@ -19,37 +20,55 @@ const Landing = () => {
 
   const utahSites = [
     { name: "Topaz Mountain", what: "Topaz crystals", distance: "3.5 hrs from SLC", gem: "topaz" },
-    { name: "Dugway Geode Beds", what: "Agate geodes", distance: "2.5 hrs from SLC", gem: "geode" },
+    { name: "Dugway Geode Beds", what: "Quartz geodes", distance: "2.5 hrs from SLC", gem: "geode" },
     { name: "Tintic Mountains", what: "Garnets & minerals", distance: "1.5 hrs from SLC", gem: "garnet" },
   ];
 
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-          <div className="max-w-2xl">
-            <h1 className="text-3xl md:text-4xl font-semibold leading-snug mb-4">
-              The Right Gear for Rockhounding in the West
-            </h1>
-            <p className="text-base text-slate-300 leading-relaxed mb-6">
-              Gear picks for metal detectors, rock hammers, GPS units, and field tools —
-              chosen for Utah's BLM land, desert terrain, and mineralized soil.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#categories"
-                className="bg-amber-700 hover:bg-amber-600 text-white font-medium px-6 py-2.5 rounded-xl transition-colors text-sm"
-              >
-                Browse Gear
-              </a>
-              <Link
-                to="/tools/detector-match"
-                className="bg-white/10 backdrop-blur-sm text-white border border-white/20 font-medium px-6 py-2.5 rounded-xl hover:bg-white/20 transition-colors text-sm"
-              >
-                Find My Detector →
-              </Link>
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-8 lg:gap-10 items-start">
+
+            {/* Left 30% — headline, gems, CTAs */}
+            <div className="lg:pt-6">
+              <h1 className="text-3xl md:text-4xl font-semibold leading-snug mb-4">
+                The Right Gear for Rockhounding in the West
+              </h1>
+              <p className="text-base text-slate-300 leading-relaxed mb-5">
+                Gear picks for metal detectors, rock hammers, GPS units, and field tools —
+                chosen for Utah's BLM land, desert terrain, and mineralized soil.
+              </p>
+
+              {/* Gem strip */}
+              <div className="flex items-center gap-3 mb-6">
+                {["topaz", "garnet", "geode", "opal", "amethyst", "red-beryl"].map((gem) => (
+                  <GemIcon key={gem} name={gem} size={34} className="opacity-90 drop-shadow-md" />
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="#categories"
+                  className="bg-amber-700 hover:bg-amber-600 text-white font-medium px-6 py-2.5 rounded-xl transition-colors text-sm"
+                >
+                  Browse Gear
+                </a>
+                <Link
+                  to="/tools/detector-match"
+                  className="bg-white/10 backdrop-blur-sm text-white border border-white/20 font-medium px-6 py-2.5 rounded-xl hover:bg-white/20 transition-colors text-sm"
+                >
+                  Find My Detector →
+                </Link>
+              </div>
             </div>
+
+            {/* Right 70% — interactive gem-marker map */}
+            <div className="w-full rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
+              <LandingMap heroMode />
+            </div>
+
           </div>
         </div>
       </section>

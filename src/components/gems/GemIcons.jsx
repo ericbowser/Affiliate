@@ -11,7 +11,8 @@ const defaultSize = 72;
  *   <GemIcon name="garnet" size={48} />
  *   <GemIcon name="red-beryl" className="inline-block mr-2" />
  *
- * Available names: topaz, amethyst, opal, red-beryl, garnet, pseudobrookite, geode
+ * Available names: topaz, amethyst, opal, red-beryl, garnet, pseudobrookite, geode,
+ *   trilobite, agate, fluorite, sunstone, pyrope
  */
 const GemIcon = ({ name, size = defaultSize, className = "" }) => {
   const src = GEM_ASSETS[name?.toLowerCase()];

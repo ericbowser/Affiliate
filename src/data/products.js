@@ -9,6 +9,7 @@ export const products = [
     rating: 4.5,
     bestFor: "Brand-new detectorists on a tight budget",
     url: "https://amzn.to/43iswmN",
+    image: "https://www.noktadetectors.com/wp-content/uploads/2023/04/nokta-simplex-lite-banner.jpg",
     pros: [
       "Fully waterproof to 16 ft — submerge it, no worries",
       "Single-menu turn-on-and-go design — minimal learning curve",
@@ -45,6 +46,7 @@ export const products = [
     rating: 4.7,
     bestFor: "Beginners ready to get serious about the hobby",
     url: "https://amzn.to/4dyU6Sx",
+    image: "https://garrett.com/app/uploads/2023/07/ace-400-10.png",
     pros: [
       "Iron Audio feature distinguishes junk from real finds",
       "DD search coil handles mineralized desert soil better than concentric coils",
@@ -105,6 +107,7 @@ export const products = [
     rating: 4.8,
     bestFor: "Intermediate hunters and wet terrain",
     url: "https://amzn.to/42Uv2iO",
+    image: "https://garrett.com/app/uploads/2023/11/AT-Max-1.png",
     pros: [
       "Fully submersible to 10ft — creek and river hunting",
       "Z-Lynk wireless audio with low latency",
@@ -127,6 +130,7 @@ export const products = [
     rating: 4.6,
     bestFor: "Gold prospectors hunting flakes and small nuggets",
     url: "https://amzn.to/49jGJ6k",
+    image: "https://garrett.com/app/uploads/2023/10/goldmaster24k-img1.png",
     pros: [
       "48 kHz frequency catches gold other detectors miss entirely",
       "XGB auto ground balance handles highly mineralized desert soil",
@@ -210,6 +214,7 @@ export const products = [
     rating: 4.9,
     bestFor: "Every rockhound, beginner to expert",
     url: "https://amzn.to/3PDmlX7",
+    image: "https://mobileimages.lowes.com/productimages/969463f0-7059-414c-bf76-d891995728ce/81321569.jpeg?size=lg",
     pros: [
       "One-piece forged steel — virtually indestructible",
       "Pointed tip for splitting and prying",
@@ -232,6 +237,7 @@ export const products = [
     rating: 4.8,
     bestFor: "Gold prospectors and serious diggers",
     url: "https://amzn.to/42TPJvj",
+    image: "https://mobileimages.lowes.com/productimages/75b25ffe-1b22-4706-a562-45f9c23fe92c/09337222.jpg?size=lg",
     pros: [
       "Flat blade for prying and scraping",
       "Pointed pick for breaking and digging",
@@ -281,6 +287,7 @@ export const products = [
     rating: 4.5,
     bestFor: "First-time tumblers and beginners",
     url: "https://amzn.to/4vfVFuL",
+    image: "https://thinkbluemarble.com/wp-content/uploads/2022/10/Hobby1.jpg",
     pros: [
       "Includes grit, polish, and rough rocks to start",
       "Quiet motor by tumbler standards",
@@ -324,6 +331,7 @@ export const products = [
     rating: 4.4,
     bestFor: "Tumblers who want more capacity and control",
     url: "https://amzn.to/4vivx2p",
+    image: "https://img.vevorstatic.com/us/YSDMJCFKSJ3LBZR69V5/goods_grid-v2/rock-tumbler-kit-m100-1.2.jpg",
     pros: [
       "Digital timer — set it and forget it",
       "Dual barrel lets you run two batches simultaneously",
@@ -347,6 +355,7 @@ export const products = [
     rating: 4.7,
     bestFor: "Any rockhound entering dark or enclosed spaces",
     url: "https://amzn.to/4wRB8yb",
+    image: "https://blackdiamondequipment.com/cdn/shop/files/620672_0004_Spot_400_Headlamp_Graphite_01.jpg?v=1774652825",
     pros: [
       "High lumens — bright enough for mine exploration",
       "Red night-vision mode preserves eye adaptation",
@@ -369,6 +378,7 @@ export const products = [
     rating: 4.7,
     bestFor: "Utah desert and high-desert rockhounding",
     url: "https://amzn.to/4dA1NIh",
+    image: "https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-TheLegendaryClassicBottle1QT_RSS_-Pomelo-Front.png?v=1762181904",
     pros: [
       "Keeps drinks cold 24hrs and hot 12hrs in the field",
       "Built-in cup lid — no extra cup needed at camp",
@@ -391,6 +401,7 @@ export const products = [
     rating: 4.7,
     bestFor: "Remote site rockhounding and backcountry safety",
     url: "https://amzn.to/4nSxM9P",
+    image: "https://www.leatherman.com/cdn/shop/files/signal_20260402201811_dz9x.jpg?crop=center&height=1200&v=1777559008&width=1200",
     pros: [
       "Fire starter built in — critical on remote BLM land",
       "Emergency whistle included",
@@ -415,6 +426,7 @@ export const products = [
     rating: 4.6,
     bestFor: "Marking find locations and navigating BLM land",
     url: "https://amzn.to/49Ui3kU",
+    image: "https://www.wellbots.com/cdn/shop/files/cf-lg-59917067-77a5-4db5-ad50-6ddba7022dc1.jpg?v=1739346620",
     pros: [
       "3-axis compass + barometric altimeter",
       "Pre-loaded TopoActive maps of Western US",
@@ -437,6 +449,7 @@ export const products = [
     rating: 4.7,
     bestFor: "Solo rockhounds in remote Utah desert and mountains",
     url: "https://amzn.to/3POuVSN",
+    image: "https://www.tackform.com/cdn/shop/files/MAIN_inReachMini2-FlameRed_77192539-a21b-4217-9456-779d2454ea26.webp?v=1735324651",
     pros: [
       "SOS connects to GEOS 24/7 rescue coordination",
       "Two-way texting via Iridium satellite network",
@@ -461,6 +474,7 @@ export const products = [
     rating: 4.6,
     bestFor: "Utah-based rockhounds of all skill levels",
     url: "https://amzn.to/4fdSjn9",
+    image: "https://cdn.shopify.com/s/files/1/0674/5433/7265/files/9781493045969_p0.jpg?v=1765038323",
     pros: [
       "75 sites including Topaz Mountain, Dugway, Tintic",
       "GPS coordinates for each location",
@@ -483,6 +497,7 @@ export const products = [
     rating: 4.4,
     bestFor: "Gem hunters focused on Utah minerals and crystals",
     url: "https://amzn.to/4fLlEW9",
+    image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387719545i/1243784.jpg",
     pros: [
       "Detailed directions to lesser-known sites",
       "Mineral descriptions and photos",
