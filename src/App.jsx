@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { GoogleMapsProvider } from "./context/GoogleMapsContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
@@ -17,6 +18,7 @@ import WeatherPage from "./components/WeatherPage";
 const App = () => {
   return (
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <GoogleMapsProvider>
       <div className="min-h-screen bg-gray-50 flex flex-col">
         <Navbar />
         <main className="flex-1">
@@ -36,6 +38,7 @@ const App = () => {
         </main>
         <Footer />
       </div>
+      </GoogleMapsProvider>
     </BrowserRouter>
   );
 };

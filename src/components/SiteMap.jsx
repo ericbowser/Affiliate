@@ -1,10 +1,12 @@
 import React, { useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap } from "@react-google-maps/api";
 import { Link } from "react-router-dom";
 import { rockhoundingSites } from "../data/sites";
 import GemSiteMarkers from "./GemSiteMarkers";
 import GemIcon from "./gems/GemIcons";
-import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET, GEM_ASSETS } from "../assets/gems";
+import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET } from "../assets/gems";
+import { useGoogleMaps } from "../context/GoogleMapsContext";
+import { MapLoadStatus } from "./MapLoadStatus";
 
 const MAP_CENTER = { lat: 39.2, lng: -111.5 };
 const MAP_ZOOM = 7;
@@ -32,9 +34,7 @@ const SiteMap = () => {
   const [selected, setSelected] = useState(null);
   const [map, setMap] = useState(null);
 
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-  });
+  const { isLoaded } = useGoogleMaps();
 
   const onLoad = useCallback((mapInstance) => setMap(mapInstance), []);
   const onUnmount = useCallback(() => setMap(null), []);
@@ -43,24 +43,6 @@ const SiteMap = () => {
     setSelected(site);
     if (map) map.panTo({ lat: site.lat, lng: site.lng });
   };
-
-  if (loadError) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <p className="text-red-600 font-medium">Failed to load Google Maps.</p>
-        <p className="text-gray-500 text-sm mt-2">Check that your API key is set correctly in .env</p>
-      </div>
-    );
-  }
-
-  if (!isLoaded) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-20 text-center">
-        <div className="inline-block w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-full animate-spin" />
-        <p className="text-gray-500 mt-4 text-sm">Loading map…</p>
-      </div>
-    );
-  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -82,28 +64,35 @@ const SiteMap = () => {
       <div className="flex flex-col lg:flex-row gap-6">
 
         {/* Map */}
-        <div className="flex-1 rounded-2xl overflow-hidden shadow-md border border-stone-200" style={{ minHeight: "540px" }}>
-          <GoogleMap
-            mapContainerStyle={{ width: "100%", height: "100%", minHeight: "540px" }}
-            center={MAP_CENTER}
-            zoom={MAP_ZOOM}
-            onLoad={onLoad}
-            onUnmount={onUnmount}
-            options={{
-              styles: MAP_STYLES,
-              mapTypeControl: false,
-              streetViewControl: false,
-              fullscreenControl: true,
-              zoomControlOptions: { position: 9 },
-            }}
-          >
-            <GemSiteMarkers
-              sites={rockhoundingSites}
-              selectedId={selected?.id ?? null}
-              onSelect={handleMarkerClick}
-              mapsReady={isLoaded}
-            />
-          </GoogleMap>
+        <div
+          className="flex-1 rounded-2xl overflow-hidden shadow-md border border-stone-200 min-h-[320px] lg:min-h-[540px]"
+          style={{ minHeight: "min(540px, 60dvh)" }}
+        >
+          {!isLoaded ? (
+            <MapLoadStatus height={400} />
+          ) : (
+            <GoogleMap
+              mapContainerStyle={{ width: "100%", height: "100%", minHeight: 400 }}
+              center={MAP_CENTER}
+              zoom={MAP_ZOOM}
+              onLoad={onLoad}
+              onUnmount={onUnmount}
+              options={{
+                styles: MAP_STYLES,
+                mapTypeControl: false,
+                streetViewControl: false,
+                fullscreenControl: true,
+                zoomControlOptions: { position: 9 },
+              }}
+            >
+              <GemSiteMarkers
+                sites={rockhoundingSites}
+                selectedId={selected?.id ?? null}
+                onSelect={handleMarkerClick}
+                mapsReady={isLoaded}
+              />
+            </GoogleMap>
+          )}
         </div>
 
         {/* Sidebar */}

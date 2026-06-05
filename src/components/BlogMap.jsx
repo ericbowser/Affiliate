@@ -1,7 +1,9 @@
 import React, { useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import { GoogleMap, Marker } from "@react-google-maps/api";
 import { rockhoundingSites } from "../data/sites";
 import { Link } from "react-router-dom";
+import { useGoogleMaps } from "../context/GoogleMapsContext";
+import { MapLoadStatus } from "./MapLoadStatus";
 
 const MAP_STYLES = [
   { elementType: "geometry", stylers: [{ color: "#f5f0e8" }] },
@@ -53,9 +55,7 @@ const BlogMap = ({ siteIds = [] }) => {
   const center = getCenter(sites);
   const zoom = getZoom(sites);
 
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-  });
+  const { isLoaded } = useGoogleMaps();
 
   const onLoad = useCallback((m) => setMap(m), []);
   const onUnmount = useCallback(() => setMap(null), []);
@@ -65,14 +65,8 @@ const BlogMap = ({ siteIds = [] }) => {
     if (map) map.panTo({ lat: site.lat, lng: site.lng });
   };
 
-  if (loadError) return null; // fail silently in article context
-
   if (!isLoaded) {
-    return (
-      <div className="w-full h-64 bg-stone-100 rounded-2xl flex items-center justify-center">
-        <div className="inline-block w-6 h-6 border-4 border-amber-500 border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
+    return <MapLoadStatus height={256} silent />;
   }
 
   return (

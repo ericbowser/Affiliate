@@ -1,8 +1,10 @@
 import React, { useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap } from "@react-google-maps/api";
 import { Link } from "react-router-dom";
 import { rockhoundingSites } from "../data/sites";
 import GemSiteMarkers from "./GemSiteMarkers";
+import { useGoogleMaps } from "../context/GoogleMapsContext";
+import { MapLoadStatus } from "./MapLoadStatus";
 
 const MAP_CENTER = { lat: 39.2, lng: -111.5 };
 const MAP_ZOOM   = 7;
@@ -37,11 +39,9 @@ const LandingMap = ({ heroMode = false }) => {
   const [selected, setSelected] = useState(null);
   const [map, setMap] = useState(null);
 
-  const mapHeight = heroMode ? 460 : 340;
+  const mapHeight = heroMode ? 360 : 340;
 
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-  });
+  const { isLoaded } = useGoogleMaps();
 
   const onLoad    = useCallback((m) => setMap(m), []);
   const onUnmount = useCallback(() => setMap(null), []);
@@ -52,20 +52,8 @@ const LandingMap = ({ heroMode = false }) => {
     if (map && next) map.panTo({ lat: site.lat, lng: site.lng });
   };
 
-  // Hard fail — render nothing rather than an error in the hero
-  if (loadError) return null;
-
-  // Loading skeleton — same footprint as the loaded map
   if (!isLoaded) {
-    return (
-      <div
-        className={`w-full flex items-center justify-center flex-col gap-2 ${heroMode ? "bg-slate-800/60" : "bg-stone-100 border border-stone-200 rounded-2xl"}`}
-        style={{ height: mapHeight }}
-      >
-        <div className="w-6 h-6 border-4 border-amber-500 border-t-transparent rounded-full animate-spin" />
-        <p className={`text-xs ${heroMode ? "text-slate-400" : "text-stone-400"}`}>Loading map…</p>
-      </div>
-    );
+    return <MapLoadStatus height={mapHeight} heroMode={heroMode} />;
   }
 
   /* ── Info strip styles ───────────────────────────────────────────── */
@@ -87,7 +75,11 @@ const LandingMap = ({ heroMode = false }) => {
 
       {/* Map canvas */}
       <GoogleMap
-        mapContainerStyle={{ width: "100%", height: `${mapHeight}px` }}
+        mapContainerStyle={{
+          width: "100%",
+          height: heroMode ? "clamp(280px, 50dvh, 460px)" : `${mapHeight}px`,
+          minHeight: heroMode ? 280 : mapHeight,
+        }}
         center={MAP_CENTER}
         zoom={MAP_ZOOM}
         onLoad={onLoad}
