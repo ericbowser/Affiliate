@@ -31,8 +31,8 @@ async function post(endpoint, body) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-  } catch (err) {
-    devLog("network error", { url, message: err?.message });
+  } catch (networkErr) {
+    devLog("network error", { url, message: networkErr?.message });
     const err = new Error("Cannot reach the email server.");
     err.code = EmailError.NETWORK;
     throw err;
