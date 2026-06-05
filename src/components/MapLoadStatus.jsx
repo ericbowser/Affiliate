@@ -83,8 +83,8 @@ export function MapLoadStatus({ height, heroMode = false, silent = false }) {
 function MapPlaceholder({ height, className, children }) {
   return (
     <div
-      className={`w-full flex flex-col items-center justify-center text-center px-4 ${className}`}
-      style={{ height, minHeight: height }}
+      className={`w-full min-w-0 flex flex-col items-center justify-center text-center px-4 ${className}`}
+      style={{ height, minHeight: height, minWidth: 280 }}
     >
       {children}
     </div>

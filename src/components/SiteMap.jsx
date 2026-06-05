@@ -7,6 +7,8 @@ import GemIcon from "./gems/GemIcons";
 import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET } from "../assets/gems";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
+import { fullMapStyle } from "../config/mapLayout";
+import { useMapResize } from "../hooks/useMapResize";
 
 const MAP_CENTER = { lat: 39.2, lng: -111.5 };
 const MAP_ZOOM = 7;
@@ -39,6 +41,8 @@ const SiteMap = () => {
   const onLoad = useCallback((mapInstance) => setMap(mapInstance), []);
   const onUnmount = useCallback(() => setMap(null), []);
 
+  useMapResize(map, isLoaded);
+
   const handleMarkerClick = (site) => {
     setSelected(site);
     if (map) map.panTo({ lat: site.lat, lng: site.lng });
@@ -61,18 +65,15 @@ const SiteMap = () => {
       </div>
 
       {/* Layout: map + sidebar */}
-      <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex flex-col lg:flex-row gap-6 min-w-0">
 
-        {/* Map */}
-        <div
-          className="flex-1 rounded-2xl overflow-hidden shadow-md border border-stone-200 min-h-[320px] lg:min-h-[540px]"
-          style={{ minHeight: "min(540px, 60dvh)" }}
-        >
+        {/* Map — explicit height so GoogleMap % height resolves on mobile */}
+        <div className="flex-1 w-full min-w-0 h-[280px] sm:h-[360px] lg:h-[min(60dvh,540px)] rounded-2xl overflow-hidden shadow-md border border-stone-200">
           {!isLoaded ? (
-            <MapLoadStatus height={400} />
+            <MapLoadStatus height={360} />
           ) : (
             <GoogleMap
-              mapContainerStyle={{ width: "100%", height: "100%", minHeight: 400 }}
+              mapContainerStyle={fullMapStyle()}
               center={MAP_CENTER}
               zoom={MAP_ZOOM}
               onLoad={onLoad}

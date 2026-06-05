@@ -4,6 +4,8 @@ import { rockhoundingSites } from "../data/sites";
 import { Link } from "react-router-dom";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
+import { blogMapStyle } from "../config/mapLayout";
+import { useMapResize } from "../hooks/useMapResize";
 
 const MAP_STYLES = [
   { elementType: "geometry", stylers: [{ color: "#f5f0e8" }] },
@@ -60,6 +62,8 @@ const BlogMap = ({ siteIds = [] }) => {
   const onLoad = useCallback((m) => setMap(m), []);
   const onUnmount = useCallback(() => setMap(null), []);
 
+  useMapResize(map, isLoaded);
+
   const handleMarkerClick = (site) => {
     setSelected(selected?.id === site.id ? null : site);
     if (map) map.panTo({ lat: site.lat, lng: site.lng });
@@ -70,10 +74,10 @@ const BlogMap = ({ siteIds = [] }) => {
   }
 
   return (
-    <div className="my-10 rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
+    <div className="my-10 w-full min-w-0 rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
       {/* Map */}
       <GoogleMap
-        mapContainerStyle={{ width: "100%", height: "340px" }}
+        mapContainerStyle={blogMapStyle()}
         center={center}
         zoom={zoom}
         onLoad={onLoad}

@@ -5,6 +5,8 @@ import { rockhoundingSites } from "../data/sites";
 import GemSiteMarkers from "./GemSiteMarkers";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
+import { heroMapStyle, cardMapStyle } from "../config/mapLayout";
+import { useMapResize } from "../hooks/useMapResize";
 
 const MAP_CENTER = { lat: 39.2, lng: -111.5 };
 const MAP_ZOOM   = 7;
@@ -46,6 +48,8 @@ const LandingMap = ({ heroMode = false }) => {
   const onLoad    = useCallback((m) => setMap(m), []);
   const onUnmount = useCallback(() => setMap(null), []);
 
+  useMapResize(map, isLoaded);
+
   const handlePin = (site) => {
     const next = selected?.id === site.id ? null : site;
     setSelected(next);
@@ -71,15 +75,11 @@ const LandingMap = ({ heroMode = false }) => {
   const fullMapClass = heroMode ? "text-xs font-medium text-amber-400 hover:text-amber-300 transition-colors" : "text-xs font-medium text-amber-700 hover:text-amber-900 transition-colors";
 
   return (
-    <div className={heroMode ? "w-full" : "rounded-2xl overflow-hidden border border-stone-200 shadow-md"}>
+    <div className={`w-full min-w-0 ${heroMode ? "" : "rounded-2xl overflow-hidden border border-stone-200 shadow-md"}`}>
 
       {/* Map canvas */}
       <GoogleMap
-        mapContainerStyle={{
-          width: "100%",
-          height: heroMode ? "clamp(280px, 50dvh, 460px)" : `${mapHeight}px`,
-          minHeight: heroMode ? 280 : mapHeight,
-        }}
+        mapContainerStyle={heroMode ? heroMapStyle() : cardMapStyle(mapHeight)}
         center={MAP_CENTER}
         zoom={MAP_ZOOM}
         onLoad={onLoad}
@@ -132,7 +132,7 @@ const LandingMap = ({ heroMode = false }) => {
           </div>
         </div>
       ) : (
-        <div className={`flex items-center justify-between ${stripBase}`}>
+        <div className={`flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between ${stripBase}`}>
           <p className={`text-xs ${textMuted}`}>
             {rockhoundingSites.length} sites · Click a gem pin for details
           </p>

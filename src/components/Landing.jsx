@@ -29,7 +29,7 @@ const Landing = () => {
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-8 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-8 lg:gap-10 items-start min-w-0">
 
             {/* Left 30% — headline, gems, CTAs */}
             <div className="lg:pt-6">
@@ -65,7 +65,7 @@ const Landing = () => {
             </div>
 
             {/* Right 70% — interactive gem-marker map */}
-            <div className="w-full rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
+            <div className="w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
               <LandingMap heroMode />
             </div>
 

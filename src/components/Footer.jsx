@@ -1,24 +1,33 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { siteConfig } from "../data/config.js";
-import { sendSubscribeNotification } from "../utils/emailService";
+import { sendSubscribeNotification, EmailError } from "../utils/emailService";
 
 const Footer = () => {
   const { categories, meta } = siteConfig;
   const [email, setEmail]       = useState("");
   const [status, setStatus]     = useState("idle"); // idle | submitting | success | error
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
     if (!email) return;
 
     setStatus("submitting");
+    setErrorMsg("");
     try {
       await sendSubscribeNotification(email);
       setStatus("success");
       setEmail("");
-    } catch {
+    } catch (err) {
       setStatus("error");
+      if (err.code === EmailError.API_UNAVAILABLE) {
+        setErrorMsg("Email API is not running. Use npm run dev (starts both site + server).");
+      } else if (err.code === EmailError.NETWORK) {
+        setErrorMsg("Could not reach the email server on port 7667. Run npm run dev in the project folder.");
+      } else {
+        setErrorMsg(err.message || "Something went wrong — try again.");
+      }
     }
   };
 
@@ -79,7 +88,7 @@ const Footer = () => {
             ) : (
               <>
                 {status === "error" && (
-                  <p className="text-sm text-red-400 mb-2">Something went wrong — try again.</p>
+                  <p className="text-sm text-red-400 mb-2">{errorMsg}</p>
                 )}
                 <form className="flex flex-col gap-2" onSubmit={handleSubscribe}>
                   <input
