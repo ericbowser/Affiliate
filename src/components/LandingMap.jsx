@@ -5,23 +5,12 @@ import { rockhoundingSites } from "../data/sites";
 import GemSiteMarkers from "./GemSiteMarkers";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
-import { heroMapStyle, cardMapStyle } from "../config/mapLayout";
+import { heroMapStyle, cardMapStyle, NIGHT_MAP_STYLES, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/mapLayout";
 import { useMapResize } from "../hooks/useMapResize";
 
-const MAP_CENTER = { lat: 39.2, lng: -111.5 };
-const MAP_ZOOM   = 7;
-
-const MAP_STYLES = [
-  { elementType: "geometry",           stylers: [{ color: "#f5f0e8" }] },
-  { elementType: "labels.text.fill",   stylers: [{ color: "#57534e" }] },
-  { elementType: "labels.text.stroke", stylers: [{ color: "#fafaf9" }] },
-  { featureType: "administrative",     elementType: "geometry.stroke", stylers: [{ color: "#c6b89a" }] },
-  { featureType: "landscape.natural",  elementType: "geometry",        stylers: [{ color: "#e8dfc8" }] },
-  { featureType: "poi",                elementType: "geometry",        stylers: [{ color: "#ddd0b4" }] },
-  { featureType: "road",               elementType: "geometry",        stylers: [{ color: "#ffffff" }] },
-  { featureType: "road.highway",       elementType: "geometry",        stylers: [{ color: "#f0c070" }] },
-  { featureType: "water",              elementType: "geometry",        stylers: [{ color: "#b8d4e8" }] },
-];
+const MAP_CENTER = DEFAULT_MAP_CENTER;
+const MAP_ZOOM   = DEFAULT_MAP_ZOOM;
+const MAP_STYLES = NIGHT_MAP_STYLES;
 
 const DIFFICULTY_COLOR = {
   Easy:            "bg-green-100 text-green-800",

@@ -23,11 +23,14 @@ export { topaz, amethyst, opal, redBeryl, garnet, pseudobrookite, geode };
 
 /** Map-pin icons (public/gem-markers) — same artwork as Google Maps markers */
 const MAP_MARKER_ASSETS = {
-  trilobite: '/gem-markers/trilobite.svg',
-  agate:     '/gem-markers/agate.svg',
-  fluorite:  '/gem-markers/fluorite.svg',
-  sunstone:  '/gem-markers/sunstone.svg',
-  pyrope:    '/gem-markers/pyrope.svg',
+  trilobite:  '/gem-markers/trilobite.svg',
+  agate:      '/gem-markers/agate.svg',
+  fluorite:   '/gem-markers/fluorite.svg',
+  sunstone:   '/gem-markers/sunstone.svg',
+  pyrope:     '/gem-markers/pyrope.svg',
+  turquoise:  '/gem-markers/turquoise.svg',
+  'fire-opal':'/gem-markers/fire-opal.svg',
+  chalcedony: '/gem-markers/chalcedony.svg',
 };
 
 /** Keyed lookup — keys match GemIcon `name` prop */
@@ -65,6 +68,21 @@ export const MINERAL_TO_ASSET = {
   'Chalcedony':                     'agate',
   'Sunstones (oligoclase feldspar)': 'sunstone',
   'Pyrope garnets (Arizona Rubies)': 'pyrope',
+  'Olenellus trilobites':            'trilobite',
+  'Cambrian marine fossils':         'trilobite',
+  'Fossilized plants':               'trilobite',
+  'Spessartine garnets':             'garnet',
+  'Almandine garnets':               'garnet',
+  'Rhyolite specimens':              'garnet',
+  'Spider-web turquoise':            'turquoise',
+  'Gem-grade turquoise':             'turquoise',
+  'Turquoise in rhyolite matrix':    'turquoise',
+  'Gem chalcedony':                  'chalcedony',
+  'Opalite':                         'opal',
+  'Black fire opal':                 'fire-opal',
+  'Crystal opal':                    'opal',
+  'Common opal':                     'opal',
+  'Opalized wood':                   'fire-opal',
 };
 
 /** Primary gem icon per site — matches map markerKey */

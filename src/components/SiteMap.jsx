@@ -7,23 +7,12 @@ import GemIcon from "./gems/GemIcons";
 import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET } from "../assets/gems";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
-import { fullMapStyle } from "../config/mapLayout";
+import { fullMapStyle, NIGHT_MAP_STYLES, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/mapLayout";
 import { useMapResize } from "../hooks/useMapResize";
 
-const MAP_CENTER = { lat: 39.2, lng: -111.5 };
-const MAP_ZOOM = 7;
-
-const MAP_STYLES = [
-  { elementType: "geometry", stylers: [{ color: "#f5f0e8" }] },
-  { elementType: "labels.text.fill", stylers: [{ color: "#57534e" }] },
-  { elementType: "labels.text.stroke", stylers: [{ color: "#fafaf9" }] },
-  { featureType: "administrative", elementType: "geometry.stroke", stylers: [{ color: "#c6b89a" }] },
-  { featureType: "landscape.natural", elementType: "geometry", stylers: [{ color: "#e8dfc8" }] },
-  { featureType: "poi", elementType: "geometry", stylers: [{ color: "#ddd0b4" }] },
-  { featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
-  { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#f0c070" }] },
-  { featureType: "water", elementType: "geometry", stylers: [{ color: "#b8d4e8" }] },
-];
+const MAP_CENTER = DEFAULT_MAP_CENTER;
+const MAP_ZOOM = DEFAULT_MAP_ZOOM;
+const MAP_STYLES = NIGHT_MAP_STYLES;
 
 const DIFFICULTY_COLOR = {
   Easy: "bg-green-100 text-green-800",
@@ -55,11 +44,11 @@ const SiteMap = () => {
         <nav className="text-sm text-gray-500 mb-4">
           <Link to="/" className="hover:text-amber-700">Home</Link>
           <span className="mx-2">/</span>
-          <span className="text-gray-900">Utah Rockhounding Sites</span>
+          <span className="text-gray-900">Utah & Nevada Rockhounding Sites</span>
         </nav>
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Utah Rockhounding Sites Map</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Utah & Nevada Rockhounding Sites Map</h1>
         <p className="text-gray-500 max-w-2xl">
-          Eight of the best public-land collecting sites in Utah. Click any pin for details on
+          The best public-land collecting sites across Utah and Nevada. Click any pin for details on
           what to find, difficulty, and best season.
         </p>
       </div>
@@ -67,10 +56,10 @@ const SiteMap = () => {
       {/* Layout: map + sidebar */}
       <div className="flex flex-col lg:flex-row gap-6 min-w-0">
 
-        {/* Map — explicit height so GoogleMap % height resolves on mobile */}
-        <div className="flex-1 w-full min-w-0 h-[280px] sm:h-[360px] lg:h-[min(60dvh,540px)] rounded-2xl overflow-hidden shadow-md border border-stone-200">
+        {/* Map — lg:flex-1 only so flex-basis doesn't collapse height on mobile */}
+        <div className="relative w-full min-w-0 shrink-0 lg:shrink lg:flex-1 h-[320px] sm:h-[400px] lg:h-auto lg:min-h-[540px] rounded-2xl overflow-hidden shadow-md border border-stone-200">
           {!isLoaded ? (
-            <MapLoadStatus height={360} />
+            <MapLoadStatus height="100%" />
           ) : (
             <GoogleMap
               mapContainerStyle={fullMapStyle()}
@@ -107,7 +96,7 @@ const SiteMap = () => {
                     <GemIcon name={SITE_PRIMARY_GEM[selected.id]} size={36} className="shrink-0 drop-shadow-md" />
                     <div>
                       <h2 className="text-white font-bold text-lg leading-tight">{selected.name}</h2>
-                      <p className="text-amber-200 text-sm mt-0.5">{selected.county} · {selected.region}</p>
+                      <p className="text-amber-200 text-sm mt-0.5">{selected.county}, {selected.state || 'UT'} · {selected.region}</p>
                     </div>
                   </div>
                   <button
@@ -208,7 +197,7 @@ const SiteMap = () => {
                         <p className="font-semibold text-gray-900 text-sm group-hover:text-amber-700 transition-colors">
                           {site.name}
                         </p>
-                        <p className="text-xs text-gray-400 mt-0.5">{site.county} · {site.distanceFromSLC}</p>
+                        <p className="text-xs text-gray-400 mt-0.5">{site.county}, {site.state || 'UT'} · {site.distanceFromSLC}</p>
                       </div>
                     </div>
                     <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${DIFFICULTY_COLOR[site.difficulty] ?? "bg-gray-100 text-gray-700"}`}>

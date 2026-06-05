@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/></filter>
+    <radialGradient id="cg" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#e0e7ff"/>
+      <stop offset="50%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </radialGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Botryoidal chalcedony - grape-like rounded bumps -->
+    <!-- Base rounded form -->
+    <ellipse cx="18" cy="20" rx="14" ry="13" fill="url(#cg)" stroke="#6366f1" stroke-width="0.6"/>
+    <!-- Botryoidal bumps - rounded bubbly surface -->
+    <circle cx="12" cy="14" r="6" fill="#c7d2fe" stroke="#818cf8" stroke-width="0.4" opacity="0.6"/>
+    <circle cx="22" cy="13" r="5.5" fill="#c7d2fe" stroke="#818cf8" stroke-width="0.4" opacity="0.55"/>
+    <circle cx="18" cy="20" r="6.5" fill="#a5b4fc" stroke="#818cf8" stroke-width="0.4" opacity="0.5"/>
+    <circle cx="10" cy="22" r="5" fill="#c7d2fe" stroke="#818cf8" stroke-width="0.4" opacity="0.45"/>
+    <circle cx="25" cy="21" r="5.5" fill="#a5b4fc" stroke="#818cf8" stroke-width="0.4" opacity="0.5"/>
+    <circle cx="15" cy="27" r="5" fill="#c7d2fe" stroke="#818cf8" stroke-width="0.4" opacity="0.4"/>
+    <circle cx="22" cy="27" r="4.5" fill="#a5b4fc" stroke="#818cf8" stroke-width="0.4" opacity="0.4"/>
+    <!-- Translucency effect -->
+    <ellipse cx="15" cy="16" rx="4" ry="3" fill="white" opacity="0.15"/>
+    <!-- Waxy luster highlights on bumps -->
+    <ellipse cx="11" cy="12" rx="2" ry="1.5" fill="white" opacity="0.25" transform="rotate(-10 11 12)"/>
+    <ellipse cx="21" cy="11" rx="1.8" ry="1.2" fill="white" opacity="0.2" transform="rotate(-5 21 11)"/>
+    <ellipse cx="17" cy="18" rx="1.5" ry="1" fill="white" opacity="0.2"/>
+    <circle cx="10" cy="20" r="1" fill="white" opacity="0.15"/>
+    <!-- Ground shadow -->
+    <ellipse cx="18" cy="40" rx="9" ry="3" fill="#00000018"/>
+  </g>
+</svg>

@@ -4,20 +4,10 @@ import { rockhoundingSites } from "../data/sites";
 import { Link } from "react-router-dom";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
-import { blogMapStyle } from "../config/mapLayout";
+import { blogMapStyle, NIGHT_MAP_STYLES } from "../config/mapLayout";
 import { useMapResize } from "../hooks/useMapResize";
 
-const MAP_STYLES = [
-  { elementType: "geometry", stylers: [{ color: "#f5f0e8" }] },
-  { elementType: "labels.text.fill", stylers: [{ color: "#57534e" }] },
-  { elementType: "labels.text.stroke", stylers: [{ color: "#fafaf9" }] },
-  { featureType: "administrative", elementType: "geometry.stroke", stylers: [{ color: "#c6b89a" }] },
-  { featureType: "landscape.natural", elementType: "geometry", stylers: [{ color: "#e8dfc8" }] },
-  { featureType: "poi", elementType: "geometry", stylers: [{ color: "#ddd0b4" }] },
-  { featureType: "road", elementType: "geometry", stylers: [{ color: "#ffffff" }] },
-  { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#f0c070" }] },
-  { featureType: "water", elementType: "geometry", stylers: [{ color: "#b8d4e8" }] },
-];
+const MAP_STYLES = NIGHT_MAP_STYLES;
 
 const DIFFICULTY_COLOR = {
   Easy: "bg-green-100 text-green-800",

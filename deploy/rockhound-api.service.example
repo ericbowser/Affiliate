@@ -1,0 +1,26 @@
+# systemd unit for the email API on Raspberry Pi
+#
+# Install:
+#   sudo cp deploy/rockhound-api.service.example /etc/systemd/system/rockhound-api.service
+#   sudo nano /etc/systemd/system/rockhound-api.service   # fix User + WorkingDirectory
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now rockhound-api
+#   sudo systemctl status rockhound-api
+#
+# Logs: journalctl -u rockhound-api -f
+
+[Unit]
+Description=Wasatch Rockhound email API
+After=network.target
+
+[Service]
+Type=simple
+User=ericbo
+WorkingDirectory=/var/www/html/Affiliate
+EnvironmentFile=/var/www/html/Affiliate/.env
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

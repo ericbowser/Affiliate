@@ -1,15 +1,37 @@
-# Snippet for rockhoundutah.com — proxy /api to the Node email server.
-# Static files from dist/ are served separately (root or try_files).
+# rockhoundutah.com — static site + /api proxy to Node email server
 #
-# 1. On the Pi: copy .env with EMAIL_USER + EMAIL_APP_PASSWORD (Gmail app password, no spaces)
-# 2. Run: API_PORT=7667 node server.js  (or use pm2/systemd)
-# 3. Include this inside your server { } block:
+# Prerequisites on the Pi:
+#   1. .env in project root (OAuth vars + EMAIL_USER + EMAIL_RECEIVE)
+#   2. Email API running: systemd rockhound-api.service OR `node server.js`
+#   3. npm run build → serve dist/
+#
+# 405 on POST /api/subscribe = this location block is missing or below a catch-all.
 
-location /api/ {
-    proxy_pass http://127.0.0.1:7667;
-    proxy_http_version 1.1;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
+server {
+    listen 80;
+    listen [::]:80;
+    server_name rockhoundutah.com www.rockhoundutah.com;
+
+    # Adjust path to your deploy directory
+    root /var/www/html/Affiliate/dist;
+    index index.html;
+
+    # MUST come before location / — proxy API to Node (port 7667)
+    location /api/ {
+        proxy_pass http://127.0.0.1:7667;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # SPA static files
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
 }
+
+# After editing: sudo nginx -t && sudo systemctl reload nginx
+# Verify API: curl -X POST https://rockhoundutah.com/api/subscribe \
+#   -H "Content-Type: application/json" -d '{"email":"test@example.com"}'
