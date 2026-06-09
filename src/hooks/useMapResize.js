@@ -1,10 +1,15 @@
 import { useEffect } from "react";
 
 /**
- * Google Maps renders at the container size on first paint. Re-trigger resize when
- * the wrapper changes (mobile orientation, flex layout, lazy load).
+ * Google Maps paints at the container's size on first layout. Mobile browsers
+ * often report the wrong size until after orientation/layout settles — re-trigger
+ * resize when the container or markers change.
+ *
+ * @param {google.maps.Map|null} map
+ * @param {boolean} enabled
+ * @param {unknown} bump — change when markers/icons finish loading
  */
-export function useMapResize(map, enabled = true) {
+export function useMapResize(map, enabled = true, bump = 0) {
   useEffect(() => {
     if (!map || !enabled) return;
 
@@ -18,21 +23,26 @@ export function useMapResize(map, enabled = true) {
     };
 
     trigger();
+    const delays = [50, 150, 400, 800].map((ms) => setTimeout(trigger, ms));
 
+    const onOrientation = () => setTimeout(trigger, 350);
     window.addEventListener("resize", trigger);
-    window.addEventListener("orientationchange", trigger);
+    window.addEventListener("orientationchange", onOrientation);
 
-    const el = map.getDiv()?.parentElement;
+    const div = map.getDiv();
+    const parent = div?.parentElement;
     let ro;
-    if (el && typeof ResizeObserver !== "undefined") {
+    if (typeof ResizeObserver !== "undefined") {
       ro = new ResizeObserver(() => trigger());
-      ro.observe(el);
+      if (div) ro.observe(div);
+      if (parent) ro.observe(parent);
     }
 
     return () => {
+      delays.forEach(clearTimeout);
       window.removeEventListener("resize", trigger);
-      window.removeEventListener("orientationchange", trigger);
+      window.removeEventListener("orientationchange", onOrientation);
       ro?.disconnect();
     };
-  }, [map, enabled]);
+  }, [map, enabled, bump]);
 }

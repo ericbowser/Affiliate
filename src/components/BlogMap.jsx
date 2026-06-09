@@ -4,10 +4,9 @@ import { rockhoundingSites } from "../data/sites";
 import { Link } from "react-router-dom";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
-import { blogMapStyle, NIGHT_MAP_STYLES } from "../config/mapLayout";
+import { blogMapStyle } from "../config/mapLayout";
+import { getMapOptions } from "../config/mapOptions";
 import { useMapResize } from "../hooks/useMapResize";
-
-const MAP_STYLES = NIGHT_MAP_STYLES;
 
 const DIFFICULTY_COLOR = {
   Easy: "bg-green-100 text-green-800",
@@ -65,20 +64,14 @@ const BlogMap = ({ siteIds = [] }) => {
 
   return (
     <div className="my-10 w-full min-w-0 rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
-      {/* Map */}
+      <div className="google-map-shell" style={blogMapStyle()}>
       <GoogleMap
-        mapContainerStyle={blogMapStyle()}
+        mapContainerStyle={{ width: "100%", height: "100%" }}
         center={center}
         zoom={zoom}
         onLoad={onLoad}
         onUnmount={onUnmount}
-        options={{
-          styles: MAP_STYLES,
-          mapTypeControl: false,
-          streetViewControl: false,
-          fullscreenControl: false,
-          zoomControlOptions: { position: 9 },
-        }}
+        options={getMapOptions("embed")}
       >
         {sites.map((site) => (
           <Marker
@@ -97,6 +90,7 @@ const BlogMap = ({ siteIds = [] }) => {
           />
         ))}
       </GoogleMap>
+      </div>
 
       {/* Info card — shown when a pin is selected */}
       {selected ? (

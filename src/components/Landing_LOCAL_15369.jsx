@@ -7,7 +7,7 @@ import GemIcon from "./gems/GemIcons";
 import LandingMap from "./LandingMap";
 
 const Landing = () => {
-  const { categories } = siteConfig;
+  const { categories, meta } = siteConfig;
   const categoriesList = Object.entries(categories);
   const featured = products.filter(p => p.tier === "premium" || p.rating >= 4.7).slice(0, 3);
 
@@ -31,7 +31,7 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-[30%_70%] gap-8 lg:gap-10 items-start min-w-0">
 
-            {/* Left — headline, gems, CTAs */}
+            {/* Left 30% — headline, gems, CTAs */}
             <div className="lg:pt-6">
               <h1 className="text-3xl md:text-4xl font-semibold leading-snug mb-4">
                 The Right Gear for Rockhounding in the West
@@ -41,6 +41,7 @@ const Landing = () => {
                 chosen for Utah's BLM land, desert terrain, and mineralized soil.
               </p>
 
+              {/* Gem strip */}
               <div className="flex items-center gap-3 mb-6">
                 {["topaz", "garnet", "geode", "opal", "amethyst", "red-beryl"].map((gem) => (
                   <GemIcon key={gem} name={gem} size={34} className="opacity-90 drop-shadow-md" />
@@ -63,7 +64,7 @@ const Landing = () => {
               </div>
             </div>
 
-            {/* Right — interactive gem-marker map */}
+            {/* Right 70% — interactive gem-marker map */}
             <div className="w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
               <LandingMap heroMode />
             </div>

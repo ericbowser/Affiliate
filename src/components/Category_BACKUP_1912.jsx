@@ -25,7 +25,10 @@ const Category = () => {
         <p className="text-lg text-gray-500 max-w-3xl">{category.description}</p>
       </div>
 
+<<<<<<< Updated upstream
+=======
       {/* Quiz CTA — metal detectors only */}
+>>>>>>> Stashed changes
       {slug === "metal-detectors" && (
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
@@ -41,6 +44,10 @@ const Category = () => {
         </div>
       )}
 
+<<<<<<< Updated upstream
+=======
+      {/* Product List */}
+>>>>>>> Stashed changes
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {productsInCategory.map(product => (
           <CategoryProductCard key={product.id} product={product} />
@@ -81,6 +88,7 @@ function CategoryProductCard({ product }) {
         <span className="text-amber-700 font-semibold">{product.price}</span>
       </p>
 
+<<<<<<< Updated upstream
       <div className="flex gap-2">
         <a
           href={product.url}
@@ -97,6 +105,16 @@ function CategoryProductCard({ product }) {
           Review
         </Link>
       </div>
+=======
+      <a
+        href={product.url}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="block w-full bg-amber-600 hover:bg-amber-500 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
+      >
+        Check price →
+      </a>
+>>>>>>> Stashed changes
     </div>
   );
 }

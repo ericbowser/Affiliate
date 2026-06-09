@@ -5,12 +5,12 @@ import { rockhoundingSites } from "../data/sites";
 import GemSiteMarkers from "./GemSiteMarkers";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
-import { heroMapStyle, cardMapStyle, NIGHT_MAP_STYLES, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/mapLayout";
+import { heroMapStyle, cardMapStyle, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/mapLayout";
+import { getMapOptions } from "../config/mapOptions";
 import { useMapResize } from "../hooks/useMapResize";
 
 const MAP_CENTER = DEFAULT_MAP_CENTER;
 const MAP_ZOOM   = DEFAULT_MAP_ZOOM;
-const MAP_STYLES = NIGHT_MAP_STYLES;
 
 const DIFFICULTY_COLOR = {
   Easy:            "bg-green-100 text-green-800",
@@ -29,6 +29,7 @@ const DIFFICULTY_COLOR = {
 const LandingMap = ({ heroMode = false }) => {
   const [selected, setSelected] = useState(null);
   const [map, setMap] = useState(null);
+  const [markersReady, setMarkersReady] = useState(false);
 
   const mapHeight = heroMode ? 360 : 340;
 
@@ -37,7 +38,7 @@ const LandingMap = ({ heroMode = false }) => {
   const onLoad    = useCallback((m) => setMap(m), []);
   const onUnmount = useCallback(() => setMap(null), []);
 
-  useMapResize(map, isLoaded);
+  useMapResize(map, isLoaded, markersReady);
 
   const handlePin = (site) => {
     const next = selected?.id === site.id ? null : site;
@@ -67,28 +68,24 @@ const LandingMap = ({ heroMode = false }) => {
     <div className={`w-full min-w-0 ${heroMode ? "" : "rounded-2xl overflow-hidden border border-stone-200 shadow-md"}`}>
 
       {/* Map canvas */}
-      <GoogleMap
-        mapContainerStyle={heroMode ? heroMapStyle() : cardMapStyle(mapHeight)}
-        center={MAP_CENTER}
-        zoom={MAP_ZOOM}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-        options={{
-          styles: MAP_STYLES,
-          mapTypeControl: false,
-          streetViewControl: false,
-          fullscreenControl: false,
-          clickableIcons: false,
-          zoomControlOptions: { position: 9 },
-        }}
-      >
-        <GemSiteMarkers
-          sites={rockhoundingSites}
-          selectedId={selected?.id ?? null}
-          onSelect={handlePin}
-          mapsReady={isLoaded}
-        />
-      </GoogleMap>
+      <div className="google-map-shell" style={heroMode ? heroMapStyle() : cardMapStyle(mapHeight)}>
+        <GoogleMap
+          mapContainerStyle={{ width: "100%", height: "100%" }}
+          center={MAP_CENTER}
+          zoom={MAP_ZOOM}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+          options={getMapOptions("embed")}
+        >
+          <GemSiteMarkers
+            sites={rockhoundingSites}
+            selectedId={selected?.id ?? null}
+            onSelect={handlePin}
+            mapsReady={isLoaded}
+            onMarkersReady={() => setMarkersReady(true)}
+          />
+        </GoogleMap>
+      </div>
 
       {/* Info strip */}
       {selected ? (
@@ -123,7 +120,8 @@ const LandingMap = ({ heroMode = false }) => {
       ) : (
         <div className={`flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between ${stripBase}`}>
           <p className={`text-xs ${textMuted}`}>
-            {rockhoundingSites.length} sites · Click a gem pin for details
+            {rockhoundingSites.length} sites · Tap a gem pin for details
+            <span className="sm:hidden"> · Use two fingers to pan the map</span>
           </p>
           <Link to="/guides/utah-sites-map" className={fullMapClass}>
             Open full map →

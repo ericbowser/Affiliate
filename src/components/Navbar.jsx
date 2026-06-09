@@ -5,6 +5,7 @@ import { siteConfig } from "../data/config.js";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isProvocative, setIsProvocative] = useState(false);
   const dropdownRef = useRef(null);
   const { categories } = siteConfig;
 
@@ -17,6 +18,20 @@ const Navbar = () => {
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  useEffect(() => {
+    const savedScheme = localStorage.getItem('colorScheme');
+    const isProvocative = savedScheme === 'provocative';
+    setIsProvocative(isProvocative);
+    document.documentElement.classList.toggle('scheme-provocative', isProvocative);
+  }, []);
+
+  const toggleScheme = () => {
+    const newScheme = isProvocative ? 'default' : 'provocative';
+    localStorage.setItem('colorScheme', newScheme);
+    setIsProvocative(!isProvocative);
+    document.documentElement.classList.toggle('scheme-provocative', !isProvocative);
+  };
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
@@ -74,6 +89,12 @@ const Navbar = () => {
             <Link to="/weather" className="text-gray-600 hover:text-amber-700 transition-colors text-base font-medium">
               Field Conditions
             </Link>
+            <button
+              onClick={toggleScheme}
+              className="text-xs font-medium px-2 py-1 rounded border border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100 transition-colors"
+            >
+              {isProvocative ? 'RGBO' : 'Provocative'}
+            </button>
           </div>
 
           {/* Mobile toggle */}

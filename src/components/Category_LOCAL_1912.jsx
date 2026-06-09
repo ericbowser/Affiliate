@@ -25,7 +25,6 @@ const Category = () => {
         <p className="text-lg text-gray-500 max-w-3xl">{category.description}</p>
       </div>
 
-      {/* Quiz CTA — metal detectors only */}
       {slug === "metal-detectors" && (
         <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Marker } from "@react-google-maps/api";
 import { useGemMarkerIcons } from "../hooks/useGemMarkerIcons";
 
@@ -7,8 +7,12 @@ import { useGemMarkerIcons } from "../hooks/useGemMarkerIcons";
  * SVG assets are rasterized to PNG because legacy google.maps.Marker
  * does not render SVG icon URLs (Maps falls back to transparent.png).
  */
-const GemSiteMarkers = ({ sites, selectedId, onSelect, mapsReady }) => {
+const GemSiteMarkers = ({ sites, selectedId, onSelect, mapsReady, onMarkersReady }) => {
   const { icons, ready } = useGemMarkerIcons(mapsReady, sites, selectedId);
+
+  useEffect(() => {
+    if (ready) onMarkersReady?.();
+  }, [ready, onMarkersReady]);
 
   if (!ready) return null;
 

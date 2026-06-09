@@ -1,5 +1,5 @@
-/** Minimum map width — keeps tiles readable on narrow phones without forcing page scroll */
-export const MAP_MIN_WIDTH = 280;
+/** Wrapper min-width; avoid inline minWidth on map div (can cause horizontal scroll on phones) */
+export const MAP_SHELL_MIN_WIDTH = 0;
 
 /** Night-mode map styles shared across all map components */
 export const NIGHT_MAP_STYLES = [
@@ -32,38 +32,31 @@ export const DEFAULT_MAP_ZOOM = 6;
 export function heroMapStyle() {
   return {
     width: "100%",
-    minWidth: MAP_MIN_WIDTH,
-    height: "clamp(240px, 42vh, 460px)",
-    minHeight: 240,
+    height: "clamp(260px, 45dvh, 460px)",
+    minHeight: 260,
   };
 }
 
 export function cardMapStyle(heightPx = 340) {
   return {
     width: "100%",
-    minWidth: MAP_MIN_WIDTH,
     height: `${heightPx}px`,
-    minHeight: 240,
+    minHeight: 260,
   };
 }
 
 export function fullMapStyle() {
   return {
     width: "100%",
-    minWidth: MAP_MIN_WIDTH,
     height: "100%",
-    /* position: absolute fills the parent regardless of flex quirks */
-    position: "absolute",
-    top: 0,
-    left: 0,
+    minHeight: 280,
   };
 }
 
 export function blogMapStyle() {
   return {
     width: "100%",
-    minWidth: MAP_MIN_WIDTH,
-    height: "clamp(240px, 40dvh, 340px)",
-    minHeight: 240,
+    height: "clamp(260px, 42dvh, 340px)",
+    minHeight: 260,
   };
 }

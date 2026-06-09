@@ -7,12 +7,12 @@ import GemIcon from "./gems/GemIcons";
 import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET } from "../assets/gems";
 import { useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
-import { fullMapStyle, NIGHT_MAP_STYLES, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/mapLayout";
+import { fullMapStyle, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/mapLayout";
+import { getMapOptions } from "../config/mapOptions";
 import { useMapResize } from "../hooks/useMapResize";
 
 const MAP_CENTER = DEFAULT_MAP_CENTER;
 const MAP_ZOOM = DEFAULT_MAP_ZOOM;
-const MAP_STYLES = NIGHT_MAP_STYLES;
 
 const DIFFICULTY_COLOR = {
   Easy: "bg-green-100 text-green-800",
@@ -24,13 +24,14 @@ const DIFFICULTY_COLOR = {
 const SiteMap = () => {
   const [selected, setSelected] = useState(null);
   const [map, setMap] = useState(null);
+  const [markersReady, setMarkersReady] = useState(false);
 
   const { isLoaded } = useGoogleMaps();
 
   const onLoad = useCallback((mapInstance) => setMap(mapInstance), []);
   const onUnmount = useCallback(() => setMap(null), []);
 
-  useMapResize(map, isLoaded);
+  useMapResize(map, isLoaded, markersReady);
 
   const handleMarkerClick = (site) => {
     setSelected(site);
@@ -57,7 +58,9 @@ const SiteMap = () => {
       <div className="flex flex-col lg:flex-row gap-6 min-w-0">
 
         {/* Map — lg:flex-1 only so flex-basis doesn't collapse height on mobile */}
-        <div className="relative w-full min-w-0 shrink-0 lg:shrink lg:flex-1 h-[320px] sm:h-[400px] lg:h-auto lg:min-h-[540px] rounded-2xl overflow-hidden shadow-md border border-stone-200">
+        <div
+          className="google-map-shell relative w-full min-w-0 shrink-0 lg:shrink lg:flex-1 h-[min(50dvh,400px)] min-h-[320px] sm:min-h-[400px] lg:h-[min(60dvh,540px)] lg:min-h-[540px] rounded-2xl shadow-md border border-stone-200"
+        >
           {!isLoaded ? (
             <MapLoadStatus height="100%" />
           ) : (
@@ -67,19 +70,14 @@ const SiteMap = () => {
               zoom={MAP_ZOOM}
               onLoad={onLoad}
               onUnmount={onUnmount}
-              options={{
-                styles: MAP_STYLES,
-                mapTypeControl: false,
-                streetViewControl: false,
-                fullscreenControl: true,
-                zoomControlOptions: { position: 9 },
-              }}
+              options={getMapOptions("page")}
             >
               <GemSiteMarkers
                 sites={rockhoundingSites}
                 selectedId={selected?.id ?? null}
                 onSelect={handleMarkerClick}
                 mapsReady={isLoaded}
+                onMarkersReady={() => setMarkersReady(true)}
               />
             </GoogleMap>
           )}

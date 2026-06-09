@@ -17,8 +17,6 @@ const Review = () => {
     .filter(p => p.category === product.category && p.id !== product.id)
     .slice(0, 3);
 
-  const hasReviewContent = product.verdict || product.ownerPros || product.ownerCons;
-
   const handleAffiliateClick = (location) => {
     trackAffiliateClick({
       productId:   product.id,
