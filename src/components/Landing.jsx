@@ -5,6 +5,7 @@ import { products } from "../data/products.js";
 import { posts } from "../data/posts";
 import GemIcon from "./gems/GemIcons";
 import LandingMap from "./LandingMap";
+import { ClientOnly } from "./ClientOnly";
 
 const Landing = () => {
   const { categories } = siteConfig;
@@ -63,10 +64,16 @@ const Landing = () => {
               </div>
             </div>
 
-            {/* Right — interactive gem-marker map */}
-            <div className="w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
-              <LandingMap heroMode />
-            </div>
+            {/* Right — interactive gem-marker map (client-only to prevent hydration mismatch) */}
+            <ClientOnly
+              fallback={
+                <div className="w-full min-h-[340px] lg:min-h-[420px] bg-slate-800/60 rounded-2xl ring-1 ring-white/10 animate-pulse" />
+              }
+            >
+              <div className="w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
+                <LandingMap heroMode />
+              </div>
+            </ClientOnly>
 
           </div>
         </div>
