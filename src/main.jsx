@@ -1,13 +1,24 @@
-﻿import React, {StrictMode} from 'react';
-import ReactDOM from 'react-dom/client';
+﻿import React, { StrictMode } from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App';
 import './styles/output.css';
 
-const root = ReactDOM.createRoot(
-    document.getElementById('root'));
-    root.render(
-        <StrictMode>
-            <App/>
-        </StrictMode>
-);
+const rootElement = document.getElementById('root');
+
+// If react-snap pre-rendered HTML is present, hydrate it.
+// Otherwise do a normal client-side render (dev or un-snapped route).
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(
+    rootElement,
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+} else {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+}
 

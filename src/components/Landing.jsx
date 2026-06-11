@@ -50,7 +50,7 @@ const Landing = () => {
               <div className="flex flex-wrap gap-3">
                 <a
                   href="#categories"
-                  className="bg-amber-700 hover:bg-amber-600 text-white font-medium px-6 py-2.5 rounded-xl transition-colors text-sm"
+                  className="bg-amber-600 hover:bg-amber-500 text-white font-medium px-6 py-2.5 rounded-xl transition-colors text-sm"
                 >
                   Browse Gear
                 </a>
@@ -58,7 +58,7 @@ const Landing = () => {
                   to="/tools/detector-match"
                   className="bg-white/10 backdrop-blur-sm text-white border border-white/20 font-medium px-6 py-2.5 rounded-xl hover:bg-white/20 transition-colors text-sm"
                 >
-                  Find My Detector →
+                  Find My Detector &rarr;
                 </Link>
               </div>
             </div>
@@ -73,13 +73,13 @@ const Landing = () => {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-white border-b border-gray-100">
+      <section className="bg-slate-800 border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {stats.map((stat, i) => (
               <div key={i}>
-                <div className="text-2xl font-semibold text-amber-700">{stat.value}</div>
-                <div className="text-sm text-gray-500 mt-0.5">{stat.label}</div>
+                <div className="text-2xl font-semibold text-amber-400">{stat.value}</div>
+                <div className="text-sm text-slate-400 mt-0.5">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -89,8 +89,8 @@ const Landing = () => {
       {/* Categories */}
       <section id="categories" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Browse by Gear Category</h2>
-          <p className="text-base text-gray-500">
+          <h2 className="text-2xl font-semibold text-slate-100 mb-2">Browse by Gear Category</h2>
+          <p className="text-base text-slate-400">
             From Dugway Geode Beds to Topaz Mountain — gear chosen for where you're actually going.
           </p>
         </div>
@@ -101,15 +101,15 @@ const Landing = () => {
               <Link
                 key={slug}
                 to={`/category/${slug}`}
-                className="group bg-white border border-gray-200 rounded-2xl p-5 hover:border-amber-600 hover:shadow-md transition-all"
+                className="group bg-slate-800 border border-slate-700 rounded-2xl p-5 hover:border-amber-500 hover:shadow-md hover:shadow-amber-900/20 transition-all"
               >
                 <span className="text-2xl mb-2 block">{cat.icon}</span>
-                <h3 className="font-semibold text-gray-900 group-hover:text-amber-700 transition-colors text-base">
+                <h3 className="font-semibold text-slate-100 group-hover:text-amber-400 transition-colors text-base">
                   {cat.name}
                 </h3>
-                <p className="text-sm text-gray-500 mt-1.5 leading-relaxed">{cat.description}</p>
+                <p className="text-sm text-slate-400 mt-1.5 leading-relaxed">{cat.description}</p>
                 <div className="mt-3">
-                  <span className="text-xs font-medium text-amber-800 bg-amber-50 px-2 py-1 rounded-full">
+                  <span className="text-xs font-medium text-amber-400 bg-amber-900/30 border border-amber-800/50 px-2 py-1 rounded-full">
                     {count} {count === 1 ? "product" : "products"}
                   </span>
                 </div>
@@ -120,33 +120,33 @@ const Landing = () => {
       </section>
 
       {/* Detector Quiz CTA */}
-      <section className="bg-amber-50 border-y border-amber-100">
+      <section className="bg-slate-800 border-y border-slate-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
-          <span className="inline-block bg-amber-100 text-amber-900 text-xs font-medium px-3 py-1 rounded-full mb-3 tracking-wide">
+          <span className="inline-block bg-amber-900/30 text-amber-400 border border-amber-800/50 text-xs font-medium px-3 py-1 rounded-full mb-3 tracking-wide">
             Interactive Tool
           </span>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+          <h2 className="text-2xl font-semibold text-slate-100 mb-3">
             Not sure which metal detector to buy?
           </h2>
-          <p className="text-base text-gray-600 max-w-xl mx-auto mb-6">
+          <p className="text-base text-slate-400 max-w-xl mx-auto mb-6">
             Answer 6 questions about your budget, terrain, and experience.
             Get a matched recommendation with honest reasoning — in 30 seconds.
           </p>
           <Link
             to="/tools/detector-match"
-            className="inline-block bg-amber-700 hover:bg-amber-600 text-white font-medium px-7 py-2.5 rounded-xl transition-colors text-sm"
+            className="inline-block bg-amber-600 hover:bg-amber-500 text-white font-medium px-7 py-2.5 rounded-xl transition-colors text-sm"
           >
-            Take the Detector Match Quiz →
+            Take the Detector Match Quiz &rarr;
           </Link>
         </div>
       </section>
 
       {/* Top Picks */}
-      <section id="top-picks" className="bg-slate-50">
+      <section id="top-picks" className="bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">Top Picks for 2026</h2>
-            <p className="text-base text-gray-500">
+            <h2 className="text-2xl font-semibold text-slate-100 mb-2">Top Picks for 2026</h2>
+            <p className="text-base text-slate-400">
               Gear that consistently performs in Utah's mineralized desert terrain.
             </p>
           </div>
@@ -161,42 +161,42 @@ const Landing = () => {
       {/* Utah Sites Teaser */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Start in Your Backyard</h2>
-          <p className="text-base text-gray-500">
+          <h2 className="text-2xl font-semibold text-slate-100 mb-2">Start in Your Backyard</h2>
+          <p className="text-base text-slate-400">
             Utah is one of the best rockhounding states in the country. Three sites worth your first trip.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {utahSites.map((site, i) => (
-            <div key={i} className="bg-white border border-gray-200 rounded-2xl p-5">
+            <div key={i} className="bg-slate-800 border border-slate-700 rounded-2xl p-5">
               <div className="mb-3">
                 <GemIcon name={site.gem} size={44} />
               </div>
-              <h3 className="font-semibold text-gray-900 text-base mb-1">{site.name}</h3>
-              <p className="text-sm text-amber-700 font-medium mb-1">{site.what}</p>
-              <p className="text-sm text-gray-500">{site.distance}</p>
+              <h3 className="font-semibold text-slate-100 text-base mb-1">{site.name}</h3>
+              <p className="text-sm text-amber-400 font-medium mb-1">{site.what}</p>
+              <p className="text-sm text-slate-400">{site.distance}</p>
             </div>
           ))}
         </div>
         <div className="mt-6">
           <Link
             to="/guides/utah-sites-map"
-            className="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-600 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-colors"
           >
-            📍 Open Interactive Site Map
+            &#128205; Open Interactive Site Map
           </Link>
         </div>
       </section>
 
       {/* Latest from the Blog */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-100">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-800">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-1">Latest from the Field</h2>
-            <p className="text-base text-gray-500">Site guides and trip planning resources.</p>
+            <h2 className="text-2xl font-semibold text-slate-100 mb-1">Latest from the Field</h2>
+            <p className="text-base text-slate-400">Site guides and trip planning resources.</p>
           </div>
-          <Link to="/blog" className="text-sm font-medium text-amber-700 hover:text-amber-900 transition-colors">
-            All posts →
+          <Link to="/blog" className="text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors">
+            All posts &rarr;
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -204,43 +204,43 @@ const Landing = () => {
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
-              className="group bg-white border border-stone-200 hover:border-amber-600 rounded-2xl p-5 transition-all hover:shadow-md"
+              className="group bg-slate-800 border border-slate-700 hover:border-amber-500 rounded-2xl p-5 transition-all hover:shadow-md hover:shadow-amber-900/20"
             >
-              <span className="inline-block bg-amber-50 text-amber-800 border border-amber-200 text-xs font-medium px-2.5 py-1 rounded-full mb-3">
+              <span className="inline-block bg-amber-900/30 text-amber-400 border border-amber-800/50 text-xs font-medium px-2.5 py-1 rounded-full mb-3">
                 {post.category}
               </span>
-              <h3 className="text-base font-semibold text-gray-900 group-hover:text-amber-700 transition-colors leading-snug mb-2">
+              <h3 className="text-base font-semibold text-slate-100 group-hover:text-amber-400 transition-colors leading-snug mb-2">
                 {post.title}
               </h3>
-              <p className="text-xs text-gray-400">{post.readTime}</p>
+              <p className="text-xs text-slate-500">{post.readTime}</p>
             </Link>
           ))}
         </div>
       </section>
 
       {/* About / Trust */}
-      <section className="bg-slate-50 border-t border-slate-100">
+      <section className="bg-slate-800/50 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-8">About Wasatch Rockhound</h2>
+          <h2 className="text-2xl font-semibold text-slate-100 mb-8">About Wasatch Rockhound</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <div className="mb-3"><GemIcon name="topaz" size={36} /></div>
-              <h3 className="font-semibold text-gray-900 mb-1.5 text-base">Utah-Based</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <h3 className="font-semibold text-slate-100 mb-1.5 text-base">Utah-Based</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
                 Built in Salt Lake City. Every site, terrain type, and season mentioned here is ground we know personally.
               </p>
             </div>
             <div>
               <div className="mb-3"><GemIcon name="garnet" size={36} /></div>
-              <h3 className="font-semibold text-gray-900 mb-1.5 text-base">Niche Focus</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <h3 className="font-semibold text-slate-100 mb-1.5 text-base">Niche Focus</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
                 Gear specifically for Western rockhounding — not general outdoor gear. Mineralized desert soil, BLM access, and high-desert conditions shape every pick.
               </p>
             </div>
             <div>
               <div className="mb-3"><GemIcon name="opal" size={36} /></div>
-              <h3 className="font-semibold text-gray-900 mb-1.5 text-base">Straight Talk</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <h3 className="font-semibold text-slate-100 mb-1.5 text-base">Straight Talk</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">
                 Honest pros, cons, and who each piece of gear is actually best for. We'd rather send you to the right $50 tool than upsell you on something you don't need.
               </p>
             </div>
@@ -258,15 +258,15 @@ const Landing = () => {
           <div className="flex flex-wrap justify-center gap-3">
             <a
               href="#categories"
-              className="bg-amber-700 hover:bg-amber-600 text-white font-medium px-6 py-2.5 rounded-xl transition-colors text-sm"
+              className="bg-amber-600 hover:bg-amber-500 text-white font-medium px-6 py-2.5 rounded-xl transition-colors text-sm"
             >
-              Browse Gear →
+              Browse Gear &rarr;
             </a>
             <Link
               to="/tools/detector-match"
               className="bg-white/10 text-white border border-white/20 font-medium px-6 py-2.5 rounded-xl hover:bg-white/20 transition-colors text-sm"
             >
-              Take the Quiz →
+              Take the Quiz &rarr;
             </Link>
           </div>
         </div>
@@ -278,26 +278,26 @@ const Landing = () => {
 function ProductCard({ product }) {
   const stars = "★".repeat(Math.floor(product.rating)) + (product.rating % 1 >= 0.5 ? "½" : "");
   return (
-    <div className="bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-md transition-all">
+    <div className="bg-slate-800 border border-slate-700 rounded-2xl p-5 hover:shadow-md hover:shadow-amber-900/20 transition-all">
       <div className="mb-2">
-        <h3 className="font-semibold text-gray-900 text-base">{product.name}</h3>
-        <p className="text-sm text-gray-500">{product.tagline}</p>
+        <h3 className="font-semibold text-slate-100 text-base">{product.name}</h3>
+        <p className="text-sm text-slate-400">{product.tagline}</p>
       </div>
-      <div className="text-amber-600 text-sm mb-2">{stars} {product.rating}</div>
-      <p className="text-sm text-gray-600 mb-1">
-        <span className="font-medium text-gray-700">Best for:</span> {product.bestFor}
+      <div className="text-amber-400 text-sm mb-2">{stars} {product.rating}</div>
+      <p className="text-sm text-slate-300 mb-1">
+        <span className="font-medium text-slate-200">Best for:</span> {product.bestFor}
       </p>
-      <p className="text-sm text-gray-700 mb-4">
+      <p className="text-sm text-slate-300 mb-4">
         <span className="font-medium">Price:</span>{" "}
-        <span className="text-amber-700 font-semibold">{product.price}</span>
+        <span className="text-amber-400 font-semibold">{product.price}</span>
       </p>
       <a
         href={product.url}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        className="block w-full bg-amber-700 hover:bg-amber-600 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
+        className="block w-full bg-amber-600 hover:bg-amber-500 text-white text-sm font-medium py-2 px-4 rounded-lg text-center transition-colors"
       >
-        Check Price →
+        Check Price &rarr;
       </a>
     </div>
   );

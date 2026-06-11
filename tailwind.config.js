@@ -11,15 +11,7 @@ module.exports = {
             fontFamily: {
                 burtons: ['../src/assets/fonts/Burtons.otf']
             },
-            colors: {
-                provocative: {
-                    primary: '#FF6B6B',
-                    secondary: '#4ECDC4',
-                    accent: '#FFD166',
-                    dark: '#1A1A1D',
-                    light: '#F7F7F7'
-                }
-            }
+            colors: {}
         },
     },
     plugins: [require('@tailwindcss/typography')],

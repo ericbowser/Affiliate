@@ -44,12 +44,12 @@ const DetectorMatch = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <nav className="text-sm text-gray-500 mb-8">
-        <Link to="/" className="hover:text-amber-700">Home</Link>
+      <nav className="text-sm text-slate-400 mb-8">
+        <Link to="/" className="hover:text-amber-400">Home</Link>
         <span className="mx-2">/</span>
-        <Link to="/category/metal-detectors" className="hover:text-amber-700">Metal Detectors</Link>
+        <Link to="/category/metal-detectors" className="hover:text-amber-400">Metal Detectors</Link>
         <span className="mx-2">/</span>
-        <span className="text-gray-900">Detector Match Quiz</span>
+        <span className="text-slate-200">Detector Match Quiz</span>
       </nav>
 
       {step === 'intro' && <IntroScreen onStart={() => setStep('question')} />}
@@ -69,37 +69,35 @@ const DetectorMatch = () => {
   );
 };
 
-// ─── INTRO ─────────────────────────────────────────────────────────────
-
+// INTRO
 const IntroScreen = ({ onStart }) => (
   <div className="text-center">
-    <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
-      Interactive Tool · ~30 seconds
+    <span className="inline-block bg-amber-900/30 text-amber-400 border border-amber-800/50 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-wider">
+      Interactive Tool &middot; ~30 seconds
     </span>
-    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+    <h1 className="text-3xl sm:text-4xl font-bold text-slate-100 mb-4">
       Which metal detector should you buy?
     </h1>
-    <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+    <p className="text-lg text-slate-400 mb-8 max-w-xl mx-auto leading-relaxed">
       Answer 6 quick questions about your budget, experience, and where you'll hunt.
       We'll match you with the right detector — with honest reasoning from the field,
       not a sales pitch.
     </p>
     <button
       onClick={onStart}
-      className="bg-amber-600 hover:bg-amber-500 text-white px-8 py-3 rounded-xl text-base font-medium transition-colors shadow-sm"
+      className="bg-amber-600 hover:bg-amber-500 text-white px-8 py-3 rounded-xl text-base font-medium transition-colors"
     >
-      Start the quiz →
+      Start the quiz &rarr;
     </button>
-    <p className="text-xs text-gray-400 mt-6">No email required. We'll show your match instantly.</p>
+    <p className="text-xs text-slate-500 mt-6">No email required. We'll show your match instantly.</p>
   </div>
 );
 
-// ─── QUESTION ──────────────────────────────────────────────────────────
-
+// QUESTION
 const QuestionScreen = ({ question, questionIndex, selectedValue, onSelect, onBack }) => (
   <div>
     <ProgressBar current={questionIndex + 1} total={TOTAL_QUESTIONS} />
-    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-8 mb-8">
+    <h2 className="text-2xl sm:text-3xl font-bold text-slate-100 mt-8 mb-8">
       {question.label}
     </h2>
     <div className="space-y-3">
@@ -111,13 +109,13 @@ const QuestionScreen = ({ question, questionIndex, selectedValue, onSelect, onBa
             onClick={() => onSelect(option.value)}
             className={`w-full text-left p-4 sm:p-5 rounded-xl border transition-all ${
               isSelected
-                ? 'border-amber-500 bg-amber-50'
-                : 'border-gray-200 bg-white hover:border-amber-300 hover:bg-stone-50'
+                ? 'border-amber-500 bg-amber-900/20'
+                : 'border-slate-700 bg-slate-800 hover:border-amber-600 hover:bg-slate-700'
             }`}
           >
-            <div className="font-semibold text-gray-900">{option.label}</div>
+            <div className="font-semibold text-slate-100">{option.label}</div>
             {option.hint && (
-              <div className="text-sm text-gray-500 mt-1">{option.hint}</div>
+              <div className="text-sm text-slate-400 mt-1">{option.hint}</div>
             )}
           </button>
         );
@@ -126,11 +124,11 @@ const QuestionScreen = ({ question, questionIndex, selectedValue, onSelect, onBa
     <div className="mt-8 flex items-center justify-between">
       <button
         onClick={onBack}
-        className="text-sm text-gray-500 hover:text-amber-700 transition-colors"
+        className="text-sm text-slate-400 hover:text-amber-400 transition-colors"
       >
-        ← Back
+        &larr; Back
       </button>
-      <span className="text-sm text-gray-400">{questionIndex + 1} of {TOTAL_QUESTIONS}</span>
+      <span className="text-sm text-slate-500">{questionIndex + 1} of {TOTAL_QUESTIONS}</span>
     </div>
   </div>
 );
@@ -141,23 +139,22 @@ const ProgressBar = ({ current, total }) => (
       <div
         key={i}
         className={`h-1.5 flex-1 rounded-full transition-colors ${
-          i < current ? 'bg-amber-600' : 'bg-stone-200'
+          i < current ? 'bg-amber-500' : 'bg-slate-700'
         }`}
       />
     ))}
   </div>
 );
 
-// ─── RESULT ────────────────────────────────────────────────────────────
-
+// RESULT
 const ResultScreen = ({ result, onRetake }) => {
   if (!result.primary) {
     return (
       <div className="text-center py-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl font-bold text-slate-100 mb-4">
           No detector matches all your requirements.
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-slate-400 mb-6">
           Your answers were too restrictive. Try loosening the water or budget filter.
         </p>
         <button
@@ -172,14 +169,14 @@ const ResultScreen = ({ result, onRetake }) => {
 
   return (
     <div>
-      <span className="inline-block bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
+      <span className="inline-block bg-amber-900/30 text-amber-400 border border-amber-800/50 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">
         Your match
       </span>
       <DetectorCard pick={result.primary} isPrimary />
 
       {result.runnerUp && (
         <>
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mt-12 mb-4">
+          <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mt-12 mb-4">
             Worth considering
           </h3>
           <DetectorCard pick={result.runnerUp} />
@@ -189,7 +186,7 @@ const ResultScreen = ({ result, onRetake }) => {
       <div className="mt-12 text-center">
         <button
           onClick={onRetake}
-          className="text-sm text-amber-700 hover:text-amber-900 underline transition-colors"
+          className="text-sm text-amber-400 hover:text-amber-300 underline transition-colors"
         >
           Retake the quiz
         </button>
@@ -203,31 +200,33 @@ const ResultScreen = ({ result, onRetake }) => {
 const DetectorCard = ({ pick, isPrimary = false }) => {
   const { detector, matches } = pick;
   return (
-    <div className={`bg-white rounded-2xl border ${isPrimary ? 'border-amber-300 shadow-md' : 'border-gray-200'} overflow-hidden`}>
+    <div className={`bg-slate-800 rounded-2xl border overflow-hidden ${
+      isPrimary ? 'border-amber-600 shadow-lg shadow-amber-900/30' : 'border-slate-700'
+    }`}>
       <div className="p-6 sm:p-8">
         <div className="flex items-start justify-between gap-4 mb-3">
-          <h2 className={`font-bold text-gray-900 ${isPrimary ? 'text-2xl sm:text-3xl' : 'text-xl'}`}>
+          <h2 className={`font-bold text-slate-100 ${isPrimary ? 'text-2xl sm:text-3xl' : 'text-xl'}`}>
             {detector.name}
           </h2>
           <div className="text-right shrink-0">
-            <div className={`font-bold text-amber-700 ${isPrimary ? 'text-2xl' : 'text-lg'}`}>
+            <div className={`font-bold text-amber-400 ${isPrimary ? 'text-2xl' : 'text-lg'}`}>
               {detector.price}
             </div>
-            <div className="text-xs text-gray-500">★ {detector.rating}</div>
+            <div className="text-xs text-slate-500">&#9733; {detector.rating}</div>
           </div>
         </div>
 
-        <p className="text-gray-600 italic mb-6">{detector.tagline}</p>
+        <p className="text-slate-400 italic mb-6">{detector.tagline}</p>
 
         {matches.length > 0 && (
-          <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-6">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+          <div className="bg-slate-700/50 border border-slate-700 rounded-xl p-4 mb-6">
+            <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
               Why this matches you
             </div>
             <ul className="space-y-1.5">
               {matches.map((m, i) => (
-                <li key={i} className="text-sm text-gray-700 flex">
-                  <span className="text-amber-600 mr-2 shrink-0">✓</span>
+                <li key={i} className="text-sm text-slate-300 flex">
+                  <span className="text-amber-400 mr-2 shrink-0">&#10003;</span>
                   <span>{m}</span>
                 </li>
               ))}
@@ -236,7 +235,7 @@ const DetectorCard = ({ pick, isPrimary = false }) => {
         )}
 
         {isPrimary && (
-          <p className="text-gray-700 leading-relaxed mb-6">{detector.pitchAngle}</p>
+          <p className="text-slate-300 leading-relaxed mb-6">{detector.pitchAngle}</p>
         )}
 
         <a
@@ -245,7 +244,7 @@ const DetectorCard = ({ pick, isPrimary = false }) => {
           rel="noopener noreferrer sponsored"
           className="block w-full bg-amber-600 hover:bg-amber-500 text-white px-5 py-3 rounded-xl font-medium text-center transition-colors"
         >
-          Check current price →
+          Check current price &rarr;
         </a>
       </div>
     </div>
@@ -253,7 +252,7 @@ const DetectorCard = ({ pick, isPrimary = false }) => {
 };
 
 const LegalDisclosure = () => (
-  <p className="text-xs text-gray-400 mt-10 text-center max-w-lg mx-auto leading-relaxed">
+  <p className="text-xs text-slate-500 mt-10 text-center max-w-lg mx-auto leading-relaxed">
     As an Amazon Associate we earn from qualifying purchases at no extra cost to you.
   </p>
 );

@@ -19,7 +19,7 @@ const App = () => {
   return (
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <GoogleMapsProvider>
-      <div className="min-h-screen bg-gray-50 flex flex-col">
+      <div className="min-h-screen bg-slate-900 flex flex-col">
         <Navbar />
         <main className="flex-1">
           <Routes>
