@@ -12,6 +12,8 @@ import rockhoundingUtah from "./posts/rockhounding-utah-8-best-sites.md?raw";
 import bestDetectors2026 from "./posts/best-metal-detectors-2026.md?raw";
 import aceVsVanquish from "./posts/garrett-ace-400-vs-vanquish-540.md?raw";
 import bestTumblers2026 from "./posts/best-rock-tumblers-beginners-2026.md?raw";
+import topazMountainGuide from "./posts/topaz-mountain-utah-guide.md?raw";
+import gearChecklist from "./posts/rockhounding-gear-checklist.md?raw";
 
 export const posts = [
   // --- PUBLISHED ---
@@ -99,31 +101,50 @@ export const posts = [
     content: bestTumblers2026,
   },
 
+  {
+    slug: "topaz-mountain-utah-guide",
+    title: "Topaz Mountain Utah: Complete Collecting Guide",
+    description:
+      "Everything you need to plan a trip to Utah's premier free topaz site — where to look, how to find crystals, getting there, what to bring, and BLM regulations.",
+    date: "2026-06-17",
+    category: "Site Guides",
+    type: "site-guide",
+    status: "published",
+    readTime: "12 min read",
+    keywords: [
+      "topaz mountain utah",
+      "topaz mountain rockhounding",
+      "where to find topaz in utah",
+    ],
+    linkedProducts: ["estwing-rock-hammer", "garmin-etrex-32x", "rockhounding-utah-book"],
+    mapSites: ["topaz-mountain"],
+    content: topazMountainGuide,
+  },
+
+  {
+    slug: "rockhounding-gear-checklist",
+    title: "Rockhounding Gear Checklist: Everything You Actually Need",
+    description:
+      "The essential gear list for rockhounding — what to bring on every trip, what's nice to have, and what you can skip. Organized by priority with honest picks at every price point.",
+    date: "2026-06-17",
+    category: "Gear Lists",
+    type: "gear-list",
+    status: "published",
+    readTime: "10 min read",
+    keywords: [
+      "rockhounding gear list",
+      "rockhounding equipment",
+      "what to bring rockhounding",
+    ],
+    linkedProducts: [
+      "estwing-rock-hammer", "black-diamond-spot", "garmin-etrex-32x",
+      "stanley-classic-bottle", "leatherman-signal", "rockhounding-utah-book",
+    ],
+    content: gearChecklist,
+  },
+
   // --- PLANNED (uncomment and add import as each is written) ---
   //
-  // {
-  //   slug: "rockhounding-gear-checklist",
-  //   title: "Rockhounding Gear Checklist: Everything You Actually Need",
-  //   type: "gear-list",
-  //   status: "draft",
-  //   keywords: ["rockhounding gear list", "rockhounding equipment", "what to bring rockhounding"],
-  //   linkedProducts: ["estwing-rock-hammer", "black-diamond-spot", "garmin-etrex-32x", "stanley-classic-bottle", "leatherman-signal", "rockhounding-utah-book"],
-  // },
-  // {
-  //   slug: "best-rock-tumblers-beginners-2026",
-  //   title: "Best Rock Tumblers for Beginners 2026",
-  //   type: "pillar",
-  //   status: "draft",
-  //   keywords: ["best rock tumbler", "rock tumbler for beginners", "best rock tumbler 2026"],
-  //   linkedProducts: ["national-geo-tumbler", "c1-rock-tumbler-kit", "vevor-tumbler"],
-  // },
-  // {
-  //   slug: "topaz-mountain-utah-guide",
-  //   title: "Topaz Mountain Utah: Complete Collecting Guide",
-  //   type: "site-guide",
-  //   status: "draft",
-  //   keywords: ["topaz mountain utah", "topaz mountain rockhounding", "where to find topaz in utah"],
-  // },
   // {
   //   slug: "nokta-simplex-lite-vs-garrett-ace-400",
   //   title: "Nokta Simplex Lite vs Garrett Ace 400: Budget Detector Showdown",

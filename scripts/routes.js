@@ -62,6 +62,8 @@ export const blogPosts = [
   { slug: "best-metal-detectors-rockhounding-2026", date: "2026-06-01" },
   { slug: "garrett-ace-400-vs-minelab-vanquish-540", date: "2026-06-01" },
   { slug: "best-rock-tumblers-beginners-2026", date: "2026-06-01" },
+  { slug: "topaz-mountain-utah-guide", date: "2026-06-17" },
+  { slug: "rockhounding-gear-checklist", date: "2026-06-17" },
 ];
 
 // --- Aggregate all paths for prerendering ---
