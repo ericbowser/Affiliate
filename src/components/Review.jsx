@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products.js";
 import { siteConfig } from "../data/config.js";
+import { getPrimaryLink } from "../data/affiliateLinks.js";
 import { trackAffiliateClick } from "../utils/analytics.js";
 import { ProductSchema } from "../data/seoSchema.jsx";
 
@@ -10,6 +11,8 @@ const Review = () => {
   const product = products.find(p => p.id === id);
 
   if (!product) return <NotFound />;
+
+  const buyLink = getPrimaryLink(product.id)?.url || product.url || null;
 
   const category = siteConfig.categories[product.category];
   const categoryName = category?.name || product.category.replace(/-/g, " ");
@@ -23,7 +26,7 @@ const Review = () => {
       productName: product.name,
       category:    product.category,
       location,
-      url:         product.url,
+      url:         buyLink,
     });
   };
 
@@ -188,8 +191,9 @@ const Review = () => {
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 text-center">
             <h2 className="text-xl font-bold text-slate-100 mb-2">{product.name}</h2>
             <p className="text-slate-400 text-sm mb-6">{product.price} &#183; {product.bestFor}</p>
+            {buyLink ? (
             <a
-              href={product.url}
+              href={buyLink}
               target="_blank"
               rel="noopener noreferrer sponsored"
               onClick={() => handleAffiliateClick('cta_button')}
@@ -197,6 +201,9 @@ const Review = () => {
             >
               Check current price on Amazon &rarr;
             </a>
+            ) : (
+            <p className="text-sm text-slate-400">Purchase link coming soon — check back shortly.</p>
+            )}
             <p className="text-xs text-slate-500 mt-4">
               As an Amazon Associate we earn from qualifying purchases at no extra cost to you.
             </p>
@@ -210,8 +217,9 @@ const Review = () => {
             <div className="text-sm text-slate-400 mb-5">
               {"★".repeat(Math.floor(product.rating))} {product.rating} / 5
             </div>
+            {buyLink ? (
             <a
-              href={product.url}
+              href={buyLink}
               target="_blank"
               rel="noopener noreferrer sponsored"
               onClick={() => handleAffiliateClick('sidebar_button')}
@@ -219,6 +227,9 @@ const Review = () => {
             >
               Check price on Amazon &rarr;
             </a>
+            ) : (
+            <p className="text-xs text-slate-500 text-center mb-4">Affiliate link pending</p>
+            )}
             <div className="space-y-3 text-sm border-t border-slate-700 pt-4">
               <div className="flex justify-between">
                 <span className="text-slate-400">Category</span>
@@ -291,8 +302,9 @@ const Review = () => {
         <div className="text-lg font-bold text-amber-400 leading-none">{product.price}</div>
         <div className="text-xs text-slate-400 mt-0.5 truncate max-w-[160px]">{product.name}</div>
       </div>
+      {buyLink ? (
       <a
-        href={product.url}
+        href={buyLink}
         target="_blank"
         rel="noopener noreferrer sponsored"
         onClick={() => handleAffiliateClick('mobile_sticky_bar')}
@@ -300,6 +312,7 @@ const Review = () => {
       >
         Check price &rarr;
       </a>
+      ) : null}
     </div>
 
     <div className="lg:hidden h-20" />

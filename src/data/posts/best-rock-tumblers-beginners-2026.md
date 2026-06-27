@@ -10,11 +10,9 @@ This guide covers the three best beginner tumblers we've tested, what actually m
 
 ## Quick Picks
 
-| Tumbler | Best For | Capacity | Price | Our Rating |
-|---------|----------|----------|-------|------------|
-| **National Geographic Kit** | Absolute beginners & kids | 1 lb | $74 | ★★★★½ |
-| **C1 Rock Tumbler Kit** | Beginners wanting durability | 1 lb | $89 | ★★★★½ |
-| **VEVOR 3 lb Dual-Barrel** | More capacity & control | 3 lb (2 barrels) | $149 | ★★★★ |
+- **[National Geographic Kit](/review/national-geo-tumbler)** — Absolute beginners & kids · 1 lb · $74 · ★★★★½
+- **[C1 Rock Tumbler Kit](/review/c1-rock-tumbler-kit)** — Beginners wanting durability · 1 lb · $89 · ★★★★½
+- **[VEVOR 3 lb Dual-Barrel](/review/vevor-tumbler)** — More capacity & control · 3 lb (2 barrels) · $149 · ★★★★
 
 ---
 
@@ -134,7 +132,7 @@ Absolutely — that's the whole point. Agate, jasper, obsidian, and petrified wo
 Roughly comparable to a dishwasher running continuously. The National Geographic kit is the quietest of the three we tested. The VEVOR is noticeably louder. Most people run tumblers in a garage, basement, or laundry room — not a living space.
 
 **What grit do I need to buy after the kit runs out?**  
-A standard 4-stage grit kit includes: 60/90 coarse silicon carbide, 150/220 medium silicon carbide, 500 fine silicon carbide (pre-polish), and aluminum oxide or cerium oxide polish. You can buy refill kits on Amazon for $12-20 that cover several batches.
+A [Polly Plastics coarse grit refill](/review/tumbler-grit-refill) restocks Stage 1 after your starter kit packets run dry — grab medium, fine, and polish stages when you need them.
 
 **Can kids use a rock tumbler?**  
 Yes — the National Geographic kit is specifically designed for kids 8+. Loading the barrel and changing grit stages is simple. The main supervision point is the grit itself (messy, shouldn't be ingested) and the wait time (kids want results faster than 4 weeks).

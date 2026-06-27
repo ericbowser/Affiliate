@@ -75,6 +75,46 @@ const affiliateLinks = {
   "nicholson-hacksaw-80950": {
     amazon: "https://amzn.to/4wYquWy",
   },
+  "dewalt-safety-glasses": {
+    amazon: "https://amzn.to/3StWhyJ",
+  },
+  "cold-chisel-set": {
+    amazon: "https://amzn.to/4eNnpAj",
+  },
+  "classifier-screen-18": {
+    amazon: "https://amzn.to/4oTBdxR",
+    highplains: null,
+  },
+  "collapsible-field-shovel": {
+    amazon: "https://amzn.to/441lQtv",
+    rei: null,
+  },
+  "jewelers-loupe-10x": {
+    amazon: "https://amzn.to/4vJ9Etx",
+  },
+  "adventure-medical-ultralight": {
+    amazon: "https://amzn.to/3SvOEI6",
+    rei: null,
+  },
+  "mechanix-original-gloves": {
+    amazon: "https://amzn.to/4aqjdFf",
+    rei: null,
+  },
+  "nokta-pinpointer": {
+    amazon: "https://amzn.to/4arIQWe",
+    kellyco: null,
+    serious: null,
+  },
+  "tumbler-grit-refill": {
+    amazon: "https://amzn.to/4vxJJEW",
+  },
+  "sunday-afternoons-hat": {
+    amazon: "https://amzn.to/4eH6cZ1",
+    rei: null,
+  },
+  "viair-88p-compressor": {
+    amazon: "https://amzn.to/4wep48Z",
+  },
 
   // --- TUMBLERS & LAPIDARY ---
   "national-geo-tumbler": {

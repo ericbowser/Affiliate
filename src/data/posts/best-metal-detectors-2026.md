@@ -10,15 +10,13 @@ Here's what actually works.
 
 ## Quick Picks
 
-| Detector | Best For | Price | Our Rating |
-|----------|----------|-------|------------|
-| **Garrett Ace 400** | Best overall for beginners | $349 | ★★★★½ |
-| **Nokta Simplex Lite** | Best waterproof budget option | $249 | ★★★★½ |
-| **Minelab Vanquish 540** | Best multi-frequency under $500 | $399 | ★★★★½ |
-| **Garrett AT Max** | Best for wet terrain | $699 | ★★★★★ |
-| **Garrett Goldmaster 24K** | Best for gold prospecting | $729 | ★★★★½ |
-| **Minelab Equinox 800** | Best all-around premium | $899 | ★★★★★ |
-| **Minelab Equinox 900** | Best flagship upgrade | $1,099 | ★★★★★ |
+- **[Garrett Ace 400](/review/garrett-ace-400)** — Best overall for beginners · $349 · ★★★★½
+- **[Nokta Simplex Lite](/review/nokta-simplex-lite)** — Best waterproof budget option · $249 · ★★★★½
+- **[Minelab Vanquish 540](/review/minelab-vanquish-540)** — Best multi-frequency under $500 · $399 · ★★★★½
+- **[Garrett AT Max](/review/garrett-at-max)** — Best for wet terrain · $699 · ★★★★★
+- **[Garrett Goldmaster 24K](/review/garrett-goldmaster-24k)** — Best for gold prospecting · $729 · ★★★★½
+- **[Minelab Equinox 800](/review/minelab-equinox-800)** — Best all-around premium · $899 · ★★★★★
+- **[Minelab Equinox 900](/review/minelab-equinox-900)** — Best flagship upgrade · $1,099 · ★★★★★
 
 ---
 
@@ -133,6 +131,8 @@ The 900 is the Equinox 800's successor with 119 high-resolution target IDs (vs t
 → Minelab Equinox 800 ($899) or 900 ($1,099).
 
 Not sure where to start? [Try our Detector Match quiz](/tools/detector-match) — it recommends based on your terrain, targets, and budget.
+
+Once you own a detector, a [pinpointer](/review/nokta-pinpointer) saves serious time in mine tailings and creek washes — it narrows a dig to a few inches instead of re-sweeping with the coil.
 
 ---
 

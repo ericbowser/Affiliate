@@ -32,10 +32,15 @@ const categories = [
 const productIds = [
   "nokta-simplex-lite", "garrett-ace-400", "minelab-vanquish-540",
   "garrett-at-max", "garrett-goldmaster-24k", "minelab-equinox-800",
-  "minelab-equinox-900", "estwing-rock-hammer", "estwing-prospecting-pick",
-  "nicholson-hacksaw-80950", "national-geo-tumbler", "c1-rock-tumbler-kit",
-  "vevor-tumbler", "black-diamond-spot", "stanley-classic-bottle",
-  "leatherman-signal", "garmin-etrex-32x", "garmin-inreach-mini-2",
+  "minelab-equinox-900",   "estwing-rock-hammer", "estwing-prospecting-pick",
+  "nicholson-hacksaw-80950",
+  "dewalt-safety-glasses", "cold-chisel-set", "classifier-screen-18", "collapsible-field-shovel",
+  "national-geo-tumbler", "c1-rock-tumbler-kit",
+  "vevor-tumbler", "tumbler-grit-refill",
+  "black-diamond-spot", "stanley-classic-bottle",
+  "leatherman-signal", "jewelers-loupe-10x", "adventure-medical-ultralight",
+  "mechanix-original-gloves", "sunday-afternoons-hat", "viair-88p-compressor",
+  "nokta-pinpointer",
   "rockhounding-utah-book", "gem-trails-utah",
 ];
 
@@ -45,8 +50,8 @@ const blogPosts = [
   { slug: "best-metal-detectors-rockhounding-2026", date: "2026-06-01" },
   { slug: "garrett-ace-400-vs-minelab-vanquish-540", date: "2026-06-01" },
   { slug: "best-rock-tumblers-beginners-2026", date: "2026-06-01" },
-  { slug: "topaz-mountain-utah-guide", date: "2026-06-17" },
-  { slug: "rockhounding-gear-checklist", date: "2026-06-17" },
+  { slug: "topaz-mountain-utah-guide", date: "2026-06-26" },
+  { slug: "rockhounding-gear-checklist", date: "2026-06-26" },
 ];
 
 // --- Generate XML ---

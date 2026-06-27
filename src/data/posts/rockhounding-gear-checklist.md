@@ -1,197 +1,232 @@
 # Rockhounding Gear Checklist: Everything You Actually Need
 
-*Wasatch Rockhound · Updated June 2026*
+*Last updated: June 2026 · By Wasatch Rockhound · 9 min read*
+
+Every rockhounding trip I've ruined came down to something I forgot to pack. Not the rock hammer — you always remember the rock hammer. It's the spray bottle that would have made topaz crystals visible. The spare tire that would have saved a three-hour wait on a dirt road with no cell service. The extra gallon of water that would have extended an afternoon that ended too early.
+
+This is the complete gear checklist for rockhounding in Utah and the American West, organized by priority. Not everything here is essential for every trip — a headlamp is critical for mine exploring and irrelevant for an open-desert site. But everything here has earned its spot through actual field use, and the "you will regret forgetting this" items are clearly marked.
 
 ---
 
-Every rockhounding forum has a thread where someone asks what gear they need, and every thread turns into a 47-item list that would cost $1,500 and fill the bed of a truck. That's not helpful. Most of that stuff is either optional, redundant, or something you'll figure out you want after your third or fourth trip — not before your first.
+## Tier 1: Non-Negotiable (Bring Every Trip)
 
-I've been collecting in Utah's West Desert for three years. I've driven to Topaz Mountain with too little gear (forgot water once — never again) and with too much (I don't need a portable rock saw in the field). What follows is the gear I actually bring on every trip, organized by how essential it is, with honest notes on where to spend and where to save.
-
-If you want the short version: a rock hammer, safety glasses, water, sun protection, and a way to carry your finds. That's the minimum. Everything below that line makes you more comfortable or more effective, but you can absolutely start with the basics and add gear as you learn what your collecting style demands.
-
----
-
-## The Non-Negotiables
-
-This is the gear that stays in my truck at all times during rockhounding season. Skip any of these and you're either going to have a bad day or miss finds you drove hours to get.
+These items go in the truck before anything else. Skip any of them and you're either cutting your trip short or putting yourself at risk.
 
 ### Rock Hammer
 
-This is your primary tool. You'll use it to crack open rhyolite for topaz vugs, split geode matrix, break specimens free from host rock, and occasionally drive a chisel. A good rock hammer lasts decades.
+A [rock hammer](/review/estwing-rock-hammer) is the single most important tool in the kit. The Estwing E3-22P is the industry standard for good reason — one-piece forged steel, pointed tip for splitting and prying, shock-reduction grip, and a lifetime warranty. It handles everything from cracking geodes to chiseling vugs to light prying work.
 
-The [Estwing E3-22P](/review/estwing-rock-hammer) is the industry standard for a reason — one-piece forged steel, pointed tip for splitting and prying, shock-reduction grip, and a lifetime warranty. It's been made in the USA since 1923. At around $54, it's one of the best values in the hobby. I've used mine on basalt, rhyolite, limestone, and tuff, and it looks the same as the day I bought it.
+If you're doing more digging than cracking (gold prospecting, geode hunting in soft tuff), add a [prospecting pick](/review/estwing-prospecting-pick). The flat blade and pointed pick are purpose-built for prying and scraping in loose material.
 
-If you're doing more digging than cracking — gold prospecting, pulling geodes from soft matrix — consider the [Estwing Prospecting Pick](/review/estwing-prospecting-pick) instead. The flat blade and pick combination is better suited for prying and excavating.
-
-**Budget alternative:** A 3 lb crack hammer from any hardware store works for breaking rock, but you lose the pointed tip and the ergonomic grip that matters over a full day of swinging.
+**Don't cheap out here.** A hardware store claw hammer will work exactly once before the handle loosens, the claw bends, or the head chips and sends steel fragments at your face. A quality geology hammer lasts decades.
 
 ### Safety Glasses
 
-Non-negotiable. Every time you swing a hammer at rock, chips fly. Rhyolite throws razor-sharp flakes. Basalt sends shrapnel. One chip in the eye and your rockhounding career is over.
+Non-negotiable when hammering rock. Period. A chip of rhyolite or quartz traveling at speed will permanently damage your eye. [Wrap-around safety glasses](/review/dewalt-safety-glasses) cost about $12, weigh nothing, and belong in every glove box.
 
-Any ANSI Z87.1-rated safety glasses work. I use wraparound style because they block chips from the side too. Cost: $5-15. There is no excuse to skip this.
+### Water (More Than You Think)
 
-### Water
+**Minimum 2 gallons per person for a full day.** Utah rockhounding sites are desert — no shade, no water sources, temperatures that can climb 20 degrees between 9 AM and noon. Dehydration sneaks up on you because the dry air wicks sweat before you feel wet.
 
-This deserves its own section because dehydration is the most common problem I see at remote Utah sites, and it's the most dangerous.
-
-**Minimum: two gallons per person per day.** More in summer. More if you're doing hard-rock work with a hammer and chisel.
-
-Most BLM rockhounding sites in Utah have no water source within an hour's drive. No creek, no spigot, no convenience store. You bring it all or you go without.
-
-The [Stanley Classic Legendary Bottle](/review/stanley-classic-bottle) is what I carry for personal hydration — keeps water cold for 24 hours in desert heat, survives drops, and the built-in cup lid means one less thing to pack. But the Stanley alone isn't enough water for a full day. I also bring a 5-gallon jug in the truck bed as a reserve. Between the two, I've never run short.
+An [insulated bottle](/review/stanley-classic-bottle) keeps water cold for hours in the truck, but also bring a full gallon jug as backup. Heat-related illness is the most common problem at Utah collecting sites, and it's entirely preventable.
 
 ### Sun Protection
 
-Every productive rockhounding site in Utah is exposed. Topaz Mountain has zero shade. Dugway Geode Beds — zero shade. San Rafael Swell — you might find a canyon wall to hide behind for lunch. Plan for full sun from dawn to dark.
+Utah desert sun is brutal. Full-spectrum SPF 50+ sunscreen, a [wide-brim hat](/review/sunday-afternoons-hat) (not a baseball cap — your ears and neck need coverage), and long sleeves are the baseline. Sunburn at altitude happens faster than you expect — the Thomas Range sits at 6,500 feet and the San Rafael Swell at 4,500-6,000 feet.
 
-Bring a wide-brim hat, SPF 50 sunscreen, and UV-rated sunglasses. A lightweight long-sleeve shirt beats reapplying sunscreen every two hours. Lip balm with SPF is the thing people always forget and always regret.
+### Vehicle Prep
 
-### Something to Carry Finds
-
-A 5-gallon bucket is the workhorse. Sturdy, cheap, holds a lot of rock, and doubles as a seat during sifting sessions. Line it with a towel if you're carrying delicate crystal specimens.
-
-Zip-lock bags in multiple sizes are essential for organizing keepers — label them with the site name and date so you don't end up with a bucket of mystery rocks at home. I keep a roll of painter's tape and a Sharpie for labeling.
-
-For fragile specimens (topaz crystals, geodes you don't want cracked), wrap them individually in newspaper or paper towels before they go in the bucket. One bump on a dirt road can undo an hour of careful extraction.
-
----
-
-## Strongly Recommended
-
-You can technically rockhound without these, but your trips will be shorter, less productive, and less comfortable.
-
-### Headlamp
-
-Early morning starts, overcast days, mine tailings, and the occasional shallow cave all demand a light source. A headlamp keeps your hands free for hammering and specimen handling.
-
-The [Black Diamond Spot](/review/black-diamond-spot) is what I use — bright enough for mine exploration, red night-vision mode for preserving eye adaptation at dawn, waterproof for rain, and it runs on AAA batteries you can buy at any gas station. The emergency strobe is a feature I hope I never need but am glad exists.
-
-You don't need a headlamp on every trip, but the trips where you need one, you *really* need one.
-
-### GPS or Offline Maps
-
-Cell service doesn't exist at most Utah collecting sites. Not weak signal — zero signal. If you're relying on Google Maps to get you to Topaz Mountain or the Dugway Geode Beds, you're going to be staring at a spinning wheel on a dirt road 50 miles from the nearest town.
-
-The [Garmin eTrex 32x](/review/garmin-etrex-32x) is the dedicated GPS I carry. Pre-loaded topo maps, 16-hour battery life on two AAs, waterproof, and glove-friendly buttons. It's not cheap at $249, but it pays for itself the first time it keeps you from getting lost in the Thomas Range road network.
-
-**Budget alternative:** Download offline maps on your phone before you leave cell range. Google Maps and Gaia GPS both support offline areas. Your phone is less reliable (battery drain, heat sensitivity, fragile screen), but it's better than nothing.
-
-**Mark your finds.** Whether you're using a dedicated GPS or a phone app, drop a waypoint every time you find something good. You will not remember the exact wash or hillside three months later, and the difference between "somewhere on the south slope" and a GPS coordinate is the difference between finding that spot again and spending an hour wandering.
-
-### Multi-Tool
-
-A dedicated multi-tool lives in my pack because the field constantly presents problems that a rock hammer can't solve. Wire that needs cutting, a bolt that needs tightening on a screen frame, a splinter, a stuck zipper, a can that needs opening at lunch.
-
-The [Leatherman Signal](/review/leatherman-signal) earns its spot because it's built for outdoor survival specifically — 19 tools including a fire starter, emergency whistle, and a saw blade for brush clearing. The fire starter is relevant on remote BLM land where nighttime temperatures can drop fast if you get stuck. At $119 it's not a budget pick, but the 25-year warranty and the peace of mind are worth it.
-
-**Budget alternative:** Any basic Leatherman or Gerber multi-tool in the $30-50 range covers the essentials. You lose the fire starter and whistle, but you keep the pliers, knife, and screwdrivers that do most of the work.
-
-### Field Guide
-
-Knowing what you're looking at matters. Not everything that glitters in a wash is topaz, and not every dark crystal is garnet. A good regional field guide helps you identify finds in the field, tells you what's worth keeping, and points you to sites you might not have known about.
-
-[Rockhounding Utah by Gretchen Hazlewood](/review/rockhounding-utah-book) covers 75 sites with GPS coordinates, minerals present, best seasons, and access notes. It's compact enough to throw in your pack and is the most-referenced book in my truck. At $18, it's one of the cheapest and most useful pieces of gear on this list.
-
-[Gem Trails of Utah](/review/gem-trails-utah) is a solid companion guide — more focused on gem and mineral localities, with detailed directions to lesser-known sites.
+Most Utah rockhounding sites require dirt road driving. Before you leave pavement:
+- **Spare tire** — not the donut, a real spare. Flat tires on BLM roads are common.
+- **Jack and lug wrench** — make sure they work. Test them in your driveway, not 50 miles from pavement.
+- **Full tank of gas** — the nearest gas station to Topaz Mountain is 70+ miles away.
+- **Basic tool kit** — pliers, screwdriver, duct tape, zip ties. Enough to improvise a fix that gets you home.
+- **Portable air compressor** — a [portable tire inflator](/review/viair-88p-compressor) handles slow leaks and soft tires after rocky BLM roads.
 
 ---
 
-## Nice to Have
+## Tier 2: Strongly Recommended
 
-This is gear that makes specific trips better but isn't essential for every outing.
+Not every trip demands these, but they'll improve your haul, your safety, or both.
 
-### Cold Chisels
+### Navigation
 
-If you're doing any hard-rock collecting — cracking rhyolite at Topaz Mountain, splitting geodes, working seams in limestone — a set of cold chisels dramatically improves your results. A hammer alone tends to shatter specimens. A chisel lets you control the break and preserve crystal faces.
+Your phone is useless at most Utah collecting sites — no cell signal, no GPS-assisted navigation, and a battery that dies in desert heat. A [dedicated GPS unit](/review/garmin-etrex-32x) preloaded with topo maps is the reliable option. Mark your parked vehicle as a waypoint before you start walking — it's surprisingly easy to lose your truck in featureless desert.
 
-A basic set of 3 sizes (1/4", 1/2", 3/4") from any hardware store costs under $15 and is all you need.
+For solo trips to truly remote sites (San Rafael Swell, Comb Ridge), a [satellite communicator](/review/garmin-inreach-mini-2) is the difference between a misadventure and a rescue. Two-way satellite texting and an SOS button that connects to GEOS 24/7 rescue coordination. The monthly subscription ($15-50) is cheap insurance when the nearest help is hours away.
 
-### Fine-Mesh Screen
+### Collecting Containers
 
-A simple wood frame with 1/8" hardware cloth stretched across it. Essential for sifting topaz-bearing soil at Topaz Mountain, useful for screening creek gravel for small agates and garnets anywhere.
+Sounds obvious, gets forgotten. You need something to carry your finds that protects them from each other. Options:
+- **Egg cartons** — free, lightweight, perfectly sized for small crystals and geodes
+- **5-gallon bucket** — for bulk collecting (geodes, rough)
+- **Newspaper or paper towels** — wrap individual specimens to prevent scratching
+- **Ziplock bags** — label with the site name and date; future you will thank past you
 
-You can build one for under $10 with scrap wood and a piece of hardware cloth from the hardware store. Make it roughly 12" x 18" — big enough to be productive, small enough to carry.
+### Chisel Set
+
+A [cold chisel set](/review/cold-chisel-set) pairs with your rock hammer for controlled splitting. When you find a crystal-bearing vug, a chisel lets you open it carefully instead of smashing it to pieces with a direct hammer strike. Carry at least two widths.
 
 ### Spray Bottle
 
-A dollar-store spray bottle filled with water is the secret weapon at Topaz Mountain. Topaz crystals look like ordinary pebbles when dry but flash with a distinctive glassy sheen when wet. Spray the ground ahead of you and watch for the glint. This technique alone probably doubles your topaz finds.
+Critical for topaz and agate hunting. A simple dollar-store spray bottle filled with water makes glassy mineral surfaces light up in the sun. Dry, dusty topaz is nearly invisible; wet topaz sparkles immediately. I've walked past specimens I would have found in seconds with a spray bottle.
+
+### Screen / Sifter
+
+A [1/8" classifier screen](/review/classifier-screen-18) lets you sift wash gravel for small crystals. Many of the best topaz specimens at Topaz Mountain are under 1/4 inch — too small to spot by eye, perfect for screening.
 
 ### Shovel
 
-Essential for geode hunting (Dugway Geode Beds specifically — you cannot collect there without one), useful for digging into soft matrix at other sites. A standard garden spade or trenching shovel works fine. A folding camp shovel saves space but is slower.
-
-### Knee Pads or Sit Pad
-
-You will spend a surprising amount of time on your knees. Sifting, examining outcrops at ground level, prying specimens from matrix — rockhounding is not a standing-up hobby. A cheap pair of garden knee pads or even a foam sit pad makes a meaningful difference in comfort over a full day.
+At Dugway Geode Beds and other soft-tuff sites, a [collapsible camp shovel](/review/collapsible-field-shovel) is non-negotiable. Folds small enough to live behind the seat year-round — you won't pull geodes out of a hillside with a hammer alone.
 
 ### First Aid Kit
 
-You're typically hours from medical care at Western BLM sites. A basic kit with bandages, antiseptic, tweezers (for splinters and cactus spines), ibuprofen, and an emergency blanket covers the most likely scenarios. Add moleskin if you're hiking to remote collecting areas.
+Remote BLM sites have no cell service. An [ultralight first aid kit](/review/adventure-medical-ultralight) handles sliced fingers, blisters, and burns — the injuries rockhounding actually produces.
+
+### Work Gloves
+
+Optional for hammering, but worth it for screening and shovel days. [Mechanix Original gloves](/review/mechanix-original-gloves) protect knuckles without killing dexterity.
+
+### Headlamp
+
+A [high-lumen headlamp](/review/black-diamond-spot) is essential if you're exploring prospect holes, abandoned mine entrances, or collecting in caves. Red-light mode preserves your night vision, and a strobe mode works as an emergency signal. Even for open-site collecting, a headlamp is useful if you're packing up at dusk after a long day.
+
+### Multi-Tool
+
+A [quality multi-tool](/review/leatherman-signal) handles the unexpected — cutting cord, tightening a bolt on your sifting screen, opening cans, sawing a branch that's blocking the road. The Leatherman Signal adds a fire starter and emergency whistle, which are genuinely useful features for remote desert work.
 
 ---
 
-## What You Don't Need (Yet)
+## Tier 3: Nice to Have
 
-A few things that show up on every gear list that beginners should skip initially:
+These improve the experience once you're past the essentials.
 
-**A metal detector** — Useful for specific applications (gold prospecting, meteorite hunting), but not essential for general rockhounding. If you decide you want one later, we have a [complete guide to detectors for rockhounding](/blog/best-metal-detectors-rockhounding-2026).
+### Field Guides
 
-**A rock saw** — Field cutting is impractical and unnecessary. Bring your specimens home whole and cut them on a bench saw, or take them to a local rock shop that offers cutting services.
+The two worth keeping in the truck for Utah:
+- [Rockhounding Utah by Gretchen Hazlewood](/review/rockhounding-utah-book) — 75 sites with GPS coordinates. The definitive reference.
+- [Gem Trails of Utah by James Mitchell](/review/gem-trails-utah) — older but strong on southern and central Utah sites, with good geological context.
 
-**A geology loupe** — Nice for examining crystal faces and identifying micro-minerals, but it won't change what you collect as a beginner. Add one after you've developed an eye for what you're looking at.
+Between the two, you'll have directions to more sites than you can visit in a season.
 
-**Specialized clothing** — You don't need rockhounding-specific anything. Sturdy boots, long pants, and a hat work. Your existing hiking or outdoor clothes are fine.
+### Magnifying Loupe (10x)
+
+A [10x triplet loupe](/review/jewelers-loupe-10x) lets you identify minerals in the field — see crystal faces, check for inclusions, distinguish topaz from quartz. Ours has a folding stand for tailgate sorting; a pocket folding triplet works too if you want something smaller.
+
+### Knee Pads
+
+You'll spend more time on your knees than you expect — sifting washes, examining rock faces, digging in soft tuff. Garden-style knee pads cost $15 and save you from limping to the truck at the end of the day.
+
+### Gloves
+
+Leather work gloves protect your hands when hammering and handling sharp rock. They also prevent blisters on long digging sessions. Skip gardening gloves — they're too thin for rock work.
+
+### Camera / Phone
+
+Even without cell service, your phone camera documents finds, records GPS coordinates (if you've downloaded offline maps), and captures the site for trip reports. A few photos of a specimen in context (still in the rock, still in the wash) are worth more than a handful of unlabeled rocks in a bag three months later.
+
+### Folding Chair
+
+It sounds indulgent until you've spent four hours squatting and kneeling on rocky desert ground. A lightweight camp chair in the truck gives you a place to sort finds, eat lunch, and rest your back. Quality of life upgrade, not essential gear.
 
 ---
 
-## The Printable Checklist
+## Trip-Type Checklists
 
-Tape this to the inside of your truck's tailgate or save it to your phone:
+### Desert Site (Topaz Mountain, Dugway, Sunstone Knoll)
+- [ ] Rock hammer + chisel
+- [ ] Safety glasses
+- [ ] 2+ gallons water per person
+- [ ] Insulated water bottle
+- [ ] Sunscreen, hat, long sleeves
+- [ ] Spray bottle
+- [ ] Screen/sifter
+- [ ] Collecting containers (egg cartons, bags)
+- [ ] GPS unit
+- [ ] Satellite communicator (solo trips)
+- [ ] Spare tire + jack
+- [ ] Full tank of gas
+- [ ] Multi-tool
+- [ ] First aid kit
+- [ ] Field guide
 
-**Every trip:**
-- Rock hammer
-- Safety glasses
-- 2+ gallons water per person
-- Hat, sunscreen, sunglasses
-- Bucket, zip-lock bags, Sharpie
-- Sturdy boots, long pants
+### Creek / River Site (San Rafael Swell, mountain streams)
+- [ ] Rock hammer
+- [ ] Safety glasses
+- [ ] Waterproof boots or waders
+- [ ] Collecting bucket
+- [ ] Gold pan (doubles as a sifter)
+- [ ] Spray bottle
+- [ ] Water (still need it even near water sources)
+- [ ] Sun protection
+- [ ] GPS unit
+- [ ] First aid kit
 
-**Most trips:**
-- Headlamp
-- GPS or offline maps downloaded
-- Multi-tool
-- Field guide
-- First aid kit
-- Snacks and lunch
-- Spare tire + jack
+### Mine / Cave Exploring
+- [ ] Headlamp (primary) + backup light source
+- [ ] Hard hat (seriously — unstable rock ceilings)
+- [ ] Rock hammer + chisel
+- [ ] Safety glasses
+- [ ] Collecting bags
+- [ ] Gloves
+- [ ] Multi-tool
+- [ ] First aid kit
+- [ ] Tell someone where you're going and when to expect you back
 
-**Site-specific:**
-- Cold chisels (hard-rock sites)
-- Screen + spray bottle (Topaz Mountain)
-- Shovel (Dugway Geode Beds)
-- 4WD or high-clearance vehicle (most BLM sites)
+---
+
+## Common Mistakes
+
+**Forgetting the spare tire.** The #1 trip-ending problem at Utah rockhounding sites. BLM roads are rocky, and flats happen. A donut spare isn't enough — bring a full-size spare and confirm your jack works before you leave home.
+
+**Not enough water.** If you think two gallons is a lot, you haven't spent a full day in the Utah desert. Bring more than you think you need. Heat-related illness doesn't announce itself — by the time you feel bad, you're already behind on hydration.
+
+**Packing too many tools.** On your first trip, you need a rock hammer, safety glasses, water, sun protection, and collecting containers. That's it. Add tools as you learn what your specific collecting style demands. A 50-pound tool bag means you spend more time organizing than collecting.
+
+**No labels on specimens.** A plastic bag of mystery rocks is worthless three months later. Label everything: site name, date, what you think it is. A Sharpie and masking tape weigh nothing and save your future self hours of frustration.
+
+**Driving on wet BLM roads.** Utah clay turns to grease when wet. If it rained in the last 24-48 hours, the road to Dugway, Topaz Mountain, or most other BLM sites is likely impassable. Check conditions before you drive — getting stuck 30 miles from pavement with no cell signal is a serious situation.
+
+---
+
+## Budget Breakdown
+
+You can get into rockhounding for under $150 in gear. Here's a realistic starter kit:
+
+- **Estwing rock hammer** — $54
+- **[Safety glasses](/review/dewalt-safety-glasses)** — ~$12
+- **5-gallon bucket** — $5
+- **Spray bottle** — $1
+- **Newspaper (wrapping)** — Free
+- **Ziplock bags + Sharpie** — $5
+- **Sunscreen** — $10
+- **Wide-brim hat** — $15
+- **2-gallon water jug** — $8
+- **Total** — **~$103**
+
+Everything else is an upgrade from there. A GPS unit, satellite communicator, headlamp, and multi-tool add capability but aren't required for your first trip to a well-documented site.
 
 ---
 
 ## FAQ
 
-**How much does it cost to start rockhounding?**
-Under $100 gets you a quality rock hammer ($54), safety glasses ($10), a bucket and bags ($10), and a field guide ($18). Add water and sunscreen from home and you're ready for your first trip.
+**What's the most important piece of gear?**
+Water. Everything else is replaceable or improvise-able in the field. Dehydration is not.
 
-**What's the single most important piece of gear?**
-The rock hammer. Everything else is supporting cast. A good hammer lets you crack, split, pry, and extract. Without one, you're limited to surface picking, which is fine but limits what you'll find.
+**Do I need a metal detector for rockhounding?**
+Not for most rockhounding. Metal detectors are specialized tools for finding gold, meteorites, and relics. Standard mineral collecting — topaz, geodes, agate, fossils — is all visual and manual. If you're interested in detectors, [read our detector guide](/blog/best-metal-detectors-rockhounding-2026).
 
-**Should I buy a cheap starter kit?**
-Most "rockhounding starter kits" on Amazon bundle a low-quality hammer with a grab bag of accessories you don't need. You're better off buying an Estwing hammer and safety glasses separately — the hammer will last your entire life, and the kit hammer won't last a season.
+**What vehicle do I need?**
+A truck or SUV with decent ground clearance handles 90% of Utah BLM roads in dry conditions. You don't necessarily need 4WD — but low clearance (sedans, sports cars) will bottom out or get stuck. The honest answer: if your vehicle can handle a rutted gravel road, you're fine for most sites.
 
-**Do I need different gear for different sites?**
-The core kit stays the same. What changes is the site-specific add-ons: a shovel for geode beds, a screen and spray bottle for Topaz Mountain, a chisel set for hard-rock sites. Check our [site guides](/blog/rockhounding-utah-8-best-sites) for specific recommendations.
+**Can I rockhound in regular hiking clothes?**
+Yes — with caveats. Long pants protect your knees when kneeling on rock. Closed-toe boots protect your feet from hammered rock fragments. Avoid open-toed shoes entirely. Light-colored, loose-fitting layers are best for desert heat.
 
-**What about a backpack vs. a bucket?**
-Both work. A bucket is better for vehicle-accessible sites (most BLM locations) because it holds more, is sturdier, and doubles as a seat. A backpack is better if you're hiking more than a quarter mile from your vehicle to reach collecting areas.
+**How do I know what I found?**
+Start with a field guide ([Rockhounding Utah by Hazlewood](/review/rockhounding-utah-book) is the best for this state). Test hardness with a pocket knife (steel is about 5.5 on the Mohs scale). Check luster, color, crystal shape. When in doubt, take a good photo and ask a local rock club or the r/rockhounds subreddit — the community is helpful and responsive.
 
 ---
 
-*Wasatch Rockhound is based in Salt Lake City. We use every piece of gear we recommend. Some links on this page are affiliate links — we earn a small commission if you buy through them, at no extra cost to you. This supports the site and helps us keep producing honest gear recommendations. [Full disclosure →](/about)*
+*Affiliate disclosure: Some links in this article earn Wasatch Rockhound a small commission at no cost to you. Our gear recommendations are based on hands-on use and are never influenced by affiliate relationships.*
+
+*Wasatch Rockhound is a project of [Execute & Engrave LLC](/about), based in Salt Lake City, Utah.*

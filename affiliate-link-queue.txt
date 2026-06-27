@@ -1,0 +1,40 @@
+# Wasatch Rockhound — Amazon link queue
+# Paste your amzn.to (or tagged amazon.com) link after each = sign.
+# Send this file back to Cursor when done — we'll wire into affiliateLinks.js + products.js
+
+# --- FILLED (wired 2026-06-03) ---
+
+dewalt-safety-glasses=https://amzn.to/3StWhyJ
+# DEWALT DPG82 Concealer Anti-Fog (B01A12J3GI) — was mis-pasted as "classifier" search
+
+cold-chisel-set=https://amzn.to/4eNnpAj
+# Stanley 4-Piece Cold Chisel Kit (B000X29DSA) — alternate to FatMax listing
+
+collapsible-field-shovel=https://amzn.to/441lQtv
+# Yeacool 16" Folding Camp Shovel (B07MKJCG9N) — replaces Fiskars prospector shovel
+
+jewelers-loupe-10x=https://amzn.to/4vJ9Etx
+# JuviPerpric 10x Triplet Loupe with stand (B0GWCJZKXF) — BelOMO not in stock
+
+adventure-medical-ultralight=https://amzn.to/3SvOEI6
+# Adventure Medical Ultralight/Watertight .7 (B0DV6NTJBK)
+
+mechanix-original-gloves=https://amzn.to/4aqjdFf
+# Mechanix Wear Original (B0001VNZQO)
+
+# --- STILL NEEDED ---
+
+classifier-screen-18=https://amzn.to/4oTBdxR
+# SE GP2-18 13.25" Stackable Classifier, 1/8" mesh (B008B0TJAI)
+
+nokta-pinpointer=https://amzn.to/4arIQWe
+# Nokta AccuPOINT Pinpointer (B0CL4RV6HC)
+
+tumbler-grit-refill=https://amzn.to/4vxJJEW
+# Polly Plastics Stage 1 Coarse Grit 2 lb (B07P2P5FR4)
+
+sunday-afternoons-hat=https://amzn.to/4eH6cZ1
+# Sunday Afternoons Ultra Adventure Hat (B01641ENY2)
+
+viair-88p-compressor=https://amzn.to/4wep48Z
+# VIAIR EVC25 rechargeable compressor (B0F3FTX6XQ) — alternate to 88P

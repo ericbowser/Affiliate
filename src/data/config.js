@@ -14,7 +14,7 @@ export const siteConfig = {
       description: "Crack, chip, and dig with purpose. The right tools make or break a day in the field.",
       slug: "rock-hammers",
       keywords: ["best rock hammer", "geology pick", "rockhounding hand tools"],
-      featuredProducts: ["estwing-rock-hammer", "estwing-prospecting-pick"]
+      featuredProducts: ["estwing-rock-hammer", "estwing-prospecting-pick", "dewalt-safety-glasses", "classifier-screen-18"]
     },
     "tumblers-lapidary": {
       name: "Tumblers & Lapidary",
@@ -30,7 +30,7 @@ export const siteConfig = {
       description: "Rockhounding takes you deep into the backcountry. Gear that keeps you safe and comfortable out there.",
       slug: "field-gear",
       keywords: ["rockhounding field gear", "desert camping gear", "backcountry essentials"],
-      featuredProducts: ["black-diamond-spot", "hydro-flask-32", "leatherman-signal"]
+      featuredProducts: ["black-diamond-spot", "stanley-classic-bottle", "leatherman-signal", "adventure-medical-ultralight"]
     },
     "gps-navigation": {
       name: "GPS & Navigation",

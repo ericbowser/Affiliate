@@ -86,7 +86,29 @@ const BlogPost = () => {
               <strong className="font-semibold text-slate-100">{children}</strong>
             ),
             em: ({ children }) => (
-              <em className="italic text-slate-400">{children}</em>
+              <em className="italic text-slate-300">{children}</em>
+            ),
+            table: ({ children }) => (
+              <div className="overflow-x-auto my-8 rounded-xl border border-slate-700">
+                <table className="w-full text-sm border-collapse">{children}</table>
+              </div>
+            ),
+            thead: ({ children }) => (
+              <thead className="bg-slate-800">{children}</thead>
+            ),
+            tbody: ({ children }) => (
+              <tbody>{children}</tbody>
+            ),
+            tr: ({ children }) => (
+              <tr className="border-b border-slate-700 even:bg-slate-800/40">{children}</tr>
+            ),
+            th: ({ children }) => (
+              <th className="text-left font-semibold text-slate-100 px-4 py-3 border-b border-slate-600">
+                {children}
+              </th>
+            ),
+            td: ({ children }) => (
+              <td className="text-slate-200 px-4 py-3 align-top">{children}</td>
             ),
             ul: ({ children }) => (
               <ul className="my-4 space-y-1 pl-5 list-disc marker:text-amber-500">

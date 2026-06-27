@@ -276,6 +276,263 @@ export const products = [
     ],
     tier: "budget"
   },
+  {
+    id: "dewalt-safety-glasses",
+    name: "DEWALT DPG82 Concealer Anti-Fog Safety Goggles",
+    tagline: "Wrap-around eye protection for hammering and chiseling",
+    category: "rock-hammers",
+    price: "~$13",
+    rating: 4.6,
+    bestFor: "Any trip where you're cracking rock",
+    url: "https://amzn.to/3StWhyJ",
+    image: "",
+    pros: [
+      "Anti-fog dual mold lens for hot desert days",
+      "Wrap-around seal keeps rock chips out",
+      "Fits over most prescription glasses",
+      "Elastic strap — stays put when you're bent over a vug"
+    ],
+    cons: [
+      "Goggle style runs warmer than open safety glasses in mid-summer",
+      "Strap elastic wears out after years of truck-glove-box storage"
+    ],
+    verdict: "The cheapest insurance on any rockhounding trip. Rhyolite and quartz send sharp chips when you hammer — these beat sunglasses every time.",
+    tier: "budget"
+  },
+  {
+    id: "cold-chisel-set",
+    name: "Stanley 4-Piece Cold Chisel Set",
+    tagline: "Open rhyolite vugs without destroying the crystals inside",
+    category: "rock-hammers",
+    price: "~$22",
+    rating: 4.5,
+    bestFor: "Topaz Mountain, Tintic tailings, any vug hunting",
+    url: "https://amzn.to/4eNnpAj",
+    image: "",
+    pros: [
+      "Four widths for narrow vug lines and wider splits",
+      "Controlled strikes vs swinging the hammer alone",
+      "Hardened steel stands up to rhyolite",
+      "Stanley build quality at a hardware-store price"
+    ],
+    cons: [
+      "Still requires safety glasses — chips fly sideways",
+      "Strike end can mushroom if you hit the chisel with a steel hammer"
+    ],
+    verdict: "At Topaz Mountain and similar hard-rock sites, a chisel is how you actually extract crystals from vugs. Pair it with an Estwing and go slow.",
+    tier: "budget"
+  },
+  {
+    id: "classifier-screen-18",
+    name: 'SE 13.25" Stackable Classifier (1/8" Mesh)',
+    tagline: "Sift wash gravel for small topaz and garnets you'd walk past",
+    category: "rock-hammers",
+    price: "~$30",
+    rating: 4.5,
+    bestFor: "Topaz Mountain washes, dry placer screening",
+    url: "https://amzn.to/4oTBdxR",
+    image: "",
+    pros: [
+      "1/8 inch stainless steel mesh catches small crystals",
+      "Stackable design nests with other SE classifier sizes",
+      "13.25\" pan fits over a 5-gallon bucket",
+      "Durable mesh holds up to rocky wash gravel"
+    ],
+    cons: [
+      "Fine mesh clogs with clay after rain",
+      "Wet screening is messy — bring extra water",
+      "Pan style is wider than compact bucket-top sieves"
+    ],
+    verdict: "Some of the best Topaz Mountain crystals are under a quarter inch. This SE stackable classifier turns 'I didn't find much' into a full pill bottle.",
+    tier: "budget"
+  },
+  {
+    id: "collapsible-field-shovel",
+    name: "Yeacool Folding Camp Shovel (16\")",
+    tagline: "Collapsible digger for geode hillsides and BLM road emergencies",
+    category: "rock-hammers",
+    price: "~$30",
+    rating: 4.4,
+    bestFor: "Dugway geodes, soft tuff digging, truck emergency kit",
+    url: "https://amzn.to/441lQtv",
+    image: "https://m.media-amazon.com/images/I/41Hi2EEfCHL.jpg",
+    pros: [
+      "Folds small — lives in the truck without a full-size spade",
+      "Pickaxe edge handles compacted dirt and gravel",
+      "Multi-tool extras: saw, bottle opener, nail puller",
+      "Useful for digging and as a backup traction tool"
+    ],
+    cons: [
+      "Shorter handle than a full digging spade — more bending at Dugway",
+      "Not as fast as a dedicated long-handle shovel for deep pits",
+      "Hinge needs occasional tightening after heavy use"
+    ],
+    verdict: "We wanted a full Fiskars spade for Dugway, but a collapsible shovel fits behind the seat year-round. Good for geode digging and BLM roadside fixes.",
+    tier: "budget"
+  },
+  {
+    id: "jewelers-loupe-10x",
+    name: "JuviPerpric 10x Triplet Loupe with Stand",
+    tagline: "Hands-free magnification for screening fines at camp",
+    category: "field-gear",
+    price: "~$18",
+    rating: 4.3,
+    bestFor: "Screening fines, garnets, pseudobrookite ID",
+    url: "https://amzn.to/4vJ9Etx",
+    image: "",
+    pros: [
+      "10x triplet lens — clearer than single-lens budget loupes",
+      "Folding tripod base for hands-free sorting at the tailgate",
+      "Adjustable focus knob — less squinting than fixed-focus loupes",
+      "Lightweight aluminum body"
+    ],
+    cons: [
+      "Tripod base is bulkier than a pocket BelOMO-style loupe",
+      "Better for tailgate sorting than one-handed field use",
+      "Newer brand with fewer long-term owner reviews than Hastings/BelOMO"
+    ],
+    verdict: "We couldn't source BelOMO in stock — this triplet with a stand works well for checking screened gravel on the tailgate. For pocket carry, look for a folding 10x triplet without the stand.",
+    tier: "budget"
+  },
+  {
+    id: "adventure-medical-ultralight",
+    name: "Adventure Medical Kits Ultralight/Watertight .7",
+    tagline: "First aid sized for solo BLM trips with no cell service",
+    category: "field-gear",
+    price: "~$40",
+    rating: 4.7,
+    bestFor: "Remote Utah sites — Topaz, Dugway, San Rafael",
+    url: "https://amzn.to/3SvOEI6",
+    image: "",
+    pros: [
+      "DryFlex waterproof inner bag — gauze stays dry in dusty trucks",
+      "Pre-cut moleskin for blister-heavy hiking days",
+      "Pain relievers and wound care for a 1–3 person day trip",
+      "Under 6 oz — fits a day pack without guilt"
+    ],
+    cons: [
+      "Not a trauma kit — serious injuries need satellite SOS",
+      "Add personal meds and extra blister care for long digs"
+    ],
+    verdict: "You're hours from help at most Utah collecting sites. This kit handles the injuries rockhounding actually produces — sliced fingers, hammer bruises, and blister care.",
+    tier: "budget"
+  },
+  {
+    id: "mechanix-original-gloves",
+    name: "Mechanix Wear Original Gloves",
+    tagline: "Grip and blister protection for screening and digging",
+    category: "field-gear",
+    price: "~$22",
+    rating: 4.6,
+    bestFor: "Screening gravel, shovel work, rough rock handling",
+    url: "https://amzn.to/4aqjdFf",
+    image: "",
+    pros: [
+      "Breathable TrekDry — hands don't cook in desert heat",
+      "Good dexterity for handling small crystals",
+      "Protects knuckles when raking washes",
+      "Machine washable after dusty trips"
+    ],
+    cons: [
+      "Not cut-proof — still wear glasses when hammering",
+      "Wear through fast if you're prying sharp rhyolite all day"
+    ],
+    verdict: "Optional for open-desert hammering, but worth it for full days of screening and shovel work. Your hands will thank you on the drive home.",
+    tier: "budget"
+  },
+  {
+    id: "nokta-pinpointer",
+    name: "Nokta AccuPOINT Pinpointer",
+    tagline: "Waterproof pinpointing after your detector beeps",
+    category: "metal-detectors",
+    price: "~$130",
+    rating: 4.6,
+    bestFor: "Mine tailings, creek detecting, small gold indicators",
+    url: "https://amzn.to/4arIQWe",
+    image: "",
+    pros: [
+      "Professional waterproof build for wash and creek hunting",
+      "Pinpoints in a tight zone — less digging per target",
+      "Essential in trashy tailings with lots of iron",
+      "Faster than re-sweeping with the main coil"
+    ],
+    cons: [
+      "Another item to carry and charge",
+      "Not a substitute for learning your detector"
+    ],
+    verdict: "Once you're detecting seriously in Utah tailings or washes, a pinpointer saves twenty minutes per target. The AccuPOINT is Nokta's current waterproof pinpoint model.",
+    tier: "mid"
+  },
+  {
+    id: "tumbler-grit-refill",
+    name: "Polly Plastics Stage 1 Coarse Grit (2 lb)",
+    tagline: "Restock coarse grit after your starter kit runs out",
+    category: "tumblers-lapidary",
+    price: "~$20",
+    rating: 4.5,
+    bestFor: "Anyone past their first tumbler batch",
+    url: "https://amzn.to/4vxJJEW",
+    image: "",
+    pros: [
+      "Two 1 lb jars of 60/90 coarse silicon carbide",
+      "Works with Nat Geo, C1, VEVOR, and Lortone tumblers",
+      "Reusable jars — less mess than loose bags",
+      "Made in the USA"
+    ],
+    cons: [
+      "This listing is Stage 1 only — buy medium, fine, and polish separately",
+      "Don't reuse grit — each stage needs fresh abrasive"
+    ],
+    verdict: "Starter tumbler kits include one run of grit. Polly Plastics sells each stage separately — this is their coarse refill. Grab the full 4-step set if you're starting from zero.",
+    tier: "budget"
+  },
+  {
+    id: "sunday-afternoons-hat",
+    name: "Sunday Afternoons Ultra Adventure Hat",
+    tagline: "Full neck and ear coverage for exposed desert sites",
+    category: "field-gear",
+    price: "~$35",
+    rating: 4.7,
+    bestFor: "Topaz Mountain, Dugway, any shadeless BLM site",
+    url: "https://amzn.to/4eH6cZ1",
+    image: "",
+    pros: [
+      "3-inch brim plus neck cape — not a baseball cap",
+      "UPF 50+ fabric",
+      "Stays on in wind better than a loose ball cap",
+      "Packs flat in a day pack"
+    ],
+    cons: [
+      "Looks goofy — function over fashion",
+      "Cape can flap when driving with windows down"
+    ],
+    verdict: "Baseball caps leave your ears and neck fried by noon. At 6,500 feet on Topaz Mountain with zero shade, this style of hat is the difference between staying all day and bailing at 11.",
+    tier: "budget"
+  },
+  {
+    id: "viair-88p-compressor",
+    name: "VIAIR EVC25 Portable Air Compressor",
+    tagline: "Rechargeable tire inflator for BLM roads and trailhead fixes",
+    category: "field-gear",
+    price: "~$80",
+    rating: 4.5,
+    bestFor: "Slow leaks on dirt roads, airing down for traction",
+    url: "https://amzn.to/4wep48Z",
+    image: "",
+    pros: [
+      "Rechargeable — no cigarette lighter or running engine required",
+      "Preset PSI with auto shut-off",
+      "Handles car, truck, and SUV tires",
+      "Peace of mind when you're miles from pavement"
+    ],
+    cons: [
+      "Smaller than a hardwired 88P — slower on full-size truck tires",
+      "Charge it before remote trips — battery won't last forever",
+      "Not a substitute for a real spare tire"
+    ],
+    verdict: "We couldn't find the classic VIAIR 88P in stock — the EVC25 is a rechargeable alternative that handles slow leaks on BLM roads without needing the engine running.",
+    tier: "mid"
+  },
 
   // --- TUMBLERS & LAPIDARY ---
   {

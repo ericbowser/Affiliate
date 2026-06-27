@@ -12,19 +12,17 @@ Here's how they compare on what actually matters in the field.
 
 ## Head-to-Head Specs
 
-| Feature | Garrett Ace 400 | Minelab Vanquish 540 |
-|---------|----------------|---------------------|
-| **Price** | $349 | $399 |
-| **Frequency** | Single (11 kHz) | Multi-IQ (simultaneous) |
-| **Search Coil** | 8.5" x 11" DD | 10" x 12" DD |
-| **Weight** | 2.8 lbs | 2.6 lbs |
-| **Waterproof** | No | Yes (3 ft) |
-| **Battery** | 4x AA (not rechargeable) | Rechargeable lithium |
-| **Ground Balance** | Pre-set | Pre-set |
-| **Iron Audio** | Yes | No |
-| **Target ID Segments** | 8 | 10+ |
-| **Made In** | USA | Asia (Minelab design) |
-| **Warranty** | 2 years | 3 years |
+- **Price:** Garrett Ace 400 — $349 · Minelab Vanquish 540 — $399
+- **Frequency:** Garrett Ace 400 — Single (11 kHz) · Minelab Vanquish 540 — Multi-IQ (simultaneous)
+- **Search Coil:** Garrett Ace 400 — 8.5" x 11" DD · Minelab Vanquish 540 — 10" x 12" DD
+- **Weight:** Garrett Ace 400 — 2.8 lbs · Minelab Vanquish 540 — 2.6 lbs
+- **Waterproof:** Garrett Ace 400 — No · Minelab Vanquish 540 — Yes (3 ft)
+- **Battery:** Garrett Ace 400 — 4x AA (not rechargeable) · Minelab Vanquish 540 — Rechargeable lithium
+- **Ground Balance:** Garrett Ace 400 — Pre-set · Minelab Vanquish 540 — Pre-set
+- **Iron Audio:** Garrett Ace 400 — Yes · Minelab Vanquish 540 — No
+- **Target ID Segments:** Garrett Ace 400 — 8 · Minelab Vanquish 540 — 10+
+- **Made In:** Garrett Ace 400 — USA · Minelab Vanquish 540 — Asia (Minelab design)
+- **Warranty:** Garrett Ace 400 — 2 years · Minelab Vanquish 540 — 3 years
 
 ---
 
