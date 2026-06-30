@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/></filter>
+    <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Prismatic hexagonal column with pyramid termination -->
+    <!-- Pyramid top -->
+    <polygon points="18,2 24,8 24,8 12,8" fill="#fef9e7" stroke="#b45309" stroke-width="0.6"/>
+    <polygon points="18,2 24,8 26,10 18,7" fill="#fde68a" opacity="0.8"/>
+    <polygon points="18,2 12,8 10,10 18,7" fill="#f59e0b" opacity="0.6"/>
+    <!-- Front left face -->
+    <polygon points="10,10 12,8 18,7 18,36 10,34" fill="url(#tg)" stroke="#b45309" stroke-width="0.5"/>
+    <!-- Front right face -->
+    <polygon points="26,10 24,8 18,7 18,36 26,34" fill="#fbbf24" stroke="#b45309" stroke-width="0.5"/>
+    <!-- Left side face -->
+    <polygon points="10,10 7,12 7,32 10,34" fill="#d97706" stroke="#b45309" stroke-width="0.5"/>
+    <!-- Right side face -->
+    <polygon points="26,10 29,12 29,32 26,34" fill="#f59e0b" stroke="#b45309" stroke-width="0.5"/>
+    <!-- Bottom termination -->
+    <polygon points="7,32 10,34 18,36 26,34 29,32 29,36 18,42 7,36" fill="#92400e" stroke="#b45309" stroke-width="0.5" opacity="0.7"/>
+    <!-- Highlight/luster -->
+    <polygon points="12,10 15,9 15,28 12,27" fill="white" opacity="0.25"/>
+    <ellipse cx="14" cy="14" rx="2" ry="4" fill="white" opacity="0.35" transform="rotate(-10 14 14)"/>
+  </g>
+</svg>

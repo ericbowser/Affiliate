@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Main cube - isometric view -->
+    <!-- Top face -->
+    <polygon points="18,4 30,10 18,16 6,10" fill="#d8b4fe" stroke="#6b21a8" stroke-width="0.7"/>
+    <!-- Left face -->
+    <polygon points="6,10 18,16 18,32 6,26" fill="#a855f7" stroke="#6b21a8" stroke-width="0.6"/>
+    <!-- Right face -->
+    <polygon points="30,10 18,16 18,32 30,26" fill="#7e22ce" stroke="#6b21a8" stroke-width="0.6"/>
+    <!-- Stepped cleavage on top face -->
+    <polygon points="14,7 22,11 18,13 10,9" fill="#e9d5ff" stroke="#9333ea" stroke-width="0.3" opacity="0.5"/>
+    <!-- Small secondary cube growing on top-right -->
+    <polygon points="24,5 30,8 24,11 18,8" fill="#c084fc" stroke="#6b21a8" stroke-width="0.5"/>
+    <polygon points="30,8 30,14 24,17 24,11" fill="#7e22ce" stroke="#6b21a8" stroke-width="0.4"/>
+    <polygon points="18,8 24,11 24,17 18,14" fill="#9333ea" stroke="#6b21a8" stroke-width="0.4"/>
+    <!-- Cubic cleavage lines on left face -->
+    <line x1="10" y1="15" x2="18" y2="21" stroke="#9333ea" stroke-width="0.4" opacity="0.3"/>
+    <line x1="8" y1="19" x2="18" y2="25" stroke="#9333ea" stroke-width="0.4" opacity="0.25"/>
+    <!-- Cleavage lines on right face -->
+    <line x1="26" y1="15" x2="18" y2="21" stroke="#581c87" stroke-width="0.4" opacity="0.3"/>
+    <line x1="28" y1="19" x2="18" y2="25" stroke="#581c87" stroke-width="0.4" opacity="0.25"/>
+    <!-- Green zone (fluorite can have green zones) -->
+    <polygon points="6,22 12,25 12,30 6,26" fill="#34d399" opacity="0.2" stroke="none"/>
+    <!-- Highlight/luster -->
+    <polygon points="10,8 14,10 12,14 8,12" fill="white" opacity="0.2"/>
+    <ellipse cx="12" cy="10" rx="2" ry="3" fill="white" opacity="0.15"/>
+    <!-- Ground shadow -->
+    <ellipse cx="18" cy="40" rx="9" ry="3" fill="#00000018"/>
+  </g>
+</svg>

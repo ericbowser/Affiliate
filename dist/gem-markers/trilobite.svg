@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 44" width="36" height="44">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#00000033"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- Matrix/shale background slab -->
+    <rect x="5" y="4" width="26" height="36" rx="3" fill="#d4c9a8" stroke="#a89070" stroke-width="0.8"/>
+    <!-- Trilobite body - three-lobed structure -->
+    <!-- Cephalon (head shield) -->
+    <path d="M18,8 Q26,8 26,13 Q26,16 18,16 Q10,16 10,13 Q10,8 18,8Z" fill="#8b7355" stroke="#5c4a32" stroke-width="0.7"/>
+    <!-- Eyes (schizochroal) -->
+    <ellipse cx="13" cy="11" rx="2.2" ry="2.8" fill="#3d2006" stroke="#5c4a32" stroke-width="0.5"/>
+    <ellipse cx="23" cy="11" rx="2.2" ry="2.8" fill="#3d2006" stroke="#5c4a32" stroke-width="0.5"/>
+    <ellipse cx="12.5" cy="10.5" rx="0.8" ry="1" fill="white" opacity="0.4"/>
+    <ellipse cx="22.5" cy="10.5" rx="0.8" ry="1" fill="white" opacity="0.4"/>
+    <!-- Glabella (center head ridge) -->
+    <path d="M16,9 L20,9 L19.5,15 L16.5,15Z" fill="#a08960" stroke="#5c4a32" stroke-width="0.4"/>
+    <!-- Thorax segments (body) - 7 segments with axial lobe -->
+    <rect x="10" y="16.5" width="16" height="2.2" rx="0.8" fill="#9b8563" stroke="#5c4a32" stroke-width="0.4"/>
+    <rect x="10.5" y="19" width="15" height="2.2" rx="0.8" fill="#8b7355" stroke="#5c4a32" stroke-width="0.4"/>
+    <rect x="11" y="21.5" width="14" height="2.2" rx="0.8" fill="#9b8563" stroke="#5c4a32" stroke-width="0.4"/>
+    <rect x="11.5" y="24" width="13" height="2.2" rx="0.8" fill="#8b7355" stroke="#5c4a32" stroke-width="0.4"/>
+    <rect x="12" y="26.5" width="12" height="2.2" rx="0.8" fill="#9b8563" stroke="#5c4a32" stroke-width="0.4"/>
+    <rect x="12.5" y="29" width="11" height="2" rx="0.8" fill="#8b7355" stroke="#5c4a32" stroke-width="0.4"/>
+    <!-- Axial lobe (center ridge down body) -->
+    <rect x="16" y="16.5" width="4" height="15" rx="1" fill="#a89070" stroke="#5c4a32" stroke-width="0.3" opacity="0.6"/>
+    <!-- Pygidium (tail) -->
+    <path d="M13,31 Q13,36 18,37 Q23,36 23,31Z" fill="#8b7355" stroke="#5c4a32" stroke-width="0.6"/>
+    <line x1="18" y1="31" x2="18" y2="36" stroke="#5c4a32" stroke-width="0.4" opacity="0.5"/>
+    <!-- Fossil texture lines on shale -->
+    <line x1="6" y1="38" x2="30" y2="38" stroke="#a89070" stroke-width="0.3" opacity="0.4"/>
+    <line x1="7" y1="6" x2="29" y2="6" stroke="#a89070" stroke-width="0.3" opacity="0.3"/>
+  </g>
+</svg>
