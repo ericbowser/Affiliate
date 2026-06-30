@@ -53,6 +53,7 @@ const blogPosts = [
   { slug: "best-rock-tumblers-beginners-2026", date: "2026-06-01" },
   { slug: "topaz-mountain-utah-guide", date: "2026-06-26" },
   { slug: "rockhounding-gear-checklist", date: "2026-06-26" },
+  { slug: "nokta-simplex-lite-vs-garrett-ace-400", date: "2026-06-30" },
 ];
 
 // --- Generate XML ---

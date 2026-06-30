@@ -14,6 +14,7 @@ import aceVsVanquish from "./posts/garrett-ace-400-vs-vanquish-540.md?raw";
 import bestTumblers2026 from "./posts/best-rock-tumblers-beginners-2026.md?raw";
 import topazMountainGuide from "./posts/topaz-mountain-utah-guide.md?raw";
 import gearChecklist from "./posts/rockhounding-gear-checklist.md?raw";
+import simplexVsAce400 from "./posts/nokta-simplex-lite-vs-garrett-ace-400.md?raw";
 
 export const posts = [
   // --- PUBLISHED ---
@@ -162,16 +163,29 @@ export const posts = [
     content: gearChecklist,
   },
 
+  {
+    slug: "nokta-simplex-lite-vs-garrett-ace-400",
+    title: "Nokta Simplex Lite vs Garrett Ace 400: Budget Detector Showdown",
+    description:
+      "The two most-recommended budget detectors compared head-to-head — waterproofing and simplicity vs Iron Audio and mineralized-ground performance, with a terrain-specific verdict for Utah rockhounding.",
+    date: "2026-06-30",
+    category: "Comparisons",
+    type: "comparison",
+    status: "published",
+    readTime: "7 min read",
+    keywords: [
+      "nokta simplex lite vs garrett ace 400",
+      "nokta simplex vs garrett ace",
+      "best budget metal detector",
+      "simplex lite review",
+      "garrett ace 400 review",
+    ],
+    linkedProducts: ["nokta-simplex-lite", "garrett-ace-400", "garrett-at-max", "garrett-goldmaster-24k"],
+    content: simplexVsAce400,
+  },
+
   // --- PLANNED (uncomment and add import as each is written) ---
   //
-  // {
-  //   slug: "nokta-simplex-lite-vs-garrett-ace-400",
-  //   title: "Nokta Simplex Lite vs Garrett Ace 400: Budget Detector Showdown",
-  //   type: "comparison",
-  //   status: "draft",
-  //   keywords: ["nokta simplex vs garrett ace", "best budget metal detector"],
-  //   linkedProducts: ["nokta-simplex-lite", "garrett-ace-400"],
-  // },
 ];
 
 // --- Helpers ---
