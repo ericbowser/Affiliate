@@ -11,6 +11,7 @@ import { fullMapStyle, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/ma
 import { getMapOptions } from "../config/mapOptions";
 import { useMapResize } from "../hooks/useMapResize";
 import { ClientOnly } from "./ClientOnly";
+import SEO from "./SEO";
 
 const MAP_CENTER = DEFAULT_MAP_CENTER;
 const MAP_ZOOM   = DEFAULT_MAP_ZOOM;
@@ -194,6 +195,11 @@ const MapCanvas = () => {
 
 const SiteMap = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <SEO
+      title="Utah & Nevada Rockhounding Sites Map"
+      description="Interactive map of the best public-land rockhounding sites across Utah and Nevada — click any pin for difficulty, season, and what you'll find."
+      path="/guides/utah-sites-map"
+    />
     {/* Header */}
     <div className="mb-8">
       <nav className="text-sm text-slate-400 mb-4">

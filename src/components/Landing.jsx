@@ -6,6 +6,7 @@ import { posts } from "../data/posts";
 import GemIcon from "./gems/GemIcons";
 import LandingMap from "./LandingMap";
 import { ClientOnly } from "./ClientOnly";
+import SEO from "./SEO";
 
 const Landing = () => {
   const { categories } = siteConfig;
@@ -27,6 +28,10 @@ const Landing = () => {
 
   return (
     <div>
+      <SEO
+        description="Honest gear reviews, site guides, and beginner resources for rockhounding across Utah and the American West. Find what to buy, where to go, and what to bring."
+        path="/"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-amber-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">

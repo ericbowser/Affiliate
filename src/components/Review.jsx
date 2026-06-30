@@ -5,6 +5,7 @@ import { siteConfig } from "../data/config.js";
 import { getPrimaryLink } from "../data/affiliateLinks.js";
 import { trackAffiliateClick } from "../utils/analytics.js";
 import { ProductSchema } from "../data/seoSchema.jsx";
+import SEO from "./SEO";
 
 const Review = () => {
   const { id } = useParams();
@@ -33,6 +34,12 @@ const Review = () => {
   return (
     <>
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SEO
+        title={`${product.name} Review`}
+        description={`${product.tagline} ${product.bestFor ? `Best for: ${product.bestFor}.` : ""}`.trim()}
+        path={`/review/${product.id}`}
+        type="product"
+      />
       <ProductSchema product={product} />
 
       {/* Breadcrumb */}

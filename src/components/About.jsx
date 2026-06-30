@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "./SEO";
 
 const About = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SEO
+        title="About"
+        description="Wasatch Rockhound is an independent gear site built by a Salt Lake City-based developer for people who actually get out and dig on Utah BLM land."
+        path="/about"
+      />
       <nav className="text-sm text-slate-400 mb-8">
         <Link to="/" className="hover:text-amber-400">Home</Link>
         <span className="mx-2">/</span>

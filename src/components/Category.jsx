@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { siteConfig } from "../data/config.js";
 import { products } from "../data/products.js";
+import SEO from "./SEO";
 
 const Category = () => {
   const { slug } = useParams();
@@ -12,6 +13,11 @@ const Category = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SEO
+        title={category.name}
+        description={category.description}
+        path={`/category/${slug}`}
+      />
       <nav className="text-sm text-slate-400 mb-6">
         <Link to="/" className="hover:text-amber-400">Home</Link>
         <span className="mx-2">/</span>

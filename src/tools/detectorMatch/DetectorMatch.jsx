@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { questions, TOTAL_QUESTIONS } from './questions.js';
 import { recommendDetectors } from './engine.js';
 import { getDetectorsForQuiz } from './detectorAttrs.js';
+import SEO from '../../components/SEO';
 
 const DetectorMatch = () => {
   const detectors = useMemo(() => getDetectorsForQuiz(), []);
@@ -44,6 +45,11 @@ const DetectorMatch = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SEO
+        title="Metal Detector Match Quiz"
+        description="Answer a few questions and get a personalized metal detector recommendation matched to your budget, terrain, and rockhounding goals."
+        path="/tools/detector-match"
+      />
       <nav className="text-sm text-slate-400 mb-8">
         <Link to="/" className="hover:text-amber-400">Home</Link>
         <span className="mx-2">/</span>

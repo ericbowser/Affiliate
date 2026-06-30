@@ -41,6 +41,7 @@ const productIds = [
   "leatherman-signal", "jewelers-loupe-10x", "adventure-medical-ultralight",
   "mechanix-original-gloves", "sunday-afternoons-hat", "viair-88p-compressor",
   "nokta-pinpointer",
+  "garmin-etrex-32x", "garmin-inreach-mini-2",
   "rockhounding-utah-book", "gem-trails-utah",
 ];
 

@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPostBySlug, getRelatedPosts } from "../data/posts";
 import { ArticleSchema } from "../data/seoSchema";
+import SEO from "./SEO";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -14,6 +15,12 @@ const BlogPost = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <SEO
+        title={post.title}
+        description={post.description}
+        path={`/blog/${post.slug}`}
+        type="article"
+      />
       <ArticleSchema post={post} />
 
       {/* Breadcrumb */}

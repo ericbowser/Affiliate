@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { rockhoundingSites } from "../data/sites";
+import SEO from "./SEO";
 
 // Module-level cache
 const cache = {};
@@ -233,6 +234,11 @@ const WeatherPage = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SEO
+        title="Field Conditions"
+        description="Live weather and road advisories for all 8 Utah rockhounding sites — updated hourly, with road impassability warnings for Dugway and San Rafael Swell."
+        path="/weather"
+      />
 
       {/* Header */}
       <div className="mb-8 flex items-start justify-between gap-4 flex-wrap">

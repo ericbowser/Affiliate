@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { posts } from "../data/posts";
+import SEO from "./SEO";
 
 const CATEGORY_COLORS = {
   "Site Guides":   { bg: "bg-amber-900/30",   text: "text-amber-400",   border: "border-amber-800/50"  },
@@ -18,6 +19,11 @@ const Blog = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <SEO
+        title="Field Notes & Site Guides"
+        description="Trip planning resources, site guides, and gear breakdowns for rockhounding in Utah and the American West."
+        path="/blog"
+      />
 
       <div className="mb-10">
         <h1 className="text-3xl font-semibold text-slate-100 mb-2">Field Notes</h1>
