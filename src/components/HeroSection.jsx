@@ -6,7 +6,7 @@ export default function HeroSection() {
       {/* Animated gradient background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-provocative-primary/10 via-provocative-dark to-provocative-secondary/20 animate-gradient-x" />
-        <div className="absolute inset-0 bg-[url('/public/desert-texture.png')] opacity-10 mix-blend-overlay" />
+        <div className="absolute inset-0 opacity-10 mix-blend-overlay bg-gradient-to-br from-amber-900/30 via-stone-800/20 to-amber-800/30" />
       </div>
 
       {/* Content */}
@@ -40,7 +40,7 @@ export default function HeroSection() {
 
       {/* Animated particle effect */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-provocative-dark to-transparent">
-        <div className="absolute inset-0 bg-[url('/public/rock-pattern.svg')] opacity-20" />
+        <div className="absolute inset-0 opacity-20 bg-gradient-to-t from-stone-900/40 to-transparent" />
       </div>
     </section>
   );

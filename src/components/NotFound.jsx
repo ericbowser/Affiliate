@@ -5,9 +5,9 @@ import SEO from "./SEO";
 const NotFound = () => {
   return (
     <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-      <SEO title="Page Not Found" path="/404" noindex />
+      <SEO title="404 — Page Not Found" path="/404" noindex />
       <div className="text-6xl mb-6">&#129704;</div>
-      <h1 className="text-3xl font-bold text-slate-100 mb-4">Nothing Found Here</h1>
+      <h1 className="text-3xl font-bold text-slate-100 mb-4">404 — Nothing Found Here</h1>
       <p className="text-slate-400 mb-8">
         Looks like you wandered off the trail. This page doesn't exist — try heading back to the main dig site.
       </p>

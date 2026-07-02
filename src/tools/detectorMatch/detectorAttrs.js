@@ -125,7 +125,9 @@ const QUIZ_ATTRS = {
  * @returns {(import('./engine.js').DetectorAttrs & {name: string, url: string, price: string, rating: number, tagline: string})[]}
  */
 export function getDetectorsForQuiz() {
-  const detectors = products.filter(p => p.category === 'metal-detectors');
+  const detectors = products.filter(
+    p => p.category === 'metal-detectors' && QUIZ_ATTRS[p.id]
+  );
 
   return detectors.map(p => {
     const attrs = QUIZ_ATTRS[p.id];
