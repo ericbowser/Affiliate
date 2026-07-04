@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { isPrerender } from '../utils/prerender.js';
 
 /**
  * Renders `fallback` during pre-render and the initial client paint,
@@ -10,6 +11,8 @@ import { useState, useEffect } from 'react';
  */
 export function ClientOnly({ children, fallback = null }) {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    if (!isPrerender()) setMounted(true);
+  }, []);
   return mounted ? children : fallback;
 }

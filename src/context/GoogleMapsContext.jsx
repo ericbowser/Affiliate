@@ -5,6 +5,7 @@ import {
   MAPS_LOADER_ID,
   MAPS_LIBRARIES,
 } from "../config/maps";
+import { isPrerender } from "../utils/prerender.js";
 
 const GoogleMapsContext = createContext({
   isLoaded: false,
@@ -12,11 +13,9 @@ const GoogleMapsContext = createContext({
   apiKey: "",
 });
 
-/**
- * Single Maps JS loader for the whole app.
- * Multiple useJsApiLoader() calls can leave isLoaded stuck false on mobile/production.
- */
-export function GoogleMapsProvider({ children }) {
+const SNAP_VALUE = { isLoaded: false, loadError: undefined, apiKey: "" };
+
+function GoogleMapsProviderInner({ children }) {
   const { isLoaded, loadError } = useJsApiLoader({
     id: MAPS_LOADER_ID,
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
@@ -30,6 +29,22 @@ export function GoogleMapsProvider({ children }) {
       {children}
     </GoogleMapsContext.Provider>
   );
+}
+
+/**
+ * Single Maps JS loader for the whole app.
+ * Skips loading during react-snap so prerendered HTML stays clean for SEO.
+ */
+export function GoogleMapsProvider({ children }) {
+  if (isPrerender()) {
+    return (
+      <GoogleMapsContext.Provider value={SNAP_VALUE}>
+        {children}
+      </GoogleMapsContext.Provider>
+    );
+  }
+
+  return <GoogleMapsProviderInner>{children}</GoogleMapsProviderInner>;
 }
 
 export function useGoogleMaps() {

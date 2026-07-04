@@ -75,6 +75,11 @@
     "source": "dist",
     "destination": "dist",
     "skipThirdPartyRequests": true,
+    "waitFor": "html[data-seo-ready]",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    },
     "headless": true,
     "puppeteerArgs": [
       "--no-sandbox",
