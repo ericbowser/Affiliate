@@ -889,10 +889,6 @@ video {
   height: 1.5rem;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .h-\[min\(50dvh\2c 400px\)\] {
   height: min(50dvh, 400px);
 }
@@ -905,8 +901,8 @@ video {
   min-height: 340px;
 }
 
-.min-h-\[60vh\] {
-  min-height: 60vh;
+.min-h-\[50vh\] {
+  min-height: 50vh;
 }
 
 .min-h-screen {

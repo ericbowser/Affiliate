@@ -11,11 +11,13 @@
   <meta name="impact-site-verification" value="079df32c-1896-4ad6-b917-137de9f2f015" />
   <title>Wasatch Rockhound</title>
   <!-- Inter is not applied site-wide; system sans keeps first paint fast -->
-  <!-- Google tag — deferred until after first paint -->
+  <!-- Google tag — load after idle so it doesn't compete with LCP -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    window.addEventListener('load', function () {
+    function loadGtag() {
+      if (window.__gtagLoaded) return;
+      window.__gtagLoaded = true;
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NW8P3LFDGD';
@@ -24,7 +26,12 @@
         gtag('js', new Date());
         gtag('config', 'G-NW8P3LFDGD');
       };
-    });
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadGtag, { timeout: 5000 });
+    } else {
+      window.addEventListener('load', function () { setTimeout(loadGtag, 3000); });
+    }
   </script>
 </head>
 <body>

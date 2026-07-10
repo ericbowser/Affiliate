@@ -2,11 +2,9 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Landing from "./components/Landing";
 
-// Route-level code splitting: each page ships only its own JS instead of
-// every route bundled into one payload. SRP/Open-Closed — add a new route
-// by adding one lazy import + one <Route>, nothing else changes.
-const Landing = lazy(() => import("./components/Landing"));
+// Route-level code splitting for secondary pages — homepage is eager (LCP route).
 const Category = lazy(() => import("./components/Category"));
 const Review = lazy(() => import("./components/Review"));
 const Compare = lazy(() => import("./components/Compare"));
@@ -19,9 +17,7 @@ const Blog = lazy(() => import("./components/Blog"));
 const WeatherPage = lazy(() => import("./components/WeatherPage"));
 
 const PageFallback = () => (
-  <div className="min-h-[60vh] flex items-center justify-center bg-slate-900">
-    <div className="h-8 w-8 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
-  </div>
+  <div className="min-h-[50vh] bg-slate-900" aria-hidden="true" />
 );
 
 const App = () => {
