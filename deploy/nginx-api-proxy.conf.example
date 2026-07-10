@@ -30,6 +30,29 @@ server {
     location / {
         try_files $uri $uri/ /index.html;
     }
+
+    # Hashed Vite assets — long cache (filenames change on each build)
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Gem marker SVGs/PNGs
+    location /gem-markers/ {
+        expires 30d;
+        add_header Cache-Control "public";
+    }
+
+    # Sitemap and robots — short cache so updates propagate
+    location = /sitemap.xml {
+        expires 1d;
+        add_header Cache-Control "public";
+    }
+
+    location = /robots.txt {
+        expires 1d;
+        add_header Cache-Control "public";
+    }
 }
 
 # After editing: sudo nginx -t && sudo systemctl reload nginx

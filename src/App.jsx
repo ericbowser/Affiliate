@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { GoogleMapsProvider } from "./context/GoogleMapsContext";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -18,6 +17,7 @@ const SiteMap = lazy(() => import("./components/SiteMap"));
 const BlogPost = lazy(() => import("./components/BlogPost"));
 const Blog = lazy(() => import("./components/Blog"));
 const WeatherPage = lazy(() => import("./components/WeatherPage"));
+const MapsRoute = lazy(() => import("./components/MapsRoute"));
 
 const PageFallback = () => (
   <div className="min-h-[60vh] flex items-center justify-center bg-slate-900">
@@ -25,10 +25,12 @@ const PageFallback = () => (
   </div>
 );
 
-// Only routes that actually render a map pay for the Google Maps JS SDK.
-// Previously this wrapped the entire app, so every page (About, reviews,
-// comparisons, weather, etc.) loaded the Maps script on every visit.
-const withMaps = (element) => <GoogleMapsProvider>{element}</GoogleMapsProvider>;
+// Only map routes load the Google Maps SDK (lazy MapsRoute chunk).
+const withMaps = (element) => (
+  <Suspense fallback={<PageFallback />}>
+    <MapsRoute>{element}</MapsRoute>
+  </Suspense>
+);
 
 const App = () => {
   return (

@@ -9,25 +9,45 @@
   <meta name="author" content="Execute & Engrave LLC" />
   <meta name="robots" content="index, follow" />
   <meta name="impact-site-verification" value="079df32c-1896-4ad6-b917-137de9f2f015" />
-  <title>Wasatch Rockhound</title>
+  <title>Wasatch Rockhound — Gear Reviews &amp; Field Guides</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://maps.googleapis.com" />
   <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" /></noscript>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NW8P3LFDGD"></script>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" /></noscript>
+  <!-- Google tag — deferred until after first paint -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NW8P3LFDGD');
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NW8P3LFDGD';
+      document.head.appendChild(s);
+      s.onload = function () {
+        gtag('js', new Date());
+        gtag('config', 'G-NW8P3LFDGD');
+      };
+    });
   </script>
-  <script type="module" crossorigin src="/assets/index-BA0HUeS4.js"></script>
+  <script type="module" crossorigin src="/assets/index-iisH9dMM.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/vendor-react-DCmrnX2c.js">
   <link rel="modulepreload" crossorigin href="/assets/vendor-maps-AacvAgiJ.js">
   <link rel="stylesheet" crossorigin href="/assets/index-BQ9vXsG3.css">
+
+  <meta name="description" content="Honest gear reviews, site guides, and beginner resources for rockhounding across Utah and the American West. Find what to buy, where to go, and what to bring." />
+  <link rel="canonical" href="https://rockhoundutah.com/" />
+  <meta property="og:title" content="Wasatch Rockhound — Gear Reviews &amp; Field Guides" />
+  <meta property="og:description" content="Honest gear reviews, site guides, and beginner resources for rockhounding across Utah and the American West. Find what to buy, where to go, and what to bring." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rockhoundutah.com/" />
+  <meta property="og:image" content="https://rockhoundutah.com/og-image.jpg" />
+  <meta property="og:site_name" content="Wasatch Rockhound" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wasatch Rockhound — Gear Reviews &amp; Field Guides" />
+  <meta name="twitter:description" content="Honest gear reviews, site guides, and beginner resources for rockhounding across Utah and the American West. Find what to buy, where to go, and what to bring." />
+  <meta name="twitter:image" content="https://rockhoundutah.com/og-image.jpg" />
 </head>
 <body>
   <div id="root"></div>
