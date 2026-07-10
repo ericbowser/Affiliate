@@ -9,6 +9,20 @@ import { buildRouteSeoList, SITE_NAME, SITE_URL, DEFAULT_IMAGE } from "../src/da
 const DIST = "dist";
 const TEMPLATE_PATH = join(DIST, "index.html");
 
+/** Instant LCP before JS — React createRoot replaces this on mount. */
+const HOME_SHELL = `
+  <div id="static-shell" style="background:#0f172a;color:#f1f5f9;font-family:system-ui,-apple-system,sans-serif">
+    <div style="max-width:80rem;margin:0 auto;padding:2.5rem 1rem">
+      <h1 style="font-size:1.875rem;font-weight:600;line-height:1.35;margin:0 0 1rem">
+        The Right Gear for Rockhounding in the West
+      </h1>
+      <p style="color:#cbd5e1;line-height:1.6;margin:0;font-size:1rem">
+        Gear picks for metal detectors, rock hammers, GPS units, and field tools —
+        chosen for Utah&rsquo;s BLM land, desert terrain, and mineralized soil.
+      </p>
+    </div>
+  </div>`;
+
 function esc(value) {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -74,6 +88,10 @@ function applySeo(template, route) {
     `<title>${esc(pageTitle)}</title>`
   );
   html = html.replace("</head>", `${buildMetaBlock(route)}\n</head>`);
+
+  if (route.path === "/") {
+    html = html.replace('<div id="root"></div>', `<div id="root">${HOME_SHELL}</div>`);
+  }
 
   return html;
 }

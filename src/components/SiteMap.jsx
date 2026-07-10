@@ -5,7 +5,7 @@ import { rockhoundingSites } from "../data/sites";
 import GemSiteMarkers from "./GemSiteMarkers";
 import GemIcon from "./gems/GemIcons";
 import { SITE_PRIMARY_GEM, MINERAL_TO_ASSET } from "../assets/gems";
-import { useGoogleMaps } from "../context/GoogleMapsContext";
+import { GoogleMapsProvider, useGoogleMaps } from "../context/GoogleMapsContext";
 import { MapLoadStatus } from "./MapLoadStatus";
 import { fullMapStyle, DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM } from "../config/mapLayout";
 import { getMapOptions } from "../config/mapOptions";
@@ -193,7 +193,7 @@ const MapCanvas = () => {
   );
 };
 
-const SiteMap = () => (
+const SiteMapContent = () => (
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <SEO
       title="Utah & Nevada Rockhounding Sites Map"
@@ -238,4 +238,10 @@ const SiteMap = () => (
   </div>
 );
 
-export default SiteMap;
+export default function SiteMapPage() {
+  return (
+    <GoogleMapsProvider>
+      <SiteMapContent />
+    </GoogleMapsProvider>
+  );
+}

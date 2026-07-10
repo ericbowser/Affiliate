@@ -17,19 +17,11 @@ const SiteMap = lazy(() => import("./components/SiteMap"));
 const BlogPost = lazy(() => import("./components/BlogPost"));
 const Blog = lazy(() => import("./components/Blog"));
 const WeatherPage = lazy(() => import("./components/WeatherPage"));
-const MapsRoute = lazy(() => import("./components/MapsRoute"));
 
 const PageFallback = () => (
   <div className="min-h-[60vh] flex items-center justify-center bg-slate-900">
     <div className="h-8 w-8 border-2 border-amber-500 border-t-transparent rounded-full animate-spin" />
   </div>
-);
-
-// Only map routes load the Google Maps SDK (lazy MapsRoute chunk).
-const withMaps = (element) => (
-  <Suspense fallback={<PageFallback />}>
-    <MapsRoute>{element}</MapsRoute>
-  </Suspense>
 );
 
 const App = () => {
@@ -40,15 +32,15 @@ const App = () => {
         <main className="flex-1">
           <Suspense fallback={<PageFallback />}>
             <Routes>
-              <Route path="/" element={withMaps(<Landing />)} />
+              <Route path="/" element={<Landing />} />
               <Route path="/category/:slug" element={<Category />} />
               <Route path="/review/:id" element={<Review />} />
               <Route path="/compare/:id1/:id2" element={<Compare />} />
               <Route path="/tools/detector-match" element={<DetectorMatch />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={withMaps(<BlogPost />)} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/weather" element={<WeatherPage />} />
-              <Route path="/guides/utah-sites-map" element={withMaps(<SiteMap />)} />
+              <Route path="/guides/utah-sites-map" element={<SiteMap />} />
               <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
