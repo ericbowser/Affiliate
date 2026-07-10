@@ -5,18 +5,22 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react({ jsxRuntime: 'classic' })],
   base: '/',
   build: {
     outDir: 'dist',
     sourcemap: false,
     chunkSizeWarningLimit: 800,
+    modulePreload: {
+      polyfill: false,
+      resolveDependencies: (_filename, deps) =>
+        deps.filter((dep) => !dep.includes('vendor-maps')),
+    },
     rollupOptions: {
       output: {
         manualChunks: {
-          'vendor-react':    ['react', 'react-dom', 'react-router-dom'],
+          'vendor-react':    ['react', 'react-dom', 'react-router-dom', 'react/jsx-runtime'],
           'vendor-markdown': ['react-markdown', 'remark-gfm'],
-          'vendor-maps':     ['@react-google-maps/api'],
           'vendor-icons':    ['react-icons'],
         },
       },

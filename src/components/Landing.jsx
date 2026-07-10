@@ -1,12 +1,18 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 import { siteConfig } from "../data/config.js";
 import { products } from "../data/products.js";
-import { posts } from "../data/posts";
+import { postRegistry } from "../data/postRegistry";
 import GemIcon from "./gems/GemIcons";
-import LandingMap from "./LandingMap";
-import { ClientOnly } from "./ClientOnly";
+import { mapSkeleton } from "./mapSkeleton";
 import SEO from "./SEO";
+
+const DeferredLandingMap = lazy(() => import("./DeferredLandingMap"));
+
+const recentPosts = [...postRegistry]
+  .filter((p) => p.status === "published")
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .slice(0, 3);
 
 const Landing = () => {
   const { categories } = siteConfig;
@@ -69,16 +75,12 @@ const Landing = () => {
               </div>
             </div>
 
-            {/* Right — interactive gem-marker map (client-only to prevent hydration mismatch) */}
-            <ClientOnly
-              fallback={
-                <div className="w-full min-h-[340px] lg:min-h-[420px] bg-slate-800/60 rounded-2xl ring-1 ring-white/10 animate-pulse" />
-              }
-            >
-              <div className="w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
-                <LandingMap heroMode />
-              </div>
-            </ClientOnly>
+            {/* Right — map chunk loads after first paint */}
+            <div className="w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
+              <Suspense fallback={mapSkeleton}>
+                <DeferredLandingMap heroMode />
+              </Suspense>
+            </div>
 
           </div>
         </div>
@@ -137,12 +139,9 @@ const Landing = () => {
           <span className="inline-block bg-amber-900/30 text-amber-400 border border-amber-800/50 text-xs font-medium px-3 py-1 rounded-full mb-3 tracking-wide">
             Interactive Tool
           </span>
-          <h2 className="text-2xl font-semibold text-slate-100 mb-3">
-            Not sure which metal detector to buy?
-          </h2>
+          <h2 className="text-2xl font-semibold text-slate-100 mb-3">Not sure which metal detector to buy?</h2>
           <p className="text-base text-slate-400 max-w-xl mx-auto mb-6">
-            Answer 6 questions about your budget, terrain, and experience.
-            Get a matched recommendation with honest reasoning — in 30 seconds.
+            Answer 6 questions about your budget, terrain, and experience. Get a matched recommendation with honest reasoning — in 30 seconds.
           </p>
           <Link
             to="/tools/detector-match"
@@ -163,14 +162,14 @@ const Landing = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featured.map(product => (
+            {featured.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Utah Sites Teaser */}
+      {/* Utah Sites teaser */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-slate-100 mb-2">Start in Your Backyard</h2>
@@ -181,9 +180,7 @@ const Landing = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {utahSites.map((site, i) => (
             <div key={i} className="bg-slate-800 border border-slate-700 rounded-2xl p-5">
-              <div className="mb-3">
-                <GemIcon name={site.gem} size={44} />
-              </div>
+              <div className="mb-3"><GemIcon name={site.gem} size={44} /></div>
               <h3 className="font-semibold text-slate-100 text-base mb-1">{site.name}</h3>
               <p className="text-sm text-amber-400 font-medium mb-1">{site.what}</p>
               <p className="text-sm text-slate-400">{site.distance}</p>
@@ -200,7 +197,7 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Latest from the Blog */}
+      {/* Latest posts — metadata only, no markdown bundle */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-800">
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -212,7 +209,7 @@ const Landing = () => {
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {posts.slice(0, 3).map((post) => (
+          {recentPosts.map((post) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
@@ -230,7 +227,7 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* About / Trust */}
+      {/* About strip */}
       <section className="bg-slate-800/50 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-2xl font-semibold text-slate-100 mb-8">About Wasatch Rockhound</h2>

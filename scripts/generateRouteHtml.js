@@ -45,6 +45,12 @@ function buildMetaBlock({ title, description, path, type, noindex = false }) {
 function optimizeForRoute(html, { maps = false }) {
   let out = html;
 
+  // Never eager-preload Maps — it loads when map routes mount.
+  out = out.replace(
+    /  <link rel="modulepreload" crossorigin href="\/assets\/[^"]*maps[^"]*\.js">\n/g,
+    ""
+  );
+
   if (!maps) {
     out = out.replace(
       /  <link rel="preconnect" href="https:\/\/maps\.googleapis\.com" \/>\n/g,
@@ -52,10 +58,6 @@ function optimizeForRoute(html, { maps = false }) {
     );
     out = out.replace(
       /  <link rel="preconnect" href="https:\/\/maps\.gstatic\.com" crossorigin \/>\n/g,
-      ""
-    );
-    out = out.replace(
-      /  <link rel="modulepreload" crossorigin href="\/assets\/vendor-maps-[^"]+\.js">\n/g,
       ""
     );
   }
