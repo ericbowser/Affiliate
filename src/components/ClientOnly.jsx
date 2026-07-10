@@ -1,18 +1,14 @@
 import { useState, useEffect } from 'react';
-import { isPrerender } from '../utils/prerender.js';
 
 /**
- * Renders `fallback` during pre-render and the initial client paint,
+ * Renders `fallback` during the initial client paint,
  * then swaps to `children` after React mounts.
  *
- * Use this around any component that produces different output in
- * a headless/SSR environment vs a real browser (Google Maps, localStorage, etc.)
- * to prevent React hydration error #418.
+ * Use around components that differ between SSR and browser
+ * (Google Maps, localStorage, etc.) to avoid hydration mismatches.
  */
 export function ClientOnly({ children, fallback = null }) {
   const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    if (!isPrerender()) setMounted(true);
-  }, []);
+  useEffect(() => { setMounted(true); }, []);
   return mounted ? children : fallback;
 }

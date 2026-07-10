@@ -43,3 +43,5 @@ env.json
 ssl/
 
 .env
+dist/
+src/styles/output.css
