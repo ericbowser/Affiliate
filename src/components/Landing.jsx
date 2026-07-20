@@ -75,8 +75,8 @@ const Landing = () => {
               </div>
             </div>
 
-            {/* Right — map chunk loads after first paint */}
-            <div className="w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
+            {/* Right — map chunk loads after first paint. Hidden on mobile to avoid 8s LCP penalty. */}
+            <div className="hidden lg:block w-full min-w-0 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
               <Suspense fallback={mapSkeleton}>
                 <DeferredLandingMap heroMode />
               </Suspense>
