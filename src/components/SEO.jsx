@@ -19,6 +19,19 @@ const DEFAULT_DESCRIPTION =
   "Honest gear reviews, site guides, and beginner resources for rockhounding across Utah and the American West. Find what to buy, where to go, and what to bring.";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.jpg`;
 
+/**
+ * Every non-root URL is canonicalized WITH a trailing slash to match the
+ * static build output (dist/<route>/index.html) that nginx serves. Without
+ * this, a no-slash canonical points at a URL that just 301-redirected,
+ * and Google won't consolidate ranking signal onto either version.
+ * Normalizing here (rather than trusting every caller) means no page
+ * component has to remember to add the slash itself.
+ */
+function canonicalPath(path) {
+  if (!path || path === "/") return "/";
+  return `${path.replace(/\/+$/, "")}/`;
+}
+
 const SEO = ({
   title,
   description = DEFAULT_DESCRIPTION,
@@ -28,7 +41,7 @@ const SEO = ({
   noindex = false,
 }) => {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Gear Reviews & Field Guides`;
-  const canonical = `${SITE_URL}${path}`;
+  const canonical = `${SITE_URL}${canonicalPath(path)}`;
 
   return (
     <Helmet>
