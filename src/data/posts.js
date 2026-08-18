@@ -12,6 +12,7 @@ import bestTumblers2026 from "./posts/best-rock-tumblers-beginners-2026.md?raw";
 import topazMountainGuide from "./posts/topaz-mountain-utah-guide.md?raw";
 import gearChecklist from "./posts/rockhounding-gear-checklist.md?raw";
 import simplexVsAce400 from "./posts/nokta-simplex-lite-vs-garrett-ace-400.md?raw";
+import dugwayGeodeGuide from "./posts/dugway-geode-beds-utah-guide.md?raw";
 import { postRegistry } from "./postRegistry.js";
 
 const contentBySlug = {
@@ -22,6 +23,7 @@ const contentBySlug = {
   "topaz-mountain-utah-guide": topazMountainGuide,
   "rockhounding-gear-checklist": gearChecklist,
   "nokta-simplex-lite-vs-garrett-ace-400": simplexVsAce400,
+  "dugway-geode-beds-utah-guide": dugwayGeodeGuide,
 };
 
 export const posts = postRegistry.map((post) => ({

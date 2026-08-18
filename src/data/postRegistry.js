@@ -139,6 +139,33 @@ export const postRegistry = [
     ],
   },
   {
+    slug: "dugway-geode-beds-utah-guide",
+    title: "Dugway Geode Beds Utah: Complete Collecting Guide",
+    description:
+      "Everything you need to plan a Dugway Geode Beds trip — how to get there, where to dig, how to open what you find, and the gear that makes it easier.",
+    date: "2026-08-18",
+    category: "Site Guides",
+    type: "site-guide",
+    status: "published",
+    readTime: "9 min read",
+    keywords: [
+      "dugway geode beds",
+      "dugway geode beds utah",
+      "dugway geodes",
+      "where to find geodes in utah",
+      "utah geode hunting",
+    ],
+    linkedProducts: [
+      "collapsible-field-shovel", "estwing-rock-hammer", "cold-chisel-set",
+      "dewalt-safety-glasses", "mechanix-original-gloves",
+      "garmin-etrex-32x", "garmin-inreach-mini-2", "viair-88p-compressor",
+      "adventure-medical-ultralight", "stanley-classic-bottle",
+      "sunday-afternoons-hat", "leatherman-signal",
+      "rockhounding-utah-book", "gem-trails-utah",
+    ],
+    mapSites: ["dugway-geode-beds"],
+  },
+  {
     slug: "nokta-simplex-lite-vs-garrett-ace-400",
     title: "Nokta Simplex Lite vs Garrett Ace 400: Budget Detector Showdown",
     description:
