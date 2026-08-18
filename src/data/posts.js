@@ -13,6 +13,7 @@ import topazMountainGuide from "./posts/topaz-mountain-utah-guide.md?raw";
 import gearChecklist from "./posts/rockhounding-gear-checklist.md?raw";
 import simplexVsAce400 from "./posts/nokta-simplex-lite-vs-garrett-ace-400.md?raw";
 import dugwayGeodeGuide from "./posts/dugway-geode-beds-utah-guide.md?raw";
+import uDigFossilsGuide from "./posts/u-dig-fossils-utah-guide.md?raw";
 import { postRegistry } from "./postRegistry.js";
 
 const contentBySlug = {
@@ -24,6 +25,7 @@ const contentBySlug = {
   "rockhounding-gear-checklist": gearChecklist,
   "nokta-simplex-lite-vs-garrett-ace-400": simplexVsAce400,
   "dugway-geode-beds-utah-guide": dugwayGeodeGuide,
+  "u-dig-fossils-utah-guide": uDigFossilsGuide,
 };
 
 export const posts = postRegistry.map((post) => ({

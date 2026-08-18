@@ -166,6 +166,29 @@ export const postRegistry = [
     mapSites: ["dugway-geode-beds"],
   },
   {
+    slug: "u-dig-fossils-utah-guide",
+    title: "U-Dig Fossils Utah: Complete Trilobite Quarry Guide",
+    description:
+      "Everything you need to plan a U-Dig Fossils trip — hours, current pricing, exact directions, and what to bring to Utah's premier trilobite quarry.",
+    date: "2026-08-18",
+    category: "Site Guides",
+    type: "site-guide",
+    status: "published",
+    readTime: "8 min read",
+    keywords: [
+      "u-dig fossils",
+      "u-dig fossils utah",
+      "trilobite quarry utah",
+      "where to dig trilobites utah",
+      "u-dig fossils hours",
+    ],
+    linkedProducts: [
+      "stanley-classic-bottle", "sunday-afternoons-hat", "mechanix-original-gloves",
+      "jewelers-loupe-10x", "garmin-etrex-32x", "rockhounding-utah-book",
+    ],
+    mapSites: ["u-dig-fossils"],
+  },
+  {
     slug: "nokta-simplex-lite-vs-garrett-ace-400",
     title: "Nokta Simplex Lite vs Garrett Ace 400: Budget Detector Showdown",
     description:
