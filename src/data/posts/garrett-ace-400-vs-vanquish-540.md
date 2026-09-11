@@ -1,6 +1,6 @@
-# Garrett Ace 400 vs Minelab Vanquish 540: Which Should You Buy?
+﻿# Garrett Ace 400 vs Minelab Vanquish 540: Which Should You Buy?
 
-*Last updated: June 2026 · By Wasatch Rockhound · 7 min read*
+*Last updated: June 2026 Â· By Wasatch Rockhound Â· 7 min read*
 
 These are the two most popular beginner-to-intermediate metal detectors on the market, and they take fundamentally different approaches to the same problem. The Ace 400 bets on simplicity and proven single-frequency performance. The Vanquish 540 bets on Minelab's Multi-IQ technology at an aggressive price point.
 
@@ -12,23 +12,23 @@ Here's how they compare on what actually matters in the field.
 
 ## Head-to-Head Specs
 
-- **Price:** Garrett Ace 400 — $349 · Minelab Vanquish 540 — $399
-- **Frequency:** Garrett Ace 400 — Single (11 kHz) · Minelab Vanquish 540 — Multi-IQ (simultaneous)
-- **Search Coil:** Garrett Ace 400 — 8.5" x 11" DD · Minelab Vanquish 540 — 10" x 12" DD
-- **Weight:** Garrett Ace 400 — 2.8 lbs · Minelab Vanquish 540 — 2.6 lbs
-- **Waterproof:** Garrett Ace 400 — No · Minelab Vanquish 540 — Yes (3 ft)
-- **Battery:** Garrett Ace 400 — 4x AA (not rechargeable) · Minelab Vanquish 540 — Rechargeable lithium
-- **Ground Balance:** Garrett Ace 400 — Pre-set · Minelab Vanquish 540 — Pre-set
-- **Iron Audio:** Garrett Ace 400 — Yes · Minelab Vanquish 540 — No
-- **Target ID Segments:** Garrett Ace 400 — 8 · Minelab Vanquish 540 — 10+
-- **Made In:** Garrett Ace 400 — USA · Minelab Vanquish 540 — Asia (Minelab design)
-- **Warranty:** Garrett Ace 400 — 2 years · Minelab Vanquish 540 — 3 years
+- **Price:** Garrett Ace 400 â€” $349 Â· Minelab Vanquish 540 â€” $399
+- **Frequency:** Garrett Ace 400 â€” Single (11 kHz) Â· Minelab Vanquish 540 â€” Multi-IQ (simultaneous)
+- **Search Coil:** Garrett Ace 400 â€” 8.5" x 11" DD Â· Minelab Vanquish 540 â€” 10" x 12" DD
+- **Weight:** Garrett Ace 400 â€” 2.8 lbs Â· Minelab Vanquish 540 â€” 2.6 lbs
+- **Waterproof:** Garrett Ace 400 â€” No Â· Minelab Vanquish 540 â€” Yes (3 ft)
+- **Battery:** Garrett Ace 400 â€” 4x AA (not rechargeable) Â· Minelab Vanquish 540 â€” Rechargeable lithium
+- **Ground Balance:** Garrett Ace 400 â€” Pre-set Â· Minelab Vanquish 540 â€” Pre-set
+- **Iron Audio:** Garrett Ace 400 â€” Yes Â· Minelab Vanquish 540 â€” No
+- **Target ID Segments:** Garrett Ace 400 â€” 8 Â· Minelab Vanquish 540 â€” 10+
+- **Made In:** Garrett Ace 400 â€” USA Â· Minelab Vanquish 540 â€” Asia (Minelab design)
+- **Warranty:** Garrett Ace 400 â€” 2 years Â· Minelab Vanquish 540 â€” 3 years
 
 ---
 
 ## Where the Garrett Ace 400 Wins
 
-**Iron Audio is a genuine differentiator.** The Ace 400 lets you hear iron targets differently from non-ferrous targets through a distinct audio tone. In practice, this means you learn to identify junk versus potential finds by ear — without looking at the screen. For rockhounding in trashy areas with old mining debris, this saves enormous time.
+**Iron Audio is a genuine differentiator.** The Ace 400 lets you hear iron targets differently from non-ferrous targets through a distinct audio tone. In practice, this means you learn to identify junk versus potential finds by ear â€” without looking at the screen. For rockhounding in trashy areas with old mining debris, this saves enormous time.
 
 **Build quality feels more robust.** At nearly the same price, the Garrett feels more substantial. The shaft connections are tighter, the coil mount is more secure, and the overall construction inspires more confidence for rough field use on rocky terrain.
 
@@ -40,7 +40,7 @@ Here's how they compare on what actually matters in the field.
 
 ## Where the Minelab Vanquish 540 Wins
 
-**Multi-IQ multi-frequency is objectively more capable technology.** Running multiple frequencies simultaneously means better target identification across different metal types and ground conditions — without you manually switching frequencies. For mixed-mineral terrain where you're encountering different metallic indicators at different depths, this matters.
+**Multi-IQ multi-frequency is objectively more capable technology.** Running multiple frequencies simultaneously means better target identification across different metal types and ground conditions â€” without you manually switching frequencies. For mixed-mineral terrain where you're encountering different metallic indicators at different depths, this matters.
 
 **Waterproof to 3 feet.** The Ace 400 is not waterproof at all. If any part of your rockhounding involves creek wading, shallow water prospecting, or hunting after rain, the Vanquish 540 handles it. The Ace 400 does not.
 
@@ -56,7 +56,7 @@ This is where the terrain-specific answer diverges from generic reviews.
 
 **If you're hunting dry desert and BLM open land:** The Garrett Ace 400 is the better choice. Iron Audio helps you sort through the old mining debris that's scattered across much of Utah's mineral-bearing ground. The DD coil handles mineralization well at the 11 kHz frequency. And the simpler interface means you're learning to read your terrain faster instead of learning to read menus.
 
-**If you're hunting creeks and wet washes:** The Vanquish 540 wins by default — the Ace 400 can't go in water, period. The Vanquish's 3-foot waterproofing covers creek wading and shallow stream prospecting comfortably.
+**If you're hunting creeks and wet washes:** The Vanquish 540 wins by default â€” the Ace 400 can't go in water, period. The Vanquish's 3-foot waterproofing covers creek wading and shallow stream prospecting comfortably.
 
 **If you're on a tight budget and need one detector for everything:** The Ace 400 at $50 less gives you the most field-practical performance for the money in dry terrain. If water is in your plan, spend the extra $50 for the Vanquish.
 
@@ -70,9 +70,9 @@ The **Minelab Vanquish 540 is the better technical investment** if you plan to h
 
 Neither is a bad choice. Both outperform detectors at twice their price from a decade ago. The question is whether simplicity or technology headroom matters more to you right now.
 
-[Read our full Garrett Ace 400 review →](/review/garrett-ace-400)  
-[Read our full Minelab Vanquish 540 review →](/review/minelab-vanquish-540)  
-[Not sure? Try our Detector Match quiz →](/tools/detector-match)
+[Read our full Garrett Ace 400 review â†’](/review/garrett-ace-400/)  
+[Read our full Minelab Vanquish 540 review â†’](/review/minelab-vanquish-540/)  
+[Not sure? Try our Detector Match quiz â†’](/tools/detector-match/)
 
 ---
 
