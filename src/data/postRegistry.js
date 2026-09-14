@@ -207,4 +207,31 @@ export const postRegistry = [
     ],
     linkedProducts: ["nokta-simplex-lite", "garrett-ace-400", "garrett-at-max", "garrett-goldmaster-24k"],
   },
+  {
+    slug: "how-to-start-rockhounding-utah",
+    title: "How to Start Rockhounding in Utah: A Beginner's Guide",
+    description:
+      "The no-nonsense beginner's guide to rockhounding in Utah — where to go first, what to bring, what to skip, and how to avoid the mistakes that make people quit.",
+    date: "2026-09-14",
+    category: "Beginner Tips",
+    type: "how-to",
+    status: "published",
+    readTime: "8 min read",
+    keywords: [
+      "how to start rockhounding",
+      "rockhounding for beginners",
+      "rockhounding in utah",
+      "utah rockhounding guide",
+      "beginner rockhounding",
+    ],
+    linkedProducts: [
+      "estwing-rock-hammer", "estwing-prospecting-pick",
+      "garmin-etrex-32x", "garmin-inreach-mini-2",
+      "stanley-classic-bottle", "jewelers-loupe-10x",
+      "rockhounding-utah-book", "national-geo-tumbler",
+    ],
+    mapSites: [
+      "topaz-mountain", "dugway-geode-beds", "u-dig-fossils",
+    ],
+  },
 ];
