@@ -15,6 +15,7 @@ import simplexVsAce400 from "./posts/nokta-simplex-lite-vs-garrett-ace-400.md?ra
 import dugwayGeodeGuide from "./posts/dugway-geode-beds-utah-guide.md?raw";
 import uDigFossilsGuide from "./posts/u-dig-fossils-utah-guide.md?raw";
 import startRockhoundingUtah from "./posts/how-to-start-rockhounding-utah.md?raw";
+import sunstoneKnollGuide from "./posts/sunstone-knoll-utah-guide.md?raw";
 import { postRegistry } from "./postRegistry.js";
 
 const contentBySlug = {
@@ -28,6 +29,7 @@ const contentBySlug = {
   "dugway-geode-beds-utah-guide": dugwayGeodeGuide,
   "u-dig-fossils-utah-guide": uDigFossilsGuide,
   "how-to-start-rockhounding-utah": startRockhoundingUtah,
+  "sunstone-knoll-utah-guide": sunstoneKnollGuide,
 };
 
 export const posts = postRegistry.map((post) => ({

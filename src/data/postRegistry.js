@@ -189,6 +189,29 @@ export const postRegistry = [
     mapSites: ["u-dig-fossils"],
   },
   {
+    slug: "sunstone-knoll-utah-guide",
+    title: "Sunstone Knoll Utah: Complete Collecting Guide",
+    description:
+      "The easiest rockhounding site in Utah — exact directions, what sunstones look like, and what to know about the land before you go.",
+    date: "2026-08-18",
+    category: "Site Guides",
+    type: "site-guide",
+    status: "published",
+    readTime: "7 min read",
+    keywords: [
+      "sunstone knoll",
+      "sunstone knoll utah",
+      "where to find sunstones utah",
+      "utah sunstone hunting",
+      "sunstone knoll directions",
+    ],
+    linkedProducts: [
+      "estwing-rock-hammer", "dewalt-safety-glasses", "sunday-afternoons-hat",
+      "stanley-classic-bottle",
+    ],
+    mapSites: ["sunstone-knoll"],
+  },
+  {
     slug: "nokta-simplex-lite-vs-garrett-ace-400",
     title: "Nokta Simplex Lite vs Garrett Ace 400: Budget Detector Showdown",
     description:
