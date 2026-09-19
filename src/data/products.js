@@ -8,7 +8,7 @@ export const products = [
     price: "$249",
     rating: 4.5,
     bestFor: "Brand-new detectorists on a tight budget",
-    url: "https://amzn.to/43iswmN",
+    url: "https://amzn.to/4jdzdPT",
     image: "https://www.noktadetectors.com/wp-content/uploads/2023/04/nokta-simplex-lite-banner.jpg",
     pros: [
       "Fully waterproof to 16 ft — submerge it, no worries",
@@ -45,7 +45,7 @@ export const products = [
     price: "$349",
     rating: 4.7,
     bestFor: "Beginners ready to get serious about the hobby",
-    url: "https://amzn.to/4dyU6Sx",
+    url: "https://link.amazon/B08TFqFQD",
     image: "https://garrett.com/app/uploads/2023/07/ace-400-10.png",
     pros: [
       "Iron Audio feature distinguishes junk from real finds",
@@ -83,7 +83,7 @@ export const products = [
     price: "$399",
     rating: 4.6,
     bestFor: "Beginners who want serious technology without the serious price",
-    url: "https://amzn.to/4a6IXWL",
+    url: "https://link.amazon/B0j3Q8ut6",
     pros: [
       "Multi-IQ simultaneous multi-frequency — rare under $500",
       "Waterproof up to 3ft — solid for creek wading",
@@ -106,7 +106,7 @@ export const products = [
     price: "$699",
     rating: 4.8,
     bestFor: "Intermediate hunters and wet terrain",
-    url: "https://amzn.to/42Uv2iO",
+    url: "https://link.amazon/B0gRMM48q",
     image: "https://garrett.com/app/uploads/2023/11/AT-Max-1.png",
     pros: [
       "Fully submersible to 10ft — creek and river hunting",
@@ -129,7 +129,7 @@ export const products = [
     price: "$729",
     rating: 4.6,
     bestFor: "Gold prospectors hunting flakes and small nuggets",
-    url: "https://amzn.to/49jGJ6k",
+    url: "https://link.amazon/B02fFp7zN",
     image: "https://garrett.com/app/uploads/2023/10/goldmaster24k-img1.png",
     pros: [
       "48 kHz frequency catches gold other detectors miss entirely",
@@ -152,7 +152,7 @@ export const products = [
     price: "$899",
     rating: 4.8,
     bestFor: "Serious hunters who want one detector that does it all",
-    url: "https://amzn.to/3RwArdq",
+    url: "https://link.amazon/B00Jr6MOi",
     pros: [
       "Multi-IQ simultaneous multi-frequency for all targets at once",
       "Fully waterproof and submersible to 10 ft",
@@ -189,7 +189,7 @@ export const products = [
     price: "$1,099",
     rating: 4.8,
     bestFor: "Experienced hunters upgrading from the Equinox 800",
-    url: "https://amzn.to/4fJbR2R",
+    url: "https://link.amazon/B04scIeN3",
     pros: [
       "119 high-resolution target IDs — sharper discrimination than the 800",
       "Carbon-fiber 3-piece shaft, only 2.8 lbs, packs down to 24 inches",
@@ -213,7 +213,7 @@ export const products = [
     price: "$54",
     rating: 4.9,
     bestFor: "Every rockhound, beginner to expert",
-    url: "https://amzn.to/3PDmlX7",
+    url: "https://link.amazon/B0eGjcnxc",
     image: "https://mobileimages.lowes.com/productimages/969463f0-7059-414c-bf76-d891995728ce/81321569.jpeg?size=lg",
     pros: [
       "One-piece forged steel — virtually indestructible",
@@ -236,7 +236,7 @@ export const products = [
     price: "$58",
     rating: 4.8,
     bestFor: "Gold prospectors and serious diggers",
-    url: "https://amzn.to/42TPJvj",
+    url: "https://link.amazon/B0blKCY1d",
     image: "https://mobileimages.lowes.com/productimages/75b25ffe-1b22-4706-a562-45f9c23fe92c/09337222.jpg?size=lg",
     pros: [
       "Flat blade for prying and scraping",
@@ -262,7 +262,7 @@ export const products = [
     price: "$14",
     rating: 4.5,
     bestFor: "Cutting rough specimens and trimming finds in the field or shop",
-    url: "https://amzn.to/4wYquWy",
+    url: "https://link.amazon/B0dYtfIGL",
     pros: [
       "Adjustable frame fits 10\" and 12\" blades",
       "Comfortable grip for extended cutting sessions",
@@ -284,7 +284,7 @@ export const products = [
     price: "~$13",
     rating: 4.6,
     bestFor: "Any trip where you're cracking rock",
-    url: "https://amzn.to/3StWhyJ",
+    url: "https://link.amazon/B0fkqIQwW",
     image: "",
     pros: [
       "Anti-fog dual mold lens for hot desert days",
@@ -307,7 +307,7 @@ export const products = [
     price: "~$22",
     rating: 4.5,
     bestFor: "Topaz Mountain, Tintic tailings, any vug hunting",
-    url: "https://amzn.to/4eNnpAj",
+    url: "https://link.amazon/B0eoahl7Y",
     image: "",
     pros: [
       "Four widths for narrow vug lines and wider splits",
@@ -330,7 +330,7 @@ export const products = [
     price: "~$30",
     rating: 4.5,
     bestFor: "Topaz Mountain washes, dry placer screening",
-    url: "https://amzn.to/4oTBdxR",
+    url: "https://link.amazon/B00SF0dGA",
     image: "",
     pros: [
       "1/8 inch stainless steel mesh catches small crystals",
@@ -354,7 +354,7 @@ export const products = [
     price: "~$30",
     rating: 4.4,
     bestFor: "Dugway geodes, soft tuff digging, truck emergency kit",
-    url: "https://amzn.to/441lQtv",
+    url: "https://link.amazon/B0bad8xPS",
     image: "https://m.media-amazon.com/images/I/41Hi2EEfCHL.jpg",
     pros: [
       "Folds small — lives in the truck without a full-size spade",
@@ -378,7 +378,7 @@ export const products = [
     price: "~$18",
     rating: 4.3,
     bestFor: "Screening fines, garnets, pseudobrookite ID",
-    url: "https://amzn.to/4vJ9Etx",
+    url: "https://link.amazon/B0iK6KqS7",
     image: "",
     pros: [
       "10x triplet lens — clearer than single-lens budget loupes",
@@ -402,7 +402,7 @@ export const products = [
     price: "~$40",
     rating: 4.7,
     bestFor: "Remote Utah sites — Topaz, Dugway, San Rafael",
-    url: "https://amzn.to/3SvOEI6",
+    url: "https://link.amazon/B021S7VOe",
     image: "",
     pros: [
       "DryFlex waterproof inner bag — gauze stays dry in dusty trucks",
@@ -425,7 +425,7 @@ export const products = [
     price: "~$22",
     rating: 4.6,
     bestFor: "Screening gravel, shovel work, rough rock handling",
-    url: "https://amzn.to/4aqjdFf",
+    url: "https://link.amazon/B087Ngyka",
     image: "",
     pros: [
       "Breathable TrekDry — hands don't cook in desert heat",
@@ -448,7 +448,7 @@ export const products = [
     price: "~$130",
     rating: 4.6,
     bestFor: "Mine tailings, creek detecting, small gold indicators",
-    url: "https://amzn.to/4arIQWe",
+    url: "https://link.amazon/B09mpaug9",
     image: "",
     pros: [
       "Professional waterproof build for wash and creek hunting",
@@ -471,7 +471,7 @@ export const products = [
     price: "~$20",
     rating: 4.5,
     bestFor: "Anyone past their first tumbler batch",
-    url: "https://amzn.to/4vxJJEW",
+    url: "https://link.amazon/B0itv4Gb3",
     image: "",
     pros: [
       "Two 1 lb jars of 60/90 coarse silicon carbide",
@@ -494,7 +494,7 @@ export const products = [
     price: "~$35",
     rating: 4.7,
     bestFor: "Topaz Mountain, Dugway, any shadeless BLM site",
-    url: "https://amzn.to/4eH6cZ1",
+    url: "https://link.amazon/B0eJrpZuc",
     image: "",
     pros: [
       "3-inch brim plus neck cape — not a baseball cap",
@@ -517,7 +517,7 @@ export const products = [
     price: "~$80",
     rating: 4.5,
     bestFor: "Slow leaks on dirt roads, airing down for traction",
-    url: "https://amzn.to/4wep48Z",
+    url: "https://link.amazon/B0hipafcl",
     image: "",
     pros: [
       "Rechargeable — no cigarette lighter or running engine required",
@@ -543,7 +543,7 @@ export const products = [
     price: "$74",
     rating: 4.5,
     bestFor: "First-time tumblers and beginners",
-    url: "https://amzn.to/4vfVFuL",
+    url: "https://link.amazon/B0eDbsffd",
     image: "https://thinkbluemarble.com/wp-content/uploads/2022/10/Hobby1.jpg",
     pros: [
       "Includes grit, polish, and rough rocks to start",
@@ -565,7 +565,7 @@ export const products = [
     price: "$89",
     rating: 4.6,
     bestFor: "Beginners wanting a complete kit without extras to buy",
-    url: "https://amzn.to/4dQ63lE",
+    url: "https://link.amazon/B0icdCzby",
     pros: [
       "Complete kit — grit, polish, and rough stones included",
       "Durable barrel holds up to repeated use",
@@ -587,7 +587,7 @@ export const products = [
     price: "$149",
     rating: 4.4,
     bestFor: "Tumblers who want more capacity and control",
-    url: "https://amzn.to/4vivx2p",
+    url: "https://link.amazon/B0j0rgBbu",
     image: "https://img.vevorstatic.com/us/YSDMJCFKSJ3LBZR69V5/goods_grid-v2/rock-tumbler-kit-m100-1.2.jpg",
     pros: [
       "Digital timer — set it and forget it",
@@ -611,7 +611,7 @@ export const products = [
     price: "$49",
     rating: 4.7,
     bestFor: "Any rockhound entering dark or enclosed spaces",
-    url: "https://amzn.to/4wRB8yb",
+    url: "https://link.amazon/B0ahxJfmU",
     image: "https://blackdiamondequipment.com/cdn/shop/files/620672_0004_Spot_400_Headlamp_Graphite_01.jpg?v=1774652825",
     pros: [
       "High lumens — bright enough for mine exploration",
@@ -634,7 +634,7 @@ export const products = [
     price: "$39",
     rating: 4.7,
     bestFor: "Utah desert and high-desert rockhounding",
-    url: "https://amzn.to/4dA1NIh",
+    url: "https://link.amazon/B07tyCxhg",
     image: "https://www.stanley1913.com/cdn/shop/files/B2B_Web_PNG-TheLegendaryClassicBottle1QT_RSS_-Pomelo-Front.png?v=1762181904",
     pros: [
       "Keeps drinks cold 24hrs and hot 12hrs in the field",
@@ -657,7 +657,7 @@ export const products = [
     price: "$119",
     rating: 4.7,
     bestFor: "Remote site rockhounding and backcountry safety",
-    url: "https://amzn.to/4nSxM9P",
+    url: "https://link.amazon/B0hyDedcf",
     image: "https://www.leatherman.com/cdn/shop/files/signal_20260402201811_dz9x.jpg?crop=center&height=1200&v=1777559008&width=1200",
     pros: [
       "Fire starter built in — critical on remote BLM land",
@@ -682,7 +682,7 @@ export const products = [
     price: "$249",
     rating: 4.6,
     bestFor: "Marking find locations and navigating BLM land",
-    url: "https://amzn.to/49Ui3kU",
+    url: "https://link.amazon/B0f7pQgtI",
     image: "https://www.wellbots.com/cdn/shop/files/cf-lg-59917067-77a5-4db5-ad50-6ddba7022dc1.jpg?v=1739346620",
     pros: [
       "3-axis compass + barometric altimeter",
@@ -705,7 +705,7 @@ export const products = [
     price: "$349 + plan",
     rating: 4.7,
     bestFor: "Solo rockhounds in remote Utah desert and mountains",
-    url: "https://amzn.to/3POuVSN",
+    url: "https://link.amazon/B00N1ToVI",
     image: "https://www.tackform.com/cdn/shop/files/MAIN_inReachMini2-FlameRed_77192539-a21b-4217-9456-779d2454ea26.webp?v=1735324651",
     pros: [
       "SOS connects to GEOS 24/7 rescue coordination",
@@ -730,7 +730,7 @@ export const products = [
     price: "$18",
     rating: 4.6,
     bestFor: "Utah-based rockhounds of all skill levels",
-    url: "https://amzn.to/4fdSjn9",
+    url: "https://link.amazon/B01amSota",
     image: "https://cdn.shopify.com/s/files/1/0674/5433/7265/files/9781493045969_p0.jpg?v=1765038323",
     pros: [
       "75 sites including Topaz Mountain, Dugway, Tintic",
@@ -753,7 +753,7 @@ export const products = [
     price: "$21",
     rating: 4.4,
     bestFor: "Gem hunters focused on Utah minerals and crystals",
-    url: "https://amzn.to/4fLlEW9",
+    url: "https://link.amazon/B05KQx75h",
     image: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1387719545i/1243784.jpg",
     pros: [
       "Detailed directions to lesser-known sites",

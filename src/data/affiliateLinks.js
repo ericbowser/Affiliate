@@ -28,135 +28,135 @@ const RETAILERS = {
 const affiliateLinks = {
   // --- METAL DETECTORS ---
   "nokta-simplex-lite": {
-    amazon: "https://amzn.to/43iswmN",
+    amazon: "https://amzn.to/4jdzdPT",
     kellyco: null,   // TODO: Apply & add KellyCo link
     rei: null,
   },
   "garrett-ace-400": {
-    amazon: "https://amzn.to/4dyU6Sx",
+    amazon: "https://link.amazon/B08TFqFQD",
     kellyco: null,
     rei: null,
   },
   "minelab-vanquish-540": {
-    amazon: "https://amzn.to/4a6IXWL",
+    amazon: "https://link.amazon/B0j3Q8ut6",
     kellyco: null,
     rei: null,
   },
   "garrett-at-max": {
-    amazon: "https://amzn.to/42Uv2iO",
+    amazon: "https://link.amazon/B0gRMM48q",
     kellyco: null,
     rei: null,
   },
   "garrett-goldmaster-24k": {
-    amazon: "https://amzn.to/49jGJ6k",
+    amazon: "https://link.amazon/B02fFp7zN",
     kellyco: null,
     highplains: null,
   },
   "minelab-equinox-800": {
-    amazon: "https://amzn.to/3RwArdq",
+    amazon: "https://link.amazon/B00Jr6MOi",
     kellyco: null,
     rei: null,
   },
   "minelab-equinox-900": {
-    amazon: "https://amzn.to/4fJbR2R",
+    amazon: "https://link.amazon/B04scIeN3",
     kellyco: null,
     rei: null,
   },
 
   // --- ROCK HAMMERS & HAND TOOLS ---
   "estwing-rock-hammer": {
-    amazon: "https://amzn.to/3PDmlX7",
+    amazon: "https://link.amazon/B0eGjcnxc",
     rei: null,
   },
   "estwing-prospecting-pick": {
-    amazon: "https://amzn.to/42TPJvj",
+    amazon: "https://link.amazon/B0blKCY1d",
     rei: null,
   },
   "nicholson-hacksaw-80950": {
-    amazon: "https://amzn.to/4wYquWy",
+    amazon: "https://link.amazon/B0dYtfIGL",
   },
   "dewalt-safety-glasses": {
-    amazon: "https://amzn.to/3StWhyJ",
+    amazon: "https://link.amazon/B0fkqIQwW",
   },
   "cold-chisel-set": {
-    amazon: "https://amzn.to/4eNnpAj",
+    amazon: "https://link.amazon/B0eoahl7Y",
   },
   "classifier-screen-18": {
-    amazon: "https://amzn.to/4oTBdxR",
+    amazon: "https://link.amazon/B00SF0dGA",
     highplains: null,
   },
   "collapsible-field-shovel": {
-    amazon: "https://amzn.to/441lQtv",
+    amazon: "https://link.amazon/B0bad8xPS",
     rei: null,
   },
   "jewelers-loupe-10x": {
-    amazon: "https://amzn.to/4vJ9Etx",
+    amazon: "https://link.amazon/B0iK6KqS7",
   },
   "adventure-medical-ultralight": {
-    amazon: "https://amzn.to/3SvOEI6",
+    amazon: "https://link.amazon/B021S7VOe",
     rei: null,
   },
   "mechanix-original-gloves": {
-    amazon: "https://amzn.to/4aqjdFf",
+    amazon: "https://link.amazon/B087Ngyka",
     rei: null,
   },
   "nokta-pinpointer": {
-    amazon: "https://amzn.to/4arIQWe",
+    amazon: "https://link.amazon/B09mpaug9",
     kellyco: null,
     serious: null,
   },
   "tumbler-grit-refill": {
-    amazon: "https://amzn.to/4vxJJEW",
+    amazon: "https://link.amazon/B0itv4Gb3",
   },
   "sunday-afternoons-hat": {
-    amazon: "https://amzn.to/4eH6cZ1",
+    amazon: "https://link.amazon/B0eJrpZuc",
     rei: null,
   },
   "viair-88p-compressor": {
-    amazon: "https://amzn.to/4wep48Z",
+    amazon: "https://link.amazon/B0hipafcl",
   },
 
   // --- TUMBLERS & LAPIDARY ---
   "national-geo-tumbler": {
-    amazon: "https://amzn.to/4vfVFuL",
+    amazon: "https://link.amazon/B0eDbsffd",
   },
   "c1-rock-tumbler-kit": {
-    amazon: "https://amzn.to/4dQ63lE",
+    amazon: "https://link.amazon/B0icdCzby",
   },
   "vevor-tumbler": {
-    amazon: "https://amzn.to/4vivx2p",
+    amazon: "https://link.amazon/B0j0rgBbu",
   },
 
   // --- FIELD GEAR ---
   "black-diamond-spot": {
-    amazon: "https://amzn.to/4wRB8yb",
+    amazon: "https://link.amazon/B0ahxJfmU",
     rei: null,
   },
   "stanley-classic-bottle": {
-    amazon: "https://amzn.to/4dA1NIh",
+    amazon: "https://link.amazon/B07tyCxhg",
     rei: null,
   },
   "leatherman-signal": {
-    amazon: "https://amzn.to/4nSxM9P",
+    amazon: "https://link.amazon/B0hyDedcf",
     rei: null,
   },
 
   // --- GPS & NAVIGATION ---
   "garmin-etrex-32x": {
-    amazon: "https://amzn.to/49Ui3kU",
+    amazon: "https://link.amazon/B0f7pQgtI",
     rei: null,
   },
   "garmin-inreach-mini-2": {
-    amazon: "https://amzn.to/3POuVSN",
+    amazon: "https://link.amazon/B00N1ToVI",
     rei: null,
   },
 
   // --- BOOKS ---
   "rockhounding-utah-book": {
-    amazon: "https://amzn.to/4fdSjn9",
+    amazon: "https://link.amazon/B01amSota",
   },
   "gem-trails-utah": {
-    amazon: "https://amzn.to/4fLlEW9",
+    amazon: "https://link.amazon/B05KQx75h",
   },
 };
 
