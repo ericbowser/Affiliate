@@ -28,7 +28,7 @@ const RETAILERS = {
 const affiliateLinks = {
   // --- METAL DETECTORS ---
   "nokta-simplex-lite": {
-    amazon: "https://amzn.to/4jdzdPT",
+    amazon: "https://link.amazon/B066azA49",
     kellyco: null,   // TODO: Apply & add KellyCo link
     rei: null,
   },
@@ -69,7 +69,7 @@ const affiliateLinks = {
     rei: null,
   },
   "estwing-prospecting-pick": {
-    amazon: "https://link.amazon/B0blKCY1d",
+    amazon: "https://link.amazon/B0fj0ly9V",
     rei: null,
   },
   "nicholson-hacksaw-80950": {
@@ -113,7 +113,7 @@ const affiliateLinks = {
     rei: null,
   },
   "viair-88p-compressor": {
-    amazon: "https://link.amazon/B0hipafcl",
+    amazon: "https://link.amazon/B0cGfXEJT",
   },
 
   // --- TUMBLERS & LAPIDARY ---

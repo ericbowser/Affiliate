@@ -8,7 +8,7 @@ export const products = [
     price: "$249",
     rating: 4.5,
     bestFor: "Brand-new detectorists on a tight budget",
-    url: "https://amzn.to/4jdzdPT",
+    url: "https://link.amazon/B066azA49",
     image: "https://www.noktadetectors.com/wp-content/uploads/2023/04/nokta-simplex-lite-banner.jpg",
     pros: [
       "Fully waterproof to 16 ft — submerge it, no worries",
@@ -236,7 +236,7 @@ export const products = [
     price: "$58",
     rating: 4.8,
     bestFor: "Gold prospectors and serious diggers",
-    url: "https://link.amazon/B0blKCY1d",
+    url: "https://link.amazon/B0fj0ly9V",
     image: "https://mobileimages.lowes.com/productimages/75b25ffe-1b22-4706-a562-45f9c23fe92c/09337222.jpg?size=lg",
     pros: [
       "Flat blade for prying and scraping",
@@ -517,7 +517,7 @@ export const products = [
     price: "~$80",
     rating: 4.5,
     bestFor: "Slow leaks on dirt roads, airing down for traction",
-    url: "https://link.amazon/B0hipafcl",
+    url: "https://link.amazon/B0cGfXEJT",
     image: "",
     pros: [
       "Rechargeable — no cigarette lighter or running engine required",
