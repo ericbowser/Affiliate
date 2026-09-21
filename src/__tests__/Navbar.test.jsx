@@ -24,6 +24,13 @@ describe("Navbar", () => {
     expect(screen.getAllByRole("link", { name: /field conditions/i }).length).toBeGreaterThan(0);
   });
 
+  test("renders a link to the interactive site map", () => {
+    renderNavbar();
+    const mapLinks = screen.getAllByRole("link", { name: /site map/i });
+    expect(mapLinks.length).toBeGreaterThan(0);
+    mapLinks.forEach((link) => expect(link).toHaveAttribute("href", "/guides/utah-sites-map"));
+  });
+
   test("tagline is visible in DOM", () => {
     renderNavbar();
     expect(screen.getByText(/salt lake city/i)).toBeInTheDocument();

@@ -69,7 +69,7 @@ const affiliateLinks = {
     rei: null,
   },
   "estwing-prospecting-pick": {
-    amazon: "https://link.amazon/B0fj0ly9V",
+    amazon: "https://www.amazon.com/dp/B004F7JCBC?tag=rock0e7-20",
     rei: null,
   },
   "nicholson-hacksaw-80950": {
@@ -113,7 +113,7 @@ const affiliateLinks = {
     rei: null,
   },
   "viair-88p-compressor": {
-    amazon: "https://link.amazon/B0cGfXEJT",
+    amazon: "https://www.amazon.com/dp/B0F3FTX6XQ?tag=rock0e7-20",
   },
 
   // --- TUMBLERS & LAPIDARY ---
@@ -124,7 +124,7 @@ const affiliateLinks = {
     amazon: "https://link.amazon/B0icdCzby",
   },
   "vevor-tumbler": {
-    amazon: "https://link.amazon/B0j0rgBbu",
+    amazon: "https://www.amazon.com/dp/B0GS1GP54N?tag=rock0e7-20",
   },
 
   // --- FIELD GEAR ---

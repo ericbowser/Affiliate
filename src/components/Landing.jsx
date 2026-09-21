@@ -72,6 +72,12 @@ const Landing = () => {
                 >
                   Find My Detector &rarr;
                 </Link>
+                <Link
+                  to="/guides/utah-sites-map"
+                  className="lg:hidden bg-white/10 backdrop-blur-sm text-white border border-white/20 font-medium px-6 py-2.5 rounded-xl hover:bg-white/20 transition-colors text-sm"
+                >
+                  &#128205; Interactive Site Map
+                </Link>
               </div>
             </div>
 

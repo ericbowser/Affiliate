@@ -64,7 +64,7 @@ function extractBrand(productName) {
   const knownBrands = [
     "Garrett", "Minelab", "Nokta", "Estwing", "National Geographic",
     "Lortone", "VEVOR", "Black Diamond", "Stanley", "Leatherman",
-    "Garmin", "Hydro Flask", "Nicholson", "C1",
+    "Garmin", "Hydro Flask", "Nicholson", "C1", "KomeStone",
   ];
   return knownBrands.find((b) => productName.startsWith(b)) || SITE.name;
 }

@@ -34,7 +34,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
             <Link to="/" className="text-slate-400 hover:text-amber-400 transition-colors text-base font-medium">
               Home
             </Link>
@@ -69,6 +69,9 @@ const Navbar = () => {
             </Link>
             <Link to="/blog" className="text-slate-400 hover:text-amber-400 transition-colors text-base font-medium">
               Blog
+            </Link>
+            <Link to="/guides/utah-sites-map" className="text-slate-400 hover:text-amber-400 transition-colors text-base font-medium">
+              Site Map
             </Link>
             <Link to="/weather" className="text-slate-400 hover:text-amber-400 transition-colors text-base font-medium">
               Field Conditions
@@ -115,6 +118,9 @@ const Navbar = () => {
             </Link>
             <Link to="/blog" className="block text-slate-300 hover:text-amber-400 text-sm font-medium py-2 border-t border-slate-800" onClick={() => setMenuOpen(false)}>
               Blog
+            </Link>
+            <Link to="/guides/utah-sites-map" className="block text-slate-300 hover:text-amber-400 text-sm font-medium py-2 border-t border-slate-800" onClick={() => setMenuOpen(false)}>
+              Site Map
             </Link>
             <Link to="/weather" className="block text-slate-300 hover:text-amber-400 text-sm font-medium py-2 border-t border-slate-800" onClick={() => setMenuOpen(false)}>
               Field Conditions
