@@ -1,6 +1,6 @@
 # Topaz Mountain Utah: Complete Collecting Guide
 
-*Last updated: June 2026 · By Wasatch Rockhound · 10 min read*
+*Last updated: October 2026 · By Wasatch Rockhound · 10 min read*
 
 Topaz Mountain is the single best free rockhounding site in Utah — and arguably one of the best in the country. Utah made topaz its official state gemstone in part because of this mountain, and once you've spent a morning cracking rhyolite on the south slope you'll understand why.
 
@@ -11,7 +11,7 @@ This is the complete guide to collecting at Topaz Mountain: how to get there, wh
 ## Quick Facts
 
 - **Location:** Thomas Range, Juab County, Utah
-- **GPS:** 39.735°N, 113.130°W
+- **GPS:** 39.666°N, 113.125°W
 - **Distance from SLC:** ~3.5 hours (160 miles)
 - **Land Status:** BLM — free, no permit required
 - **Best Season:** April–May, September–October
@@ -43,13 +43,13 @@ Topaz Mountain sits on the southern end of the Thomas Range — a volcanic forma
 
 **From Salt Lake City:**
 
-Take I-15 south to Nephi (Exit 222). Head west on UT-132 toward Lynndyl. At Lynndyl, continue west on US-6/US-50 to the tiny town of Abraham. From Abraham, follow the signs south toward the Thomas Range on a BLM road.
+Take I-15 south to Nephi (Exit 222). Head southwest on UT-132 for about 34 miles to Lynndyl and the junction with US-6. Continue south on US-6 for about 5 miles, then turn west onto Highway 174 (Brush Wellman Road), which is well marked. Follow the paved road northwest for roughly 37 miles to the signed dirt road that leads up to Topaz Mountain. The mountain is clearly visible from that turn, and the most popular collecting is on its southern slope. (These directions follow the BLM's own description of the route.)
 
-The last section is approximately 12 miles of unpaved BLM road. In dry conditions, a truck or SUV with decent clearance handles it fine. After rain, this road becomes rutted and potentially impassable — check conditions before you go.
+The final stretch is unpaved BLM road. In dry conditions, a truck or SUV with decent clearance handles it fine. After rain, this road becomes rutted and potentially impassable — check conditions before you go.
 
-**GPS waypoint:** 39.735°N, 113.130°W will put you at the main collecting area on the south side of the mountain.
+**GPS waypoint:** 39.666°N, 113.125°W will put you at the main collecting area on the south side of the mountain.
 
-**No gas, no water, no services** exist between Abraham and the mountain. Fill up in Nephi and bring everything you need.
+The BLM notes there is no water and no services at the mountain. Fill up in Nephi and bring everything you need.
 
 ---
 
@@ -133,7 +133,7 @@ This is remote BLM desert with no services, no shade, and no cell signal. Pack l
 ### Navigation & Safety
 - [GPS unit](/review/garmin-etrex-32x) — preloaded with topo maps, since your phone is useless out here
 - [Satellite communicator](/review/garmin-inreach-mini-2) — the nearest help is hours away
-- Spare tire and basic tool kit — you're 12 miles of dirt road from pavement
+- Spare tire and basic tool kit — the last stretch is dirt and help is a long way off
 - [Ultralight first aid kit](/review/adventure-medical-ultralight)
 - [Portable air compressor](/review/viair-88p-compressor) — slow leaks on rocky BLM roads
 
@@ -151,12 +151,43 @@ This is remote BLM desert with no services, no shade, and no cell signal. Pack l
 
 ---
 
+## Camping at Topaz Mountain
+
+Camping overnight is one of the best ways to get the most out of a Topaz Mountain trip. A sunrise start on the mountain beats a 5 AM departure from Salt Lake City every time.
+
+**Dispersed camping is permitted throughout the Topaz Mountain Rockhound Recreation Area.** There are no developed campsites, no reservations, and no fees. The BLM allows free dispersed camping on all BLM Utah-managed lands except where posted, and Topaz Mountain has no posted restrictions.
+
+### What to Know
+
+- **14-day limit** — You can camp up to 14 days in one spot before you must move at least 25 miles. Not a concern for a weekend trip, but worth knowing if you're spending a week.
+- **No water, no facilities** — There is nothing at the mountain. The BLM notes one pit toilet on the access road, but that's it. Bring all your water, food, and fuel.
+- **Camp in previously disturbed sites** — BLM rules require you to use existing disturbed areas. Don't clear new ground, trench, dig, or level your site.
+- **Fire rules** — Use existing fire rings or a fire pan. Collect only dead and down wood. Never leave a fire unattended. Check [utahfireinfo.gov](https://utahfireinfo.gov/fire-restrictions/) for current fire restrictions before you go — summer and early fall often bring fire bans in western Utah.
+- **Pack out everything** — There are no trash services. Leave No Trace applies fully.
+
+### Camping Gear to Bring
+
+- A [headlamp](/review/black-diamond-spot) — essential for camp after dark and early-morning starts
+- A [multi-tool](/review/leatherman-signal) — the fire starter and emergency whistle earn their weight out here
+- Warm layers — desert temperatures drop sharply at night, even in shoulder season. Expect 30s–40s°F overnight in April, May, September, and October.
+- A ground tarp and sleeping pad — the ground is rocky volcanic soil
+- Extra water beyond your collecting supply — plan at least 1 gallon per person for camp use on top of what you'll drink during the day
+
+### Nearest Developed Camping
+
+If dispersed camping isn't your style, the closest developed options are about 50 miles away:
+- **Yuba State Park** — ~50 miles east, with developed sites and reservations
+- **Antelope Valley RV Park** (Delta) — full-hookup RV sites, a good staging area if you're towing
+
+---
+
 ## Rules and Etiquette
 
 **BLM collecting rules:**
 - 25 pounds per person per day for personal (non-commercial) use
-- No power tools or heavy equipment
-- No commercial collecting without a permit
+- **Topaz collected in the recreation area cannot be sold** — collection is for personal, casual use only
+- **Hand tools only** — no power tools or heavy equipment. The BLM banned power tools due to degradation of site characteristics
+- Do not enter tunnels or caves — exercise caution on steep terrain
 - Pack out all trash — leave the site cleaner than you found it
 
 **Etiquette:**
@@ -165,7 +196,7 @@ This is remote BLM desert with no services, no shade, and no cell signal. Pack l
 - If you crack open a vug and find crystals, that's your find — but don't claim an entire cliff face
 - Share information freely — the rockhounding community is generous and tight-knit
 
-**[BLM Topaz Mountain page](https://www.blm.gov/visit/topaz-mountain)** — check for any access updates or closures before you go.
+**[BLM Topaz Mountain page](https://www.blm.gov/visit/topaz-mountain)** and **[Topaz Mountain Rockhound Recreation Area](https://www.blm.gov/visit/topaz-mountain-rockhound-recreation-area)** — check both for access updates or closures before you go. The BLM Fillmore Field Office can answer road-condition questions at (435) 743-3100.
 
 ---
 
@@ -173,11 +204,11 @@ This is remote BLM desert with no services, no shade, and no cell signal. Pack l
 
 If you're making the 3.5-hour drive from Salt Lake City, consider hitting nearby sites on the same trip.
 
-**Dugway Geode Beds** (~45 minutes north) — Quartz and amethyst geodes in the soft tuff hillsides. Completely different collecting experience — digging versus hard-rock cracking — and an excellent pairing with Topaz Mountain. [Read our Dugway guide](/blog/rockhounding-utah-8-best-sites#2-dugway-geode-beds-tooele-county)
+**Dugway Geode Beds** — Quartz and amethyst geodes in the soft tuff hillsides. Completely different collecting experience — digging versus hard-rock cracking — and a good pairing for a second trip. It's reached by a different road than Topaz, so check the drive on a map before combining them. [Read our Dugway guide](/blog/dugway-geode-beds-utah-guide)
 
-**Sunstone Knoll** (~30 minutes south) — Labradorite feldspar with flash. Small site but unique finds. Can be combined as a quick stop on the drive.
+**Sunstone Knoll** — Labradorite feldspar with flash. Small site but unique finds. It's a separate drive from Topaz, so plan it as its own stop. [Read our Sunstone Knoll guide](/blog/sunstone-knoll-utah-guide)
 
-**U-Dig Fossils** (~20 minutes south near Delta) — Trilobite quarry. Fee site (~$70/day) but guaranteed finds. Great addition if you're traveling with kids or non-rockhounds who need a guaranteed win.
+**U-Dig Fossils** (near Delta) — Trilobite quarry. Fee site — see [our U-Dig guide](/blog/u-dig-fossils-utah-guide) for current pricing and season dates. Great addition if you're traveling with kids or non-rockhounds who need a guaranteed win.
 
 ---
 
@@ -189,12 +220,10 @@ If you're making the 3.5-hour drive from Salt Lake City, consider hitting nearby
 - **10:00 AM–12:00 PM** — Move to the east wall for hard-rock cracking
 - **12:00–1:00 PM** — Lunch in the shade of your vehicle
 - **1:00–3:00 PM** — Screen the washes or explore the saddle area
-- **3:00 PM** — Pack up, drive to Dugway Geode Beds (optional)
-- **3:45–5:30 PM** — Geode collecting at Dugway
-- **5:30 PM** — Head home
-- **8:00 PM** — Back in Salt Lake City
+- **3:00 PM** — Pack up and head home
+- **6:30 PM** — Back in Salt Lake City
 
-This is an aggressive day. You can easily spend the whole day at Topaz Mountain alone. If it's your first visit, skip the Dugway detour and give yourself the full day on the mountain.
+This is a full day. Give yourself the whole day on the mountain, and save other sites like Dugway for their own trips.
 
 ---
 
@@ -204,7 +233,7 @@ This is an aggressive day. You can easily spend the whole day at Topaz Mountain 
 Yes. It's BLM land — no permit, no fee, no registration. The 25 pound per person daily limit for personal collecting applies. No commercial collecting without a BLM permit.
 
 **Can I drive a sedan to Topaz Mountain?**
-I wouldn't recommend it. The last 12 miles are unpaved BLM road with rocks, ruts, and washouts. A truck, SUV, or crossover with decent ground clearance handles it fine in dry conditions. After rain, even high-clearance vehicles can struggle on the clay sections.
+I wouldn't recommend it. The final stretch is unpaved BLM road with rocks, ruts, and washouts. A truck, SUV, or crossover with decent ground clearance handles it fine in dry conditions. After rain, even high-clearance vehicles can struggle on the clay sections.
 
 **Is there cell service at Topaz Mountain?**
 No. You'll lose signal well before you reach the mountain. Bring a [satellite communicator](/review/garmin-inreach-mini-2) if you're going solo — the nearest help is hours away.
@@ -213,7 +242,7 @@ No. You'll lose signal well before you reach the mountain. Bring a [satellite co
 April-May and September-October. Avoid summer heat (95-100 degrees with no shade) and winter snow (access road can be impassable November-March).
 
 **Can I camp at Topaz Mountain?**
-Yes — dispersed camping is allowed on BLM land. There are no developed campsites, no water, and no facilities. Pack everything in, pack everything out. Camping is a great option if you want a sunrise start on the mountain.
+Yes — free dispersed camping is permitted throughout the recreation area with a 14-day limit. There are no developed campsites, no water, and no facilities beyond a pit toilet on the access road. Pack everything in, pack everything out. See the [Camping at Topaz Mountain](#camping-at-topaz-mountain) section above for full details and gear recommendations.
 
 **How much topaz will I actually find?**
 On a typical day of surface hunting and screening, expect to find 10-30+ small crystals, with most under 1/2 inch. Hard-rock cracking can produce larger specimens but is hit-or-miss. Manage expectations: you won't fill a bucket, but you'll come home with genuine Utah topaz.

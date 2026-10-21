@@ -31,6 +31,8 @@ Beyond topaz, keep your eyes open for deep red garnets, opal nodules in the rhyo
 
 **Land status:** BLM — free, no permit required. [BLM Topaz Mountain page](https://www.blm.gov/visit/topaz-mountain)
 
+**Going?** Read the [complete Topaz Mountain collecting guide](/blog/topaz-mountain-utah-guide) for turn-by-turn directions, where to dig, and a full gear list.
+
 ---
 
 ## 2. Dugway Geode Beds (Tooele County)
