@@ -85,12 +85,12 @@ export const postRegistry = [
     slug: "topaz-mountain-utah-guide",
     title: "Topaz Mountain Utah: Complete Collecting Guide",
     description:
-      "Everything you need to plan a Topaz Mountain trip — where to dig, what you'll find, how to get there, and the gear that makes the difference.",
+      "Everything you need to plan a Topaz Mountain trip — where to dig, what you'll find, how to get there, camping info, and the gear that makes the difference.",
     date: "2026-06-26",
     category: "Site Guides",
     type: "site-guide",
     status: "published",
-    readTime: "10 min read",
+    readTime: "12 min read",
     keywords: [
       "topaz mountain utah",
       "topaz mountain rockhounding",

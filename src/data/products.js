@@ -105,20 +105,39 @@ export const products = [
     category: "metal-detectors",
     price: "$699",
     rating: 4.8,
-    bestFor: "Intermediate hunters and wet terrain",
+    bestFor: "Intermediate hunters ready to detect in any conditions",
     url: "https://link.amazon/B0gRMM48q",
     image: "https://garrett.com/app/uploads/2023/11/AT-Max-1.png",
     pros: [
-      "Fully submersible to 10ft — creek and river hunting",
-      "Z-Lynk wireless audio with low latency",
-      "Excellent ground balance for mineralized desert soil",
-      "Pro audio for tone identification",
-      "Built for serious daily use"
+      "Fully submersible to 10ft — creek beds, river bars, and rain are non-issues",
+      "Z-Lynk wireless audio — 6x faster than Bluetooth, no cord snags in brush",
+      "175-point ground balance — auto and manual tuning for Utah's mineralized desert soil",
+      "Iron Audio in True All-Metal mode — hear iron targets instead of silencing them",
+      "13.6 kHz operating frequency — strong on coins, relics, and small gold",
+      "Built in the USA with Garrett's support and parts availability"
     ],
     cons: [
-      "Higher price point",
-      "Heavier than entry models at 3.03 lbs"
+      "$699 is a real step up from the $250–$400 entry tier",
+      "Heavier at 3.03 lbs — noticeable on all-day hunts versus a 2.6 lb Simplex",
+      "Runs on 4x AA batteries (not rechargeable) — 15–20 hours per set",
+      "Single-frequency VLF — no simultaneous multi-frequency like the Minelab Equinox line"
     ],
+    verdict: "The AT Max is where Garrett's AT line stops being a beginner detector and becomes a serious field tool. It combines the Ace 400's Iron Audio and mineralized-soil handling with full 10-foot waterproofing and Z-Lynk wireless — two features you genuinely cannot get from Garrett below this price. If you're hunting Utah creek beds after snowmelt, detecting in the rain, or need ground balance that handles the West Desert without constant adjustment, this is the detector to buy. The main question is whether you need it over the Ace 400: if you never hunt in water and don't care about wireless audio, save the $350.",
+    ownerPros: [
+      "Z-Lynk wireless praised as a genuine upgrade — owners say no perceptible lag and no cord hassle",
+      "Waterproofing holds up to actual submersion — creek and beach hunters confirm it",
+      "Ground balance handles heavily mineralized soil without constant re-tuning",
+      "Iron Audio in All-Metal mode is a differentiator — saves time by identifying iron targets audibly",
+      "Build quality and durability consistently cited — owners report years of hard field use"
+    ],
+    ownerCons: [
+      "AT Max chatter is a known issue — the detector can produce false signals in highly mineralized ground until sensitivity is dialed down",
+      "AA batteries are a step backward when competitors offer USB rechargeable",
+      "At 3.03 lbs, arm fatigue is mentioned on hunts over 3–4 hours",
+      "Some owners feel the jump from Ace 400 doesn't justify double the price unless you need waterproofing"
+    ],
+    whoFor: "You've outgrown entry-level and want a detector that handles any terrain and weather without compromise. Especially strong for Utah creek beds, wet-weather hunting, and mineralized desert soil where ground balance matters.",
+    whoSkip: "You're brand new to detecting — the Ace 400 teaches the same fundamentals for half the price. Or you want simultaneous multi-frequency technology, in which case look at the Minelab Equinox 800.",
     tier: "premium"
   },
   {
